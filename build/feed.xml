@@ -1,0 +1,1239 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-07-11T00:07:37+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Hydejack</title><subtitle>Hydejack is a boutique Jekyll theme for hackers, nerds, and academics, with a focus on personal sites that are meant to impress.
+</subtitle><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><entry><title type="html">July</title><link href="http://localhost:4000/blog/til/2022-07-01-July/" rel="alternate" type="text/html" title="July" /><published>2022-07-01T00:00:00+09:00</published><updated>2022-07-01T00:00:00+09:00</updated><id>http://localhost:4000/blog/til/July</id><content type="html" xml:base="http://localhost:4000/blog/til/2022-07-01-July/">&lt;p&gt;개발일지 참고 사이트 https://velog.io/@mooh2jj/Java-stream-Collector-%EC%99%9C-%EC%93%B0%EB%8A%94-%EA%B1%B0%EC%95%BC&lt;br /&gt;
+자바 티포인트 https://www.javatpoint.com/&lt;/p&gt;
+
+&lt;h2 id=&quot;220701&quot;&gt;22.07.01&lt;/h2&gt;
+&lt;p&gt;section1.[Git기초] 시작&lt;/p&gt;
+
+&lt;p&gt;git clone&lt;br /&gt;
+또는&lt;br /&gt;
+git init&lt;br /&gt;
+============-
+git remote add origin (url)&lt;/p&gt;
+
+&lt;p&gt;git remote add pair (상대방url)&lt;/p&gt;
+
+&lt;p&gt;git pull pair origin&lt;/p&gt;
+
+&lt;h1 id=&quot;git-remote--v-로-두-리포지토리-url이-현재-폴더에-등록된-것을-확인하고&quot;&gt;git remote -v 로 두 리포지토리 url이 현재 폴더에 등록된 것을 확인하고,&lt;/h1&gt;
+&lt;p&gt;이후에 git pull origin/pair main 으로 둘 중의 어느 곳에서도 pull 할 수 있다.
+———–
+그리고 pull 시 merge 의 경우 
+1.다른 파일이거나 같은 파일 내 다른 줄 수정 등의 상황이면 자동으로 머지되고,
+2.같은 줄의 내용이 로컬과 원격리포의 내용이 다를 경우 머지가 안되는데,
+ 이때 a. 원격리포의 내용을 반영하려면 git restore [file_name] 또는 git reset HEAD^, 또는 직접 로컬 파일을 수정할 수 있다.
+b.로컬내용으로 하려면 git add&amp;gt;commit&amp;gt;push 하면 된다.&lt;/p&gt;
+
+&lt;p&gt;git pull origin main&lt;/p&gt;
+
+&lt;p&gt;git remote add origin (url)&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;리포 복사&lt;/li&gt;
+  &lt;li&gt;깃 클론 으로 각자의 로컬로 연결&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;3.페어의 리포와&lt;/p&gt;
+
+&lt;p&gt;4.자기 로컬과 자기 리포에 푸시&lt;/p&gt;
+
+&lt;p&gt;=========================&lt;/p&gt;
+
+&lt;h2 id=&quot;0704-java-기초-시작&quot;&gt;07.04 Java 기초 시작&lt;/h2&gt;
+&lt;p&gt;1.intro&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//접근 허용 범위가 public 인 Main 이라는 클래스 를 정의함.  &lt;/span&gt;
+
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{...}&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;add&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;2.변수와 타입&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;//변수명은 영문 숫자 _ $ 를 사용할 수 있고 보통 camelCase 를 사용한다.&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//변수명은 숫자로 시작할 수 없다&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//상수는 final 로 지정하고, 보통 SCREAMING_SNAKE_CASE 를 사용한다.&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;ex&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;final&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;CALCULATOR_PI&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.14&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//타입이란 어떤 값의 유형 및 종류를 의미하며, 타입에 따라 메모리 공간의 크기/방식이 결정된다.&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;먼저&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;기본타입변수는&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;이라는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;값&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;그&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;자체를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장합니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;여기에서&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;타입으로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;분류했을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;때&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정수형의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;값이며&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정수형은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;상으로는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;기본&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;타입에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;해당합니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;기본타입은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;값&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;그&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;자체가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변수에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장되기&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;때문에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;기본타입변수&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;결과는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;기본타입변수가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장하고&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;값&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;그대로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;출력됩니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+    &lt;span class=&quot;n&quot;&gt;참조타입변수는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;무언가를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장할&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;때&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;것이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;존재하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;위치를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장합니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;예제의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;객체는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;참조타입의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;데이터에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;해당하며&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;따라서&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;객체를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;어떤&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변수에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장한다면&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;그&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변수에는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;객체가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;존재하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;메모리&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;주소를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;값으로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;가집니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;즉&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;객체의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;주소값이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변수에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장되어&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;것이죠&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;따라서&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;출력&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;참조타입변수&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;결과는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;참조타입변수가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장하고&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;값&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;즉&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;객체의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;주소값이&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bbe5e8와&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;같은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;형식으로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;출력됩니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Example&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;primitive&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;reference&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;();&lt;/span&gt;
+
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;primitive&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reference&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Task&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Test&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;java&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;lang&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;Object&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;626&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b2d4a&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 정수형 리터럴 20을 정수형 변수 currentAge에 할당&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;currentAge&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 실수형 리터럴 3.14159를 실수형 변수 pi에 할당&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pi&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;3.14159&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 논리형 리터럴 true를 논리형 변수 boolean에 할당&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isGenius&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 문자형 리터럴 &apos;A&apos;를 문자형 변수 firstAlphabet에 할당&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;firstAlphabet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&apos;A&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// 문자열 리터럴 &quot;CodeStates&quot;를 문자열 타입 변수 learnedAt에 할당&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;learnedAt&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;CodeStates&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;https://appstew.github.io/img/java_variable.png&quot; alt=&quot;java_variable&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;자바의 실수 타입 기본 처리는 double이므로, 
+float 타입의 변수에 실수형 리터럴을 할당할 때, 리터럴 뒤에 접미사 f를 붙여주어야 한다. double 변수의 값에는 D를 안 써도 되고, 써도 된다.
+
+long 타입의 변수에 정수형 리터럴을 할당할 때, 리터럴 뒤에 접미사 L을 붙여주어야 합니다. 
+    소문자 l을 붙여도 되지만, 숫자와의 혼동을 방지하기 위해 보통 대문자 L을 사용합니다. ```java float weight = 74.5f; final long LIGHT_YEAR = 9460730472580L;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;float = 9460730472580.0F;
+double = 9460730472580.0D;&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---------------
+
+   
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;정수형 &lt;br /&gt;
+    오버플로우&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;    자료형이 표현할 수 있는 범위 중 최대값 이상의 값을 표현한 경우 발생합니다.
+
+    최대값을 넘어가면 해당 데이터 타입의 최소값으로 값이 순환합니다.
+
+    예 : 어떤 값이 byte형이고, byte형의 최대값인 127을 값으로 가지는 경우, 이 값에 1을 더하면 128이 되는게 아니라, 최소값인 -128이 됩니다.
+
+
+언더플로우
+
+    자료형이 표현할 수 있는 범위 중 최소값 이하의 값을 표현한 경우 발생합니다.
+
+    최소값을 넘어가면 해당 데이터 타입의 최대값으로 값이 순환합니다.
+
+    예 : 어떤 값이 byte형이고, byte 형의 최소값인 -128을 값으로 가지는 경우, 이 값에 1을 빼면 -129가 되는게 아니라, 최대값인 127이 됩니다. ```
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;실수형의 오버플로우와 언더플로우
+
+실수형에서도 오버플로우와 언더플로우가 발생합니다. 다만, 오버플로우와 언더플로우가 발생했을 때의 결과가 다릅니다. 
+
+    오버플로우
+        값이 음의 최소 범위 또는 양의 최대 범위를 넘어갔을 때 발생하며, 이 때 값은 무한대가 됩니다.
+
+    언더플로우
+        값이 음의 최대 범위 또는 양의 최소 범위를 넘어갔을 때 발생하며, 이 때 값은 0이 됩니다.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;문자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;타입은&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;크기의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;char형&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;오직&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하나만&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; 
+
+&lt;span class=&quot;n&quot;&gt;문자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;타입&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변수를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;선언하면&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;해당&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변수에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;오직&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하나의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;문자형&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;리터럴을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;저장할&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; 
+
+&lt;span class=&quot;n&quot;&gt;문자형&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;리터럴을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;작성할&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;때에는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;반드시&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;큰&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;따옴표&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;””&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;가&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;아닌&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;작은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;따옴표&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;’’&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사용하여야&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;합니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;큰&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;따옴표를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사용한&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;리터럴은&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;문자형&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;리터럴이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;아니라&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;문자열&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;리터럴로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;인식되기&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;때문입니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; 
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;sc&quot;&gt;&apos;a&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ab&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 에러 : 단 하나의 문자만 할당할 수 있습니다. &lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;a&quot;&lt;/span&gt;   &lt;span class=&quot;c1&quot;&gt;// 에러 : 작은 따옴표를 사용해야 합니다. &lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;65&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;letter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 출력 결과 : A&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;short&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)/&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;double&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;
+
+
+&lt;span class=&quot;n&quot;&gt;하나만&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;짚자면&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;위의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;순서도에서&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;float은&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;byte인데&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;int와&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;long보다&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;더&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;뒤쪽에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있습니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;이는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;float이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;표현할&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;수&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;있는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;값이&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;모든&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정수형보다&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;더&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;정밀하기&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;때문입니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// float이 long보다 정밀하므로, 자동으로 타입이 변환됩니다.&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;long&lt;/span&gt;  &lt;span class=&quot;n&quot;&gt;longValue&lt;/span&gt;  &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;12345L&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;float&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;floatValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;longValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;floatValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// 12345.0이 출력됩니다.&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;수동으로&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;타입을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변환할&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;때에는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;캐스팅&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;연산자&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;를&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;사용하며&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;캐스팅&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;연산자의&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;괄호&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;안에&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;변환하고자&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;하는&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;타입을&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;적어주면&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;됩니다&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;
+&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;//int 타입으로 선언된 변수 intValue를 더 작은 단위인 byte로 변환합니다.&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;intValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;128&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;byteValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;byteValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// -128&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;hr /&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 문자열 리터럴을 String 타입의 변수 name에 할당하는 방법&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Kim Coding&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// String 클래스의 인스턴스를 생성하는 방법&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Kim Coding&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Kim Coding&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Kim Coding&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Kim Coding&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Kim Coding&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Kim Coding&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;      &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison4&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;             &lt;span class=&quot;c1&quot;&gt;// false&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison5&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Kim Coding&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison6&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;comparison7&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name3&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;equals&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;name4&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;        &lt;span class=&quot;c1&quot;&gt;// true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;h3 id=&quot;위-코드-설명&quot;&gt;위 코드 설명&lt;/h3&gt;
+&lt;details&gt;
+&lt;summary&gt;접기/펼치기 버튼&lt;/summary&gt;
+
+위 예제를 설명하기 전에 먼저 등가 비교 연산자 ==와 equals() 메서드에 대해서 간략하게 설명하겠습니다. 등가 비교 연산자는 다음 유닛 [연산자]에서 학습합니다. 
+
+등가 비교 연산자는 좌항 == 우항의 형태로 사용할 수 있으며, 좌항의 값과 우항의 값이 일치하는지 검사하여 일치하면 true를, 일치하지 않으면 false를 반환합니다. 양쪽의 항에는 변수 또는 값 등이 위치할 수 있습니다. 
+
+equals()메서드는 간단히 설명하면, .앞의 변수가 저장하고 있는 문자열의 내용과 () 안의 문자열의 내용이 같은지 비교하여 같으면 true를 다르면 false를 반환해줍니다. 
+
+이제 예제를 보며 다시 두 방법 간의 차이를 알아봅시다. 
+
+name1과 name2는 1번의 방법, 즉 문자열 리터럴을 String 타입의 변수에 직접 할당하는 방법을 사용하고 있습니다. 이처럼 동일한 문자열 리터럴을 두 변수에 할당하는 경우, 두 변수는 같은 문자열의 참조값을 공유합니다. 즉, name1과 name2가 저장하게 되는 문자열의 주소값은 같습니다. 
+
+반면, name3과 name4는 2번의 방법, 즉 String 클래스의 인스턴스를 생성해서 String 타입의 변수에 할당하는 방법을 사용하고 있습니다. 이처럼 String 클래스의 인스턴스를 생성하게 되면 문자열의 내용이 같을지라도, 별개의 인스턴스가 따로 생성됩니다. 따라서, name3과 name4가 할당받게 되는 인스턴스의 참조값은 서로 다릅니다. 즉, name3과 name4는 서로 다른 인스턴스의 주소값을 저장하고 있게 됩니다. 
+
+이제 comparison1 ~ 7을 살펴봅시다. 
+
+    comparison1
+        name1은 Kim Coding이라는 문자열 리터럴을 직접 할당받았으며, 비교의 대상이 되는 우항 또한 Kim Coding이라는 내용이 같은 문자열입니다. 문자열 리터럴은 내용이 같다면 같은 주소값을 가지기 때문에 true가 반환됩니다.
+
+    comparison2
+        name1과 name2는 내용이 같은 문자열 리터럴을 직접 할당받은 변수입니다. 따라서 두 변수는 같은 문자열의 참조값을 가지므로, true가 반환됩니다.
+
+    comparison3
+        name1은 문자열 리터럴을 할당 받은 변수이며, name3은 String 클래스를 통해 인스턴스를 생성하여 할당받은 변수입니다. String 클래스로 인스턴스를 생성하면 항상 별개의 인스턴스가 생성됩니다. 따라서 name1과 name3은 다른 주소값을 저장하고 있게 되므로 false가 반환됩니다.
+
+    comparison4
+        name3과 name4는 둘 다 String 클래스로 인스턴스를 생성하여 할당받은 변수입니다. String 클래스로 인스턴스를 생성하면 항상 별개의 인스턴스가 생성되므로 두 변수는 서로 다른 주소값을 저장하게 됩니다. 따라서 결과값으로 false가 반환됩니다.
+
+    comparison5
+        equals() 메서드를 활용하여 name1과 “Kim Coding&quot;의 내용이 같은지 비교하고 있습니다. 이 둘은 참조값도 같고 내용도 같습니다. equals() 메서드는 내용이 같은지만을 비교합니다. 따라서 결과값으로 true가 반환됩니다.
+
+    comparison6 :
+        equals() 메서드를 활용하여 name1과 name3의 문자열 내용이 같은지 비교하고 있습니다. name1과 name3은 참조값은 서로 다르지만 내용은 같습니다. 따라서 결과값으로 true가 반환됩니다.
+
+    comparison7
+        equals() 메서드를 활용하여 name3과 name4의 문자열 내용이 같은지 비교하고 있습니다. comparison6의 경우와 마찬가지로, name3과 name4는 서로 다른 참조값을 가지지만, 이 둘이 가리키고 있는 인스턴스의 내용은 같습니다. 따라서 결과값으로 true가 반환됩니다.
+
+
+&lt;/details&gt;
+
+&lt;details&gt;
+&lt;summary&gt;1. charAt() 메서드&lt;/summary&gt;
+
+```java
+String str = new String(&quot;Java&quot;);
+System.out.println(&quot;문자열 : &quot; + str); // &quot;문자열 : Java&quot;
+
+System.out.println(str.charAt(0)); // &apos;J&apos;
+System.out.println(str.charAt(1)); // &apos;a&apos;
+System.out.println(str.charAt(2)); // &apos;v&apos;
+System.out.println(str.charAt(3)); // &apos;a&apos;
+
+System.out.println(&quot;\ncharAt() 메서드 호출 후 문자열 : &quot; + str);
+```
+
+&lt;/details&gt;
+
+&lt;details&gt;
+&lt;summary&gt;2. compareTo() 메서드&lt;/summary&gt;
+
+```java
+String str = new String(&quot;abcd&quot;);
+System.out.println(&quot;문자열 : &quot; + str);
+System.out.println(str.compareTo(&quot;bcef&quot;));
+System.out.println(str.compareTo(&quot;abcd&quot;) + &quot;\n&quot;);
+System.out.println(str.compareTo(&quot;Abcd&quot;));
+System.out.println(str.compareToIgnoreCase(&quot;Abcd&quot;));
+System.out.println(&quot;compareTo() 메서드 호출 후 문자열 : &quot; + str);
+```
+&lt;/details&gt;
+
+&lt;details&gt;
+&lt;summary&gt;3. concat() 메서드&lt;/summary&gt;
+
+```java
+String str = new String(&quot;Java&quot;);
+System.out.println(&quot;문자열 : &quot; + str);
+System.out.println(str.concat(&quot;수업&quot;));
+System.out.println(&quot;concat() 메서드 호출 후 문자열 : &quot; + str);
+```
+&lt;/details&gt;
+
+&lt;details&gt;
+&lt;summary&gt;4. indexOf() 메서드&lt;/summary&gt;
+
+```java
+String str = new String(&quot;Oracle Java&quot;);
+System.out.println(&quot;문자열 : &quot; + str);
+System.out.println(str.indexOf(&apos;o&apos;));
+System.out.println(str.indexOf(&apos;a&apos;));
+System.out.println(str.indexOf(&quot;Java&quot;));
+System.out.println(&quot;indexOf() 메서드 호출 후 원본 문자열 : &quot; + str);
+```
+&lt;/details&gt;
+
+&lt;details&gt;
+&lt;summary&gt;5. trim() 메서드&lt;/summary&gt;
+
+```java
+String str = new String(&quot; Java     &quot;);
+System.out.println(&quot;문자열 : &quot; + str);
+System.out.println(str + &apos;|&apos;);
+System.out.println(str.trim() + &apos;|&apos;);
+System.out.println(&quot;trim() 메서드 호출 후 문자열 : &quot; + str);
+```
+&lt;/details&gt;
+
+&lt;details&gt;
+&lt;summary&gt;6. toLowerCase() 와 toUpperCase() 메서드&lt;/summary&gt;
+
+```java
+String str = new String(&quot;Java&quot;);
+System.out.println(&quot;문자열 : &quot; + str);
+System.out.println(str.toLowerCase());
+System.out.println(str.toUpperCase());
+System.out.println(&quot;두 메서드 호출 후 문자열 : &quot; + str);
+```
+&lt;/details&gt;
+
+&lt;hr /&gt;
+
+&lt;이해 안되는=&quot;&quot; 것들=&quot;&quot; 정리=&quot;&quot;&gt;
+11번 문제. 
+```java
+package com.codestates.coplit; 
+
+public class Solution { 
+	public int convertToNumber(char character) {
+    int result;
+    // TODO: 여기에 코드를 작성합니다.
+    result = Character.getNumericValue(character);
+    //하단의 코드는 수정하지 말아야 합니다.
+    return result;
+  }
+}
+```
+=============================
+## 07.05 조건문, 반복문
+
+    조건문: if, switch
+    반복문:  for, while, do while
+&lt;/이해&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><category term="TIL" /><category term="tag1" /><summary type="html">개발일지 참고 사이트 https://velog.io/@mooh2jj/Java-stream-Collector-%EC%99%9C-%EC%93%B0%EB%8A%94-%EA%B1%B0%EC%95%BC 자바 티포인트 https://www.javatpoint.com/</summary></entry><entry><title type="html">Html,css연습</title><link href="http://localhost:4000/blog/2022-06-28-html,css%EC%97%B0%EC%8A%B5/" rel="alternate" type="text/html" title="Html,css연습" /><published>2022-06-28T00:00:00+09:00</published><updated>2022-06-28T00:00:00+09:00</updated><id>http://localhost:4000/blog/html,css%EC%97%B0%EC%8A%B5</id><content type="html" xml:base="http://localhost:4000/blog/2022-06-28-html,css%EC%97%B0%EC%8A%B5/">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;twittler&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;code.css&quot; /&gt;
+ 
+
+ &lt;/head&gt;
+  &lt;body&gt;
+
+    &lt;div id=&quot;sub-body&quot;&gt;
+        &lt;header&gt;
+            Twitter
+
+        &lt;/header&gt;
+
+
+        &lt;main&gt;
+            &lt;p&gt;Welcome to the Twittler Code States&lt;/p&gt;
+
+            &lt;form id=&quot;inputbox&quot;&gt;
+                &lt;div&gt;
+                    &lt;label for=&quot;usernameInput&quot;&gt;Username&lt;/label&gt;
+                    &lt;input id=&quot;usernameInput&quot;&gt;
+                &lt;/div&gt;
+
+              &lt;div&gt;
+                &lt;label for=&quot;messageInput&quot;&gt;Message&lt;/label&gt;
+                &lt;input id=&quot;messageInput&quot;&gt;
+              &lt;/div&gt;
+              &lt;button type=&quot;button&quot; id=&quot;tweetButton&quot;&gt;Twitt&lt;/button&gt;
+              &lt;button type=&quot;button&quot; id=&quot;randomButton&quot;&gt;Check New Twitt&lt;/button&gt;
+            &lt;/form&gt;
+
+
+            &lt;section id=&quot;tweetlist&quot; class=&quot;white&quot;&gt;
+              &lt;ul id = &quot;tweetWrapper&quot;&gt;
+                &lt;li class = &quot;white&quot;&gt;
+
+                    &lt;span class = &quot;tweetusername&quot;&gt;01&lt;/span&gt;
+                    &lt;div class = &quot;tweetcreatedAt&quot;&gt;2022. 06. 29&lt;/div&gt;
+                    &lt;div class = &quot;tweetmessage&quot;&gt;안녕하세요&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class = &quot;white&quot;&gt;
+
+                    &lt;span class = &quot;tweetusername&quot;&gt;02&lt;/span&gt;
+                    &lt;div class = &quot;tweetcreatedAt&quot;&gt;2022. 06. 29&lt;/div&gt;
+                    &lt;div class = &quot;tweetmessage&quot;&gt;안녕하세요&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class = &quot;white&quot;&gt;
+
+                    &lt;span class = &quot;tweetusername&quot;&gt;03&lt;/span&gt;
+                    &lt;div class = &quot;tweetcreatedAt&quot;&gt;2022. 06. 29&lt;/div&gt;
+                    &lt;div class = &quot;tweetmessage&quot;&gt;안녕하세요&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class = &quot;white&quot;&gt;
+
+                    &lt;span class = &quot;tweetusername&quot;&gt;04&lt;/span&gt;
+                    &lt;div class = &quot;tweetcreatedAt&quot;&gt;2022. 06. 29&lt;/div&gt;
+                    &lt;div class = &quot;tweetmessage&quot;&gt;안녕하세요&lt;/div&gt;
+                &lt;/li&gt;
+                &lt;li class = &quot;white&quot;&gt;
+
+                  &lt;span class = &quot;tweetusername&quot;&gt;04&lt;/span&gt;
+                  &lt;div class = &quot;tweetcreatedAt&quot;&gt;2022. 06. 29&lt;/div&gt;
+                  &lt;div class = &quot;tweetmessage&quot;&gt;안녕하세요&lt;/div&gt;
+              &lt;/li&gt;                &lt;li class = &quot;white&quot;&gt;
+
+                &lt;span class = &quot;tweetusername&quot;&gt;04&lt;/span&gt;
+                &lt;div class = &quot;tweetcreatedAt&quot;&gt;2022. 06. 29&lt;/div&gt;
+                &lt;div class = &quot;tweetmessage&quot;&gt;안녕하세요&lt;/div&gt;
+            &lt;/li&gt;
+              
+                &lt;li class = &quot;white&quot;&gt;
+
+                    &lt;span class = &quot;tweetusername&quot;&gt;last&lt;/span&gt;
+                    &lt;div class = &quot;tweetcreatedAt&quot;&gt;2022. 06. 29&lt;/div&gt;
+                    &lt;div class = &quot;tweet__message&quot;&gt;
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                      daadawd
+                    &lt;/div&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+
+
+            &lt;/section&gt;
+
+        &lt;/main&gt;
+
+    &lt;/div&gt;
+
+
+    &lt;footer&gt;
+        &lt;p&gt;Twittler 페이지 입니다&lt;/p&gt;
+    &lt;/footer&gt;
+
+
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><summary type="html">twittler</summary></entry><entry><title type="html">Html,css연습</title><link href="http://localhost:4000/blog/2022-06-28-html,css%EC%97%B0%EC%8A%B5/" rel="alternate" type="text/html" title="Html,css연습" /><published>2022-06-28T00:00:00+09:00</published><updated>2022-06-28T00:00:00+09:00</updated><id>http://localhost:4000/blog/html,css%EC%97%B0%EC%8A%B5</id><content type="html" xml:base="http://localhost:4000/blog/2022-06-28-html,css%EC%97%B0%EC%8A%B5/">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;twittler&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;index.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;sub-body&quot;&gt;
+      &lt;header&gt;
+        Twitter
+      &lt;/header&gt;
+
+      &lt;main&gt;
+        &lt;p&gt;Welcome to the Twittler Code States&lt;/p&gt;
+
+        &lt;form id=&quot;inputbox&quot;&gt;
+          &lt;label for=&quot;usernameInput&quot;&gt;Username&lt;/label&gt;
+          &lt;input id=&quot;usernameInput&quot; /&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;label for=&quot;messageInput&quot;&gt;Message&lt;/label&gt;
+          &lt;input id=&quot;messageInput&quot; /&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;button type=&quot;button&quot; id=&quot;tweetButton&quot;&gt;Twitt&lt;/button&gt;
+          &lt;button type=&quot;button&quot; id=&quot;randomButton&quot;&gt;Check New Twitt&lt;/button&gt;
+        &lt;/form&gt;
+
+        &lt;section id=&quot;tweetlist&quot; class=&quot;white&quot;&gt;&lt;/section&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            01
+        &lt;span class=&quot;tweet_username&quot;&gt;
+
+        &lt;/span&gt;
+            
+    &lt;/li&gt;
+        &lt;li&gt;
+            02
+        &lt;/li&gt;
+    
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;br&gt;
+    &lt;br&gt;
+    sdsd
+
+
+      &lt;div class=&quot;footer&quot;&gt;
+        &lt;p&gt;Twittler 페이지 입니다&lt;/p&gt;&lt;/div&gt;
+
+
+
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><summary type="html">twittler Twitter</summary></entry><entry><title type="html">Html,css연습 copy</title><link href="http://localhost:4000/blog/2022-06-28-html,css%EC%97%B0%EC%8A%B5-copy/" rel="alternate" type="text/html" title="Html,css연습 copy" /><published>2022-06-28T00:00:00+09:00</published><updated>2022-06-28T00:00:00+09:00</updated><id>http://localhost:4000/blog/html,css%EC%97%B0%EC%8A%B5%20copy</id><content type="html" xml:base="http://localhost:4000/blog/2022-06-28-html,css%EC%97%B0%EC%8A%B5-copy/">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;title&gt;twittler&lt;/title&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; media=&quot;screen&quot; href=&quot;index.css&quot; /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id=&quot;sub-body&quot;&gt;
+      &lt;header&gt;
+        Twitter
+      &lt;/header&gt;
+
+      &lt;main&gt;
+        &lt;p&gt;Welcome to the Twittler Code States&lt;/p&gt;
+
+        &lt;form id=&quot;inputbox&quot;&gt;
+          &lt;label for=&quot;usernameInput&quot;&gt;Username&lt;/label&gt;
+          &lt;input id=&quot;usernameInput&quot; /&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;label for=&quot;messageInput&quot;&gt;Message&lt;/label&gt;
+          &lt;input id=&quot;messageInput&quot; /&gt;
+          &lt;div&gt;&lt;/div&gt;
+          &lt;button type=&quot;button&quot; id=&quot;tweetButton&quot;&gt;Twitt&lt;/button&gt;
+          &lt;button type=&quot;button&quot; id=&quot;randomButton&quot;&gt;Check New Twitt&lt;/button&gt;
+        &lt;/form&gt;
+
+        &lt;section id=&quot;tweetlist&quot; class=&quot;white&quot;&gt;&lt;/section&gt;
+      &lt;/main&gt;
+    &lt;/div&gt;
+    &lt;ul&gt;
+        &lt;li&gt;
+            01
+        &lt;span class=&quot;tweet_username&quot;&gt;
+
+        &lt;/span&gt;
+            
+    &lt;/li&gt;
+        &lt;li&gt;
+            02
+        &lt;/li&gt;
+    
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+
+    &lt;br&gt;
+    &lt;br&gt;
+    sdsd
+
+
+      &lt;div class=&quot;footer&quot;&gt;
+        &lt;p&gt;Twittler 페이지 입니다&lt;/p&gt;&lt;/div&gt;
+
+
+
+    &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><summary type="html">twittler Twitter</summary></entry><entry><title type="html">깃헙 블로그, 리액트 앱 설치 실행기</title><link href="http://localhost:4000/blog/til%20bundle%20jekyll%20react/2022-06-26-a01/" rel="alternate" type="text/html" title="깃헙 블로그, 리액트 앱 설치 실행기" /><published>2022-06-26T00:00:00+09:00</published><updated>2022-06-26T00:00:00+09:00</updated><id>http://localhost:4000/blog/til%20bundle%20jekyll%20react/a01</id><content type="html" xml:base="http://localhost:4000/blog/til%20bundle%20jekyll%20react/2022-06-26-a01/">&lt;p&gt;코드스테이츠 개강 전날 급하게 깃헙 블로그를 생성하고, 들어만 보았던&lt;br /&gt;
+React 라는 것을 직접 설치해보고 지금도 그것들에 대해 잘 알지 못하지만&lt;br /&gt;
+그나마 이해한 거라도 까먹지 않기 위해 이 회고를 작성하기로 하였다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;[name]&lt;/th&gt;
+      &lt;th&gt;[url]&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Minimal-misteaks 공식 리포지토리&lt;/td&gt;
+      &lt;td&gt;https://github.com/mmistakes/minimal-mistakes&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;React 설치부터 배포까지의 과정을 정리&lt;/td&gt;
+      &lt;td&gt;https://dev.classmethod.jp/articles/the-process-from-installing-react-to-distributing-it/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;[취미로 코딩하는 개발자]&lt;/td&gt;
+      &lt;td&gt;&lt;a href=&quot;https://devinlife.com/&quot;&gt;취미로 코딩하는 개발자&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;평생 블로그를 써본 적 없던 나는 어떤 블로그 플랫폼을 사용할지 결정하기 힘들었고,&lt;br /&gt;
+당장 내일로 코드스테이츠 개강일이 다가오자 그나마 익숙한 깃헙에 블로그를 개설하기로 하였다.&lt;/p&gt;
+
+&lt;p&gt;그래서 위 가이드에 따라서 일단 입문으로 minimal-mistakes 템플릿을 다운받고 사용하기로 하였다. &lt;br /&gt;
+그 후 다른 부분은 어느 정도 따라 할 수 있었으나&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle exe jekyll serve
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;입력 후 &lt;a href=&quot;https://127.0.0.1:4000&quot;&gt;https://127.0.0.1:4000&lt;/a&gt;에 접속하는 부분에서 에러가 발생하며 되지 않았다.&lt;br /&gt;
+당시는 왜 그런지 모르고 시간도 없어서 일단 넘어갔다.&lt;/p&gt;
+
+&lt;p&gt;그리고 &lt;a href=&quot;https://seb.oopy.io/entry-course&quot;&gt;코드스테이츠 엔트리코스&lt;/a&gt; 를 따라하다가 만들어져서 이것을 로컬에서도 실행하는 법을 알고 싶어졌다.&lt;/p&gt;
+
+&lt;p&gt;그래서 검색하다가 위 블로그를 찾았고&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;React 앱 설치 및 실행
+    &lt;blockquote&gt;
+      &lt;p&gt;npm, node.js 설치&lt;br /&gt;
+npm install -g create-react-app&lt;br /&gt;
+create-react-app -V &lt;br /&gt;
+create-react-app . // 앱 폴더에서 실행&lt;br /&gt;
+npm run start // 로컬호스트에 실행&lt;br /&gt;
+npm run build // build 폴더에 빌드&lt;br /&gt;
+npm install -g serve&lt;br /&gt;
+serve -s build // build 폴더 내용을 로컬호스트에 실행&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+  &lt;li&gt;깃헙 블로그 로컬 실행의 경우
+    &lt;blockquote&gt;
+      &lt;p&gt;sudo apt install ruby ruby-dev buld-essential&lt;br /&gt;
+gem install jekyll bundler    &lt;br /&gt;
+jekyll new NewBlog // jekyll 로 바로 블로그를 생성할 경우.&lt;br /&gt;
+bundle exec jekyll serve // 127.0.0.1에 블로그 실행&lt;br /&gt;
+bundle exec jekyll serve -H 192.168.0.8 // 로컬 네트워크 상의 다른 기기에서 접속 가능&lt;/p&gt;
+    &lt;/blockquote&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;지금 생각해보면 비슷한 점이 있거나 공통된 사용 프로그램이 있는지는 잘 모르겠다. 하지만&lt;br /&gt;
+전부 기억해두고 다음에 이것들에 대해 잘 알아두면&lt;br /&gt;
+나중에 나만의 react 앱 등을 테스트 해볼 데 분명 도움이 될 것이다.&lt;/p&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><category term="TIL bundle jekyll React" /><category term="tag1" /><summary type="html">코드스테이츠 개강 전날 급하게 깃헙 블로그를 생성하고, 들어만 보았던 React 라는 것을 직접 설치해보고 지금도 그것들에 대해 잘 알지 못하지만 그나마 이해한 거라도 까먹지 않기 위해 이 회고를 작성하기로 하였다.</summary></entry><entry><title type="html">학습목표</title><link href="http://localhost:4000/blog/dev/2022-06-23-Development%EA%B8%B0%EC%B4%88/" rel="alternate" type="text/html" title="학습목표" /><published>2022-06-23T00:00:00+09:00</published><updated>2022-06-23T00:00:00+09:00</updated><id>http://localhost:4000/blog/dev/Development%EA%B8%B0%EC%B4%88</id><content type="html" xml:base="http://localhost:4000/blog/dev/2022-06-23-Development%EA%B8%B0%EC%B4%88/">&lt;p&gt;-컴퓨터의 구성 요소에 대해서 설명할 수 있다.&lt;br /&gt;
+     -프로그램을 실행하면 컴퓨터 내부에서 어떤 일이 일어나는지 이해할 수 있다.&lt;br /&gt;
+     -프로그래밍과 관련된 개념들을 설명할 수 있다:&lt;br /&gt;
+         -프로그램, 프로그래밍, 프로그래밍 언어, 컴파일, 빌드, 통합개발환경
+     -웹 클라이언트와 웹 서버가 무엇인지 설명할 수 있다.
+     -자신의 운영체제에 맞는 개발 도구를 설치하고, 환경설정을 할 수 있다.
+     -IntelliJ의 기본적인 기능들을 사용할 수 있다.&lt;/p&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><category term="dev" /><category term="코드스테이츠" /><summary type="html">-컴퓨터의 구성 요소에 대해서 설명할 수 있다. -프로그램을 실행하면 컴퓨터 내부에서 어떤 일이 일어나는지 이해할 수 있다. -프로그래밍과 관련된 개념들을 설명할 수 있다: -프로그램, 프로그래밍, 프로그래밍 언어, 컴파일, 빌드, 통합개발환경 -웹 클라이언트와 웹 서버가 무엇인지 설명할 수 있다. -자신의 운영체제에 맞는 개발 도구를 설치하고, 환경설정을 할 수 있다. -IntelliJ의 기본적인 기능들을 사용할 수 있다.</summary></entry><entry><title type="html">2022.06</title><link href="http://localhost:4000/blog/til/2022-06-22-22.06/" rel="alternate" type="text/html" title="2022.06" /><published>2022-06-22T00:00:00+09:00</published><updated>2022-06-22T00:00:00+09:00</updated><id>http://localhost:4000/blog/til/22.06</id><content type="html" xml:base="http://localhost:4000/blog/til/2022-06-22-22.06/">&lt;hr /&gt;
+&lt;p&gt;약 한 달 전 생애 처음으로 개발 공부를 시작하고 많은 방황을 하였습니다.
+이제 약간 공부 방향이 잡힌 듯하여 github blog에 
+개발공부일지를 작성하고자 합니다.&lt;/p&gt;
+
+&lt;h1 id=&quot;22060120&quot;&gt;22.06.01~20&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;개발공부 입문으로 &lt;a href=&quot;https://ridd-coding.tistory.com/&quot;&gt;릿드의 코딩연구소&lt;/a&gt; 를 따라 
+간단한 자바 게임을 만들어보기로 하였다.&lt;/li&gt;
+  &lt;li&gt;이클립스와 jdk를 설치하고, 플리그인들을 설치하였다.&lt;/li&gt;
+  &lt;li&gt;다 완성 후 이클립스 에디터 안에서는 잘 실행되지만 
+Runnable Jar 에서는 계속 NullPointerError가 떠서 너무 힘들었는데, 
+결국 이미지 파일 경로에서 대소문자 하나 잘못 쓴 것으로 밝혀졌다…&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;220621&quot;&gt;22.06.21&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;Minimal-Mistakes 테마를 사용하여 깃헙 블로그 생성&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;참고한 사이트: &lt;br /&gt;
+&lt;a href=&quot;https://devinlife.com/&quot;&gt;취미로 코딩하는 개발자&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://velog.io/@eona1301&quot;&gt;공유의 가치를 추구하는 개발자&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://blog.devari.kr/&quot;&gt;Dev Ari&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://milooy.github.io/TIL/&quot;&gt;Today Yurim Learned&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://gist.github.com/ihoneymon/652be052a0727ad59601&quot;&gt;마크다운 작성법&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://github.com/JiwoonKim/JUNEKIM.dev&quot;&gt;JuneKim repo&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;앞으로 가급적 개발한 프로그램을 저장소에 올리고 md, jekyll 문법을 더 공부하여 일지와 블로그를 더 미려하게 꾸밀 계획이다. 그림도 올리고.&lt;/li&gt;
+  &lt;li&gt;내일 8시부터 코드스테이츠 백엔드 부트캠프 시작이다. 내일 OT는 오전 7시에 시작&lt;/li&gt;
+  &lt;li&gt;노션 사이트&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.notion.so/Index-Software-Engineering-Backend-24-dfbb5b1399c54d04885b090f385ef8eb&quot;&gt;개강안내문서&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.notion.so/D-0beb0e4bba3749199d0ad705a0d52edc&quot;&gt;학습툴세팅&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;220622&quot;&gt;22.06.22&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;코드스테이츠의 엔트리코스 중 js기초를 연습하다 너무 맘에 드는 결과가 만들어져서 
+다운받아 보관하고 싶어졌다. 그런데 태어나서 처음으로 접하는 js파일을 어떻게 실행하는지 몰라 구글링하였고, 
+&lt;a href=&quot;https://dev.classmethod.jp/articles/the-process-from-installing-react-to-distributing-it/&quot;&gt;React 설치부터 배포까지의 과정을 정리&lt;/a&gt;
+를 참고하여 VS Code 에 관련 패키지 설치 후, 드디어 빌드 및 로컬 실행에 성공하였다.
+말로만 듣던 리액트 라는 것도 이렇게 접하니 신기했다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;한편 전에 만든 java slime game 을 비롯하여, 앞으로 공부하면서 만들게 될 크고 작은 
+앱과 서비스 소스들을 깃헙이나 블로그에 올려야 할지, 아니면 핵심이 되거나 중요한 부분의 코드만 올려야 할지, 수많은 언어와 프레임워크 별로 어떻게 관리해야 할지 생각하니 머리가 복잡하다.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;좋은 방법이 생각나기 전에는 일단 로컬 저장소에 잘 정리해두기로 하였다. 
+&lt;img src=&quot;https://appstew.github.io/img/01.png&quot; alt=&quot;첫 리액트 앱_filepath&quot; /&gt;
+&lt;img src=&quot;https://appstew.github.io/img/slime_game.png&quot; alt=&quot;slime_game.png&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;220623-현재-0700-드디어-코드스테이츠-백엔드-2기-수강-시작&quot;&gt;22.06.23 현재 07:00 드디어 코드스테이츠 백엔드 2기 수강 시작!&lt;/h1&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;데일리 회고 가이드&lt;br /&gt;
+-블로그나 노트에 기록.&lt;/p&gt;
+  &lt;ul&gt;
+    &lt;li&gt;학습 전(10분)&lt;br /&gt;
+-오늘의 학습목표&lt;br /&gt;
+-오늘 학습할 내용 중에 이미 알고 있는 내용?&lt;/li&gt;
+    &lt;li&gt;학습 후(30분)&lt;br /&gt;
+-새롭게 배운 내용&lt;br /&gt;
+-다른 사람에게 설명할 수 있나요?&lt;br /&gt;
+-오늘 학습한 내용 중 아직 이해되지 않은 불확실한 내용은 무엇인가요?&lt;br /&gt;
+-또 그런 내용을 보완하기 위해서 내가 할 수 있는 일은?&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;페어프로그래밍이 종료되면 페어 리뷰를 작성하여 발송. &lt;a href=&quot;https://urclass.codestates.com/fa50f6cc-e972-4fd0-93ef-29a4073a7a44?playlist=1783&quot;&gt;페어리뷰 안내문서&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;// 새로 배운 md 문법&lt;/p&gt;
+&lt;h1 id=&quot;html-요소&quot;&gt;HTML 요소&lt;/h1&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; div
+ span
+ ul, ol, li
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h1 id=&quot;html-구조&quot;&gt;HTML 구조&lt;/h1&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; id
+ class
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;22.06.23 20:00
+====
+코듣스테이츠 백엔드 부트캠프 40기의 첫 날 과정을 마쳤다.&lt;br /&gt;
+줌에서 OT와 section01 의 일부 학습을 진행하였다.&lt;br /&gt;
+section01 에 잘 짜여진 교육자료들을 보니 너무 기분이 좋고 당장이라도 전부 
+공부하고 싶지만,&lt;br /&gt;
+앞으로 저 많은 것들을 공부하면서 공부한 내용과 자료들을 잘 정리할 수 있는 환경을&lt;br /&gt;
+먼저 구성해야할 것 같아, 오늘 자기 전까진 깃헙 블로그와 md 문법을 조금 공부해야겠다.&lt;/p&gt;
+
+&lt;p&gt;나중엔 바뀔지도 모르지만, 일단 지금 이 블로그가 구성된 minial-mistakes 템플릿의 &lt;br /&gt;
+&lt;a href=&quot;https://github.com/mmistakes/minimal-mistakes&quot;&gt;공식 깃허브 리포&lt;/a&gt;와 
+&lt;a href=&quot;https://mmistakes.github.io/minimal-mistakes/&quot;&gt;예시 사이트&lt;/a&gt; 를 보면서 공부하기로 하였다.&lt;/p&gt;
+
+&lt;h1 id=&quot;220624&quot;&gt;22.06.24&lt;/h1&gt;
+&lt;p&gt;강의자료에 따라 intelliJ 를 설치하고 튜토리얼을 진행하였다.&lt;br /&gt;
+사용하던 Eclipse 에 비해 굉장히 유용한 단축키들이 많다.&lt;br /&gt;
+하지만 너무 많아서 익숙해질 때까지 필요할 때마다 튜토리얼을 다시 진행해야 겠다.&lt;/p&gt;
+
+&lt;p&gt;한편 for문은 이미 본 적이 있고 알고 있다고 생각했는데,&lt;/p&gt;
+
+&lt;p&gt;튜토리얼을 진행하다가 굉장히 간단한&lt;/p&gt;
+
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;su&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++);&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;su&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;su&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;su&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;에서 당연히 5050 이 출력될 것으로 예상하였으나, &lt;br /&gt;
+오류가 발생하였다.&lt;br /&gt;
+이해가 안돼서 코드를 차근차근 살펴본 후,&lt;/p&gt;
+
+&lt;p&gt;1.for문 위에 static int i = 0; 추가&lt;br /&gt;
+2.이클립스로도 실행&lt;br /&gt;
+3.그 외에 두 IDE 에서 제안하는 오류 수정 방법을 모두 실행&lt;/p&gt;
+
+&lt;p&gt;하였으나 0값만 출력할 뿐이었다.&lt;br /&gt;
+인터넷에서 찾은 코드와 비교해도 차이를 알지 못했는데..&lt;/p&gt;
+
+&lt;p&gt;for () 뒤에 ; 을 잘못 입력했다는 것을 한참 후에야 발견했다..&lt;/p&gt;
+
+&lt;p&gt;그래서 ; 를 지운 뒤에도 5050이 아닌 4950 이 출력되는 것을 보고&lt;br /&gt;
+i&amp;lt;100 에 대해 엄청 고민했다.&lt;br /&gt;
+나는 당연히 코드는 위에서부터 순차적으로 실행된다고 생각해서&lt;br /&gt;
+i 값이 &amp;lt;100, 즉 99 일때 i++ 를 실행한 후 최종 i=100 이 된다고 생각했는데, &lt;br /&gt;
+그게 아니고 최종 i 값에 대한 조건을 지정하는 것을 알게 되었다.&lt;/p&gt;
+
+&lt;p&gt;1부터 100까지의 합을 구하는 최종 코드는 다음과 같다.&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Main&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Hello World&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;su&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;n&quot;&gt;su&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;su&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;su&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+&lt;p&gt;이후 100까지의 자연수 중 소수를 구하는 다음 코드를 보고&lt;/p&gt;
+&lt;div class=&quot;language-java highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;PrimeNumbers&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;args&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;Prime numbers between 1 and 100&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+
+        &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+            &lt;span class=&quot;kt&quot;&gt;boolean&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;isPrime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+
+            &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                    &lt;span class=&quot;n&quot;&gt;isPrime&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                    &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;;&lt;/span&gt;
+                &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+            &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;isPrime&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+                &lt;span class=&quot;nc&quot;&gt;System&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;out&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;);&lt;/span&gt;
+            &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;ol&gt;
+  &lt;li&gt;정수 i와 j 에 대해&lt;/li&gt;
+  &lt;li&gt;2 &amp;lt;= i &amp;lt; 100, 2 &amp;lt;= j &amp;lt; i&lt;/li&gt;
+  &lt;li&gt;i 가 j 로 나누어 떨어지면 isPrime = false&lt;/li&gt;
+  &lt;li&gt;그 외의 나머지 상황,&lt;br /&gt;
+즉 2 &amp;lt;= i &amp;lt; 100 인 동안 i 가 소수일 경우(isPrime = true) i 를 출력&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;로 이해할 수 있었다.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;220627&quot;&gt;22.06.27&lt;/h1&gt;
+&lt;p&gt;HTML,CSS 과목이 시작됐다.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;내용&lt;/th&gt;
+      &lt;th&gt;url&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;W3 Schools&lt;/td&gt;
+      &lt;td&gt;https://www.w3schools.com/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;시맨틱 mmdn 문서&lt;/td&gt;
+      &lt;td&gt;https://developer.mozilla.org/en-US/docs/Glossary/Semantics&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HTML요소 참고서&lt;/td&gt;
+      &lt;td&gt;https://developer.mozilla.org/ko/docs/Web/HTML/Element#%EC%BD%98%ED%85%90%EC%B8%A0_%EA%B5%AC%ED%9A%8D&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;구글 폰트&lt;/td&gt;
+      &lt;td&gt;https://fonts.google.com/&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CSS 크기 설정&lt;/td&gt;
+      &lt;td&gt;https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units#numbers_lengths_and_percentages&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;CSS 크기 설정2&lt;/td&gt;
+      &lt;td&gt;https://www.w3schools.com/cssref/css_units.asp&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;flexboxfroggy&lt;/td&gt;
+      &lt;td&gt;https://flexboxfroggy.com/#ko&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;와이어프레임 만드는 사이트&lt;/td&gt;
+      &lt;td&gt;https://ovenapp.io/&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;HTML: structure (구조)
+CSS: 스타일
+JS: Interaction (상호작용)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;HTML 은 마크다운과 같이 마크업 언어 의 일종.&lt;/li&gt;
+  &lt;li&gt;자주 사용되는 HTML 요소(Element):
+```html&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div&gt; &lt;span&gt; &lt;ul&gt;&lt;li&gt;//순서없는목록 &lt;ol&gt;//순서있는목록 &lt;input /&gt;
+```
+- 기본
+```html
+&amp;lt;!DOCTYPE html&amp;gt;
+&lt;html&gt;  
+    &lt;head&gt;  // 문서의 메타데이터를 선언
+        &lt;title&gt;Page title&lt;/title&gt; // 문서 제목, 브라우저 탭에 보여짐
+    &lt;/head&gt;
+    &lt;body&gt; // 문서의 내용
+        &lt;h1&gt;Hello World&lt;/h1&gt; // heading을 의미. h1~h6
+        &lt;div&gt;Contents here // content division. 줄바꿈됨
+        &lt;span&gt;Here too!&lt;/span&gt; // content. 줄바꿈 안됨
+        &lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+```
+```html
+&lt;img src=&quot;aa.jpg&quot; /&gt; 이미지 태그는 / 가 없다.
+&lt;a href=&quot;http://naver.com&quot;&gt;네이버&lt;/a&gt;
+ // url 기본형
+&lt;a href=&quot;http://naver.com&quot; target=&quot;_blank&quot;&gt;네이버&lt;/a&gt;
+ // target=&quot;_blank&quot; 새 탭에서 열기
+ 
+ &lt;div&gt;ID &lt;input type=&quot;text&quot; placeholder=&quot;type here&quot; /&gt;&lt;/div&gt;
+ &lt;div&gt;Password &lt;input type=&quot;password&quot; /&gt;&lt;/div&gt;
+ &lt;div&gt;&lt;input type=&quot;checkbox&quot; /&gt; 다음에 들어올때 ID 기억하기 &lt;/div&gt;
+
+&lt;div&gt;&lt;input type=&quot;text area&quot; /&gt;&lt;/div&gt;
+&lt;div&gt;&lt;button&gt;로그인&lt;/button&gt;&lt;/div&gt;
+&lt;p&gt;paragraph. 문단&lt;/p&gt;
+&lt;section&gt;section. &lt;/section&gt; 
+// 시맨틱요소 mmdn 링그 https://developer.mozilla.org/en-US/docs/Glossary/Semantics
+```
+
+- 시맨틱 태그란 &lt;div&gt;와 기능은 동일하지만, 별도의 이름을 붙인 태그로 다음이 대표적이다.
+```
+&lt;header&gt; &lt;main&gt; &lt;nav&gt; &lt;aside&gt; &lt;footer&gt;
+```
+
+```css
+.box {
+  color: #155724; /* 글자 색상 */
+  background-color: #d4edda; /* 배경 색상 */
+  border-color: #c3e6cb; /* 테두리 색상 */
+}
+.emphasize {
+  font-family: &quot;SF Pro KR&quot;, &quot;MalgunGothic&quot;, &quot;Verdana&quot;;
+  font-size: 24px; // 0.8rem; 상대 크기
+}
+굵기: font-weight
+밑줄, 가로줄: text-decoration
+자간: letter-spacing
+행간: line-height
+가로 정렬: text-align: left, right, center, justtify;
+```
+- box: block box(h1, p 등), inline box(span 등), inline-block box
+
+- 좋은 방법이 생각나기 전에는 일단 로컬 저장소에 잘 정리해두기로 하였다. 
+![첫 리액트 앱_filepath](https://appstew.github.io/img/01.png)
+![slime_game](https://appstew.github.io/img/slime_game.png)
+
+
+
+===============
+
+## 22.06.28
+HTML/CSS 2일차.
+어렵다..
+[html.css공부한것_raw링크](/blog/2022-06-28-html,css%EC%97%B0%EC%8A%B5/)  
+
+[html.css공부한것_raw링크]()
+
+## 22.6.29
+
+border-box: width, padding, border 등 사이즈 통합한 최종 사이즈 규정
+
+margin을 쓰는 이유: 
+
+css 처음에 전체에 마진과 패딩을 0으로 설정하면 세부 값 결과를 계산하기 좋다
+line-height: 1.5, 2 등으로 설정
+word-spacing: 10px;
+border-radious: 5px;
+font-style: normal;
+gap: 50px;
+.form-label:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+footer { 부모요소에
+    position: relative;
+    min-height: 100px;
+}
+
+.efef__img { 자식요소에
+    position: absolute;
+    height: 10px;
+}
+
+test
+test2
+&lt;/footer&gt;&lt;/aside&gt;&lt;/nav&gt;&lt;/main&gt;&lt;/header&gt;&lt;/div&gt;&lt;/ol&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/span&gt;&lt;/div&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><category term="TIL" /><category term="tag1" /><summary type="html">약 한 달 전 생애 처음으로 개발 공부를 시작하고 많은 방황을 하였습니다. 이제 약간 공부 방향이 잡힌 듯하여 github blog에 개발공부일지를 작성하고자 합니다.</summary></entry><entry><title type="html">What’s New in Hydejack 9.1?</title><link href="http://localhost:4000/blog/hydejack/2021-02-13-whats-new-in-hydejack-9-1/" rel="alternate" type="text/html" title="What’s New in Hydejack 9.1?" /><published>2021-02-13T00:00:00+09:00</published><updated>2021-02-13T00:00:00+09:00</updated><id>http://localhost:4000/blog/hydejack/whats-new-in-hydejack-9-1</id><content type="html" xml:base="http://localhost:4000/blog/hydejack/2021-02-13-whats-new-in-hydejack-9-1/">&lt;p&gt;What’s New in Hydejack 9.1?&lt;/p&gt;
+
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#stripe-ified-design&quot; id=&quot;markdown-toc-stripe-ified-design&quot;&gt;Stripe-ified Design&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#inverted-sidebars&quot; id=&quot;markdown-toc-inverted-sidebars&quot;&gt;Inverted Sidebars&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#code-block-headers&quot; id=&quot;markdown-toc-code-block-headers&quot;&gt;Code Block Headers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#resume-download-buttons&quot; id=&quot;markdown-toc-resume-download-buttons&quot;&gt;Resume Download Buttons&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#serp-breadcrumbs&quot; id=&quot;markdown-toc-serp-breadcrumbs&quot;&gt;&lt;abbr title=&quot;Search Engine Results Page&quot;&gt;SERP&lt;/abbr&gt; Breadcrumbs&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#last-modified-at&quot; id=&quot;markdown-toc-last-modified-at&quot;&gt;Last Modified At&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#clap-button-preview&quot; id=&quot;markdown-toc-clap-button-preview&quot;&gt;Clap Button Preview&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#credits&quot; id=&quot;markdown-toc-credits&quot;&gt;Credits&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;stripe-ified-design&quot;&gt;Stripe-ified Design&lt;/h2&gt;
+&lt;p&gt;Most elements now have rounded borders, making the design look more modern (dare I say “Stripe-ified”) than ever before.&lt;/p&gt;
+
+&lt;p&gt;The goal of Hydejack was always to provide a theme that looks “designed” combined the amenities of a typical Jekyll theme for coders.
+This is an important step in maintaining this goal.&lt;/p&gt;
+
+&lt;p&gt;At the same time, I’m introducing nerdy elements like &lt;a href=&quot;#serp-breadcrumbs&quot;&gt;breadcrumbs&lt;/a&gt;, that are almost ornamental in nature.
+You wouldn’t find these on other Stripe-like designs, but I think they are appealing to developer types like myself. 
+Like most additions to Hydejack, they can be disabled via configuration.&lt;/p&gt;
+
+&lt;h2 id=&quot;inverted-sidebars&quot;&gt;Inverted Sidebars&lt;/h2&gt;
+&lt;p&gt;The colors on the sidebar can now be inverted to allow brighter sidebar images. This can be enabled per-page in the fort matter:&lt;/p&gt;
+
+&lt;div class=&quot;language-yml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;invert_sidebar&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;code-block-headers&quot;&gt;Code Block Headers&lt;/h2&gt;
+&lt;p&gt;Code blocks can now have headers:&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// file: &apos;hello-world.js&apos;&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;Hello World!&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&apos;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Headers are added by making the first line a comment of the form &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;(file|title): [&apos;&quot;].*[&apos;&quot;]&lt;/code&gt;, e.g.:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~~~js
+// file: &apos;hello-world.js&apos;
+console.log(&apos;Hello World!&apos;);
+~~~
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Code blocks with and without headers now also come with a copy button. 
+In the case of header-less code blocks, the button only shows on hover to prevent potential overlap.&lt;/p&gt;
+
+&lt;h2 id=&quot;resume-download-buttons&quot;&gt;Resume Download Buttons&lt;/h2&gt;
+&lt;p&gt;Resumes can now have download buttons:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/9.1.0-3.png&quot; alt=&quot;Download Buttons&quot; class=&quot;border lead&quot; width=&quot;1776&quot; height=&quot;258&quot; loading=&quot;lazy&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;figcaption&quot;&gt;Resumes can now have download buttons.&lt;/p&gt;
+
+&lt;p&gt;The documentation has been updated with a chapter on &lt;a href=&quot;/docs/basics/#downloads&quot;&gt;how to configure the buttons&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;serp-breadcrumbs&quot;&gt;&lt;abbr title=&quot;Search Engine Results Page&quot;&gt;SERP&lt;/abbr&gt; Breadcrumbs&lt;/h2&gt;
+&lt;p&gt;Added breadcrumbs above page title:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/9.1.0-2.png&quot; alt=&quot;Breadcrumbs&quot; class=&quot;border lead&quot; width=&quot;1588&quot; height=&quot;164&quot; loading=&quot;lazy&quot; /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;figcaption&quot;&gt;Bread crumbs are now shown above each page title.&lt;/p&gt;
+
+&lt;p&gt;Note that this requires a &lt;a href=&quot;https://qwtel.com/posts/software/urls-are-directories/&quot;&gt;directory-like URL structure&lt;/a&gt; on your entire site, 
+otherwise the intermediate links will point to nonexisting sites.&lt;/p&gt;
+
+&lt;p&gt;On a side note, Hydejack now has built-in tooltips for abbreviations like &lt;abbr title=&quot;Search Engine Results Page&quot;&gt;SERP&lt;/abbr&gt; (activated via tap/click).
+See &lt;a href=&quot;/blog/hyde/2012-02-07-example-content/#inline-html-elements&quot;&gt;Example Content&lt;/a&gt; on how to add them to your content.&lt;/p&gt;
+
+&lt;h2 id=&quot;last-modified-at&quot;&gt;Last Modified At&lt;/h2&gt;
+&lt;p&gt;Blog posts can now have a “last modified at” date in the sub title row.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/blog/9.1.0-1.png&quot; alt=&quot;Last modified at&quot; class=&quot;border lead&quot; width=&quot;1254&quot; height=&quot;218&quot; loading=&quot;lazy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that this depends on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;last_modified_at&lt;/code&gt; property of the page, which must be either set manually in the frontmatter (not recommended), or via a plugin like &lt;a href=&quot;https://github.com/gjtorikian/jekyll-last-modified-at&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-last-modified-at&lt;/code&gt;&lt;/a&gt;. Note that the later is not available when building on GitHub Pages and can increase build times.&lt;/p&gt;
+
+&lt;h2 id=&quot;clap-button-preview&quot;&gt;Clap Button Preview&lt;/h2&gt;
+&lt;p&gt;I’ve been trying something new with &lt;a href=&quot;https://getclaps.app/&quot;&gt;&lt;strong&gt;getclaps.app&lt;/strong&gt;&lt;/a&gt;, a feedback and analytics tool for personal sites like those powered by Hydejack.&lt;/p&gt;
+
+&lt;!-- &lt;clap-button style=&quot;--clap-button-color:var(--body-color);margin:2rem auto 3rem;width:3rem;height:3rem;font-size:smaller&quot; nowave&gt;&lt;/clap-button&gt; --&gt;
+
+&lt;p&gt;It is a separate product from Hydejack and not enabled by default. Because it depends on a backend component, it requires a monthly fee. 
+If enabled, it is placed below posts and pages where the dingbat character (❖) used to be.&lt;/p&gt;
+
+&lt;p&gt;I can’t claim that this product is fully baked (feedback welcome), but I’ve been using it on my personal site and here for the last couple of months with no issues.
+For more, see &lt;a href=&quot;https://getclaps.app/&quot;&gt;the dedicated website&lt;/a&gt;.&lt;/p&gt;
+
+&lt;hr style=&quot;margin:2rem 0&quot; /&gt;
+
+&lt;p&gt;There are many more changes and bugfixes in 9.1. See the &lt;a href=&quot;/CHANGELOG/&quot; class=&quot;heading flip-title&quot;&gt;CHANGELOG&lt;/a&gt; for details.&lt;/p&gt;
+
+&lt;h2 id=&quot;credits&quot;&gt;Credits&lt;/h2&gt;
+
+&lt;p&gt;&lt;span&gt;Photo by &lt;a href=&quot;https://unsplash.com/@jjying?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;JJ Ying&lt;/a&gt; on &lt;a href=&quot;https://unsplash.com/?utm_source=unsplash&amp;amp;utm_medium=referral&amp;amp;utm_content=creditCopyText&quot;&gt;Unsplash&lt;/a&gt;&lt;/span&gt;&lt;/p&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><category term="hydejack" /><summary type="html">What’s New in Hydejack 9.1?</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jj-ying.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jj-ying.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Introducing Hydejack 9</title><link href="http://localhost:4000/blog/hydejack/2020-07-03-introducing-hydejack-9/" rel="alternate" type="text/html" title="Introducing Hydejack 9" /><published>2020-07-03T00:00:00+09:00</published><updated>2020-07-03T00:00:00+09:00</updated><id>http://localhost:4000/blog/hydejack/introducing-hydejack-9</id><content type="html" xml:base="http://localhost:4000/blog/hydejack/2020-07-03-introducing-hydejack-9/">&lt;p class=&quot;lead&quot;&gt;Version 9 is the most complete version of Hydejack yet.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;#linking-in-style&quot;&gt;Modernized&lt;/a&gt; &lt;a href=&quot;#whats-in-the-cards&quot;&gt;design&lt;/a&gt;, &lt;a href=&quot;#ready-for-the-big-screen&quot;&gt;big headlines&lt;/a&gt;, big new features: &lt;a href=&quot;#built-in-search&quot;&gt;Built-In Search&lt;/a&gt;, &lt;a href=&quot;#sticky-table-of-contents&quot;&gt;Sticky Table of Contents&lt;/a&gt;, and &lt;a href=&quot;#auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/a&gt;. That &lt;a href=&quot;#and-much-more&quot;&gt;and more&lt;/a&gt; is Hydejack 9.&lt;/p&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#linking-in-style&quot; id=&quot;markdown-toc-linking-in-style&quot;&gt;Linking in Style&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#ready-for-the-big-screen&quot; id=&quot;markdown-toc-ready-for-the-big-screen&quot;&gt;Ready for the Big Screen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#whats-in-the-cards&quot; id=&quot;markdown-toc-whats-in-the-cards&quot;&gt;What’s in the Cards?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#built-in-search&quot; id=&quot;markdown-toc-built-in-search&quot;&gt;Built-In Search&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#auto-hiding-navbar&quot; id=&quot;markdown-toc-auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#sticky-table-of-contents&quot; id=&quot;markdown-toc-sticky-table-of-contents&quot;&gt;Sticky Table of Contents&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#and-much-more&quot; id=&quot;markdown-toc-and-much-more&quot;&gt;…and much more&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#even-more-to-come&quot; id=&quot;markdown-toc-even-more-to-come&quot;&gt;Even More to Come&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#get-it-now&quot; id=&quot;markdown-toc-get-it-now&quot;&gt;Get It Now&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;linking-in-style&quot;&gt;Linking in Style&lt;/h2&gt;
+
+&lt;p&gt;Ever since the introduction of Dark Mode, link styles have been a bit of an issue. Specifically, finding an accent color that worked on both light and dark backgrounds was the problem. With Hydejack 9, the &lt;a href=&quot;#linking-in-style&quot;&gt;link style&lt;/a&gt; has been revamped so that legibility is no longer tied to the choice of accent_color, giving you much more freedom in creating a unique design flavor for your site.&lt;/p&gt;
+
+&lt;h2 id=&quot;ready-for-the-big-screen&quot;&gt;Ready for the Big Screen&lt;/h2&gt;
+
+&lt;p&gt;The theme on which Hydejack is based was designed for a different era of the web. Hydejack has inherited many of its limitations, but over time I’ve made adjustments, such as centering the content column for better reading ergonomics.&lt;/p&gt;
+
+&lt;p&gt;With version 9, Hydejack takes full advantage of large displays. Whether it’s design indulgences such as oversized headlines, or quality of life improvements such as a floating table of contents, Hydejack now finds use for all that extra screen real estate&lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;whats-in-the-cards&quot;&gt;What’s in the Cards?&lt;/h2&gt;
+
+&lt;p&gt;Hydejack 9 now lets you use content cards for both projects and posts. 
+The cards have been redesigned with a new hover style and drop shadows and they retain their unique transition-to-next-page animations, which now also work on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;blog&lt;/code&gt; layout. The new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;grid&lt;/code&gt; layout lets you do that.&lt;/p&gt;
+
+&lt;p&gt;Good images are key to making the most out of content cards. For that reason, a &lt;a href=&quot;../../docs/basics.md#adding-images&quot;&gt;chapter on images&lt;/a&gt; has been added to the documentation.&lt;/p&gt;
+
+&lt;h2 id=&quot;built-in-search&quot;&gt;Built-In Search&lt;/h2&gt;
+
+&lt;p&gt;Hydejack now has Built-In Search. It even works offline. I’ve been prototyping many approaches and eventually settled on a fully client-side, off-the-main thread solution that perfectly fits the use case of personal sites and shows surprisingly good results&lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;The new search UI is custom made for Hydejack and shows beautiful previews of your posts and pages, right on top of your regular content.&lt;/p&gt;
+
+&lt;p&gt;Together with the Auto-Hiding Navbar, your entire content library is now only a couple of keystrokes away.&lt;/p&gt;
+
+&lt;h2 id=&quot;auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/h2&gt;
+
+&lt;p&gt;A navbar that’s there when you need it, and disappears when you don’t. Simple as that.&lt;/p&gt;
+
+&lt;h2 id=&quot;sticky-table-of-contents&quot;&gt;Sticky Table of Contents&lt;/h2&gt;
+
+&lt;p&gt;Already a staple on so many sites on the web, this pattern is now also available in Hydejack. 
+What’s unique about it is that it simply picks up the table of contents already created by kramdown’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;{:toc}&lt;/code&gt; tag and transparently upgrades it to a fully dynamic version.&lt;/p&gt;
+
+&lt;h2 id=&quot;and-much-more&quot;&gt;…and much more&lt;/h2&gt;
+
+&lt;p&gt;Other noteworthy changes include:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Support for Jekyll 4&lt;/li&gt;
+  &lt;li&gt;Choice between MathJax and KaTeX for math rendering&lt;/li&gt;
+  &lt;li&gt;Use of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll-include-cache&lt;/code&gt; for drastically improved page building speeds&lt;/li&gt;
+  &lt;li&gt;New variables configuration file — adjust content width, sidebar width, font size, etc…&lt;/li&gt;
+  &lt;li&gt;…and the option to disable grouping projects by year.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Read the the &lt;a href=&quot;/CHANGELOG/&quot; class=&quot;heading flip-title&quot;&gt;CHANGELOG&lt;/a&gt; for the full scope of features and improvements made in Hydejack 9.
+Maybe just glance at it to confirm that it is indeed a pretty long list.&lt;/p&gt;
+
+&lt;h2 id=&quot;even-more-to-come&quot;&gt;Even More to Come&lt;/h2&gt;
+
+&lt;p&gt;New features for 9.1 are already lined up. Code block headers and code line highlights for even better technical blogging, as well as download buttons on the resume page for PDF, vCard, and Resume JSON are just around the corner.&lt;/p&gt;
+
+&lt;h2 id=&quot;get-it-now&quot;&gt;Get It Now&lt;/h2&gt;
+&lt;p&gt;The Free Version of Hydejack is now availabe on &lt;a href=&quot;https://rubygems.org/gems/jekyll-theme-hydejack&quot;&gt;RubyGems&lt;/a&gt;
+and for the first time also on &lt;a href=&quot;https://github.com/hydecorp/hydejack/packages&quot;&gt;GitHub Packages&lt;/a&gt;. 
+The source code is available on &lt;a href=&quot;https://github.com/hydecorp/hydejack&quot;&gt;GitHub&lt;/a&gt; as always.&lt;/p&gt;
+
+&lt;p&gt;The PRO Version is scheduled to release on July 7th on Gumroad. Pre-Orders are open now:&lt;/p&gt;
+
+&lt;div class=&quot;gumroad-product-embed&quot; data-gumroad-product-id=&quot;nuOluY&quot;&gt;&lt;a href=&quot;https://gumroad.com/l/nuOluY&quot;&gt;Loading…&lt;/a&gt;&lt;/div&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;If you are a fan of the old two-column layout, or don’t like modern design tropes such as mega headlines, Hydejack lets you revert these changes on a case-by-case basis via configuration options. &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+
+      &lt;p&gt;Search was mainly tested for English and German. Please let me know about issues in other languages. 
+  While I’ve tried to find a multi-language solution, most showed drastically worse  results for the English base case.
+  If you’re technically inclined, you can adopt the code located in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_includes/js/search-worker.js&lt;/code&gt; to your needs. &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#x21a9;&amp;#xfe0e;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><category term="hydejack" /><summary type="html">Version 9 is the most complete version of Hydejack yet.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/jeremy-bishop@0,5x.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">About Upcoming Versions of Hydejack</title><link href="http://localhost:4000/blog/hydejack/2019-11-10-about-upcoming-versions-of-hydejack/" rel="alternate" type="text/html" title="About Upcoming Versions of Hydejack" /><published>2019-11-10T00:00:00+09:00</published><updated>2019-11-10T00:00:00+09:00</updated><id>http://localhost:4000/blog/hydejack/about-upcoming-versions-of-hydejack</id><content type="html" xml:base="http://localhost:4000/blog/hydejack/2019-11-10-about-upcoming-versions-of-hydejack/">&lt;p&gt;I think it’s time to post an update on upcoming versions of Hydejack, in part to get me back into the mood for writing. Missing documentation is, as always, what’s holding up the release. There are currently plenty of features that would be useful to many people that simply aren’t documented, including everything that is work in progress for v9. It’s both the least fun and most valuable part of the project.&lt;/p&gt;
+
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#version-9&quot; id=&quot;markdown-toc-version-9&quot;&gt;Version 9&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#grid-layout&quot; id=&quot;markdown-toc-grid-layout&quot;&gt;Grid Layout&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#auto-hiding-navbar&quot; id=&quot;markdown-toc-auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pricing&quot; id=&quot;markdown-toc-pricing&quot;&gt;Pricing&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#pro&quot; id=&quot;markdown-toc-pro&quot;&gt;PRO+&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#communication&quot; id=&quot;markdown-toc-communication&quot;&gt;Communication&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;version-9&quot;&gt;Version 9&lt;/h2&gt;
+&lt;p&gt;Version 9 is the next “major” version of Hydejack, that will once again alter its design. The reason for this is that with the current style for hyperlinks, the choice of accent colors is quite limited, as some might look good on white background, but be barely legible on dark background and vice-versa. Instead of solving this in the most complicated way possible through some advanced color arithmetic (assuming that’s what it’s called), I’ve opted to reduce the use of the accent color instead. You can see a work-in-progress on &lt;a href=&quot;https://qwtel.com/&quot;&gt;my personal site&lt;/a&gt;. I have to say I’m quite please with the results.&lt;/p&gt;
+
+&lt;h2 id=&quot;grid-layout&quot;&gt;Grid Layout&lt;/h2&gt;
+&lt;p&gt;Purchasers of the PRO version will have access to a new grid layout (see screenshot) that’s basically a version of the project cards adapted for posts.&lt;/p&gt;
+
+&lt;h2 id=&quot;auto-hiding-navbar&quot;&gt;Auto-Hiding Navbar&lt;/h2&gt;
+&lt;p&gt;One of the annoyances of the current version of Hydejack is the inability to reach the navbar from the middle of the page. I won’t be implemented a “Jump to Top” button, since I’ve never used one myself and wondering if anyone ever did.&lt;/p&gt;
+
+&lt;p&gt;In the past I’ve set the header to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;fixed&lt;/code&gt;, but this either caused overlapping artifacts, or took away too much screen real estate when adding a background color. In V9 this is resolved by a auto-hiding navbar, that will disappear when scrolling down, and reappear when scrolling up. Obviously, this pattern is not new, but getting it work smoothly took a bit of figuring out and there are still improvements to be made, though I thik the current version is “good enough”. Again, &lt;a href=&quot;https://qwtel.com/&quot;&gt;my personal site&lt;/a&gt; has the work-in-progress.&lt;/p&gt;
+
+&lt;!-- ## Release Date
+I plan on releasing V9 in 2019 to keep the naming scheme --&gt;
+
+&lt;h2 id=&quot;pricing&quot;&gt;Pricing&lt;/h2&gt;
+&lt;p&gt;To state the obvious, v9 will be a paid upgrade. As before, I won’t give away work for free only to have people complain that I’ve changed their design. Instead, v9 is a paid opt-in for those who like the new design and features. Against any economic sense, I will also release many of the behind the scenes updates as part of the 8.6 release. The details are yet to be worked out, but it will solve several of the &lt;a href=&quot;https://github.com/hydecorp/hydejack&quot;&gt;open issues&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Since v9 will be a pretty small update otherwise, the cost will be something along $20 via a discount code included on the 8.6 release zip.&lt;/p&gt;
+
+&lt;h2 id=&quot;pro&quot;&gt;PRO+&lt;/h2&gt;
+&lt;p&gt;For the first time I will be offering a PRO+ Version that will include an hour of my time to be used for anything from asking questions to debugging a particular issue. In the past I’ve shut down many if not most support requests because I have this habit of not wanting to do professional work free of charge.&lt;/p&gt;
+
+&lt;p&gt;At the same time there was no path for someone who — quite correctly — calculated that I could fix their particular issue in a fraction of the time they themselves or any Jekyll developer on the marketplace could. For them, as well as anyone who isn’t quite as price sensitive to begin with, there will be the PRO+ option that will include a priority email to contact me. Support requests to the regular email will be discarded with no exceptions once this option is available.&lt;/p&gt;
+
+&lt;h2 id=&quot;communication&quot;&gt;Communication&lt;/h2&gt;
+&lt;p&gt;As with this post, going forward I’ll be communicating in a more personal, less business-y tone. I’ve made the mistake of dabbling in marketing speak, even imitating Apple at times, though it is a poor fit for the product at hand. Hydejack is a very niche, very opinionated product that wouldn’t even exist if I didn’t want it for myself. Given that, the “broadest possible reach”-style of communication is… ineffective. If nothing else, writing bland, gentrified copy is boring and takes too long, while “thinking out loud” type of writing is both fun to write and quicker to produce.&lt;/p&gt;</content><author><name>Florian Klampfer</name><email>mail@qwtel.com</email></author><category term="hydejack" /><summary type="html">I think it’s time to post an update on upcoming versions of Hydejack, in part to get me back into the mood for writing. Missing documentation is, as always, what’s holding up the release. There are currently plenty of features that would be useful to many people that simply aren’t documented, including everything that is work in progress for v9. It’s both the least fun and most valuable part of the project.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/blog/grid.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/blog/grid.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

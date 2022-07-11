@@ -15,9 +15,9 @@ or change the theme of [an existing site](#existing-sites).
 
 #### 
 
-<img title="img" src="file:///F:/blog/site/img/01.png" alt="img" width="406">6">
+<img title="img" src="../../img/01.png" alt="img" width="406">
 
-![](F:\blog\site\img\01.png)
+![](../../img/01.png)
 
 
 

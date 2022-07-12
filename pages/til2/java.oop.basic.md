@@ -1,3 +1,27 @@
+---
+layout: page
+title: [Java]객체지향 프로그래밍 기초
+description: >
+hide_description: false
+---
+
+{TOC}
+{:toc}
+
+## 클래스와 객체
+
+
+
+## 필드와 메서드
+
+## 생성자
+
+## 내부 클래스
+
+## 심화 실습 - 텍스트 스타크래프트 프로그램
+
+> dfdf
+
 ```java
 //be-oop-reference/encapsulation, inheritance
 //
@@ -21,8 +45,6 @@ super fantastic 페퍼톤스
 
 4패키지 외
 
-
-
 접근구별자
 
 private 1
@@ -32,15 +54,3 @@ default 12
 protected 123
 
 public 1234
-
-
-
-
-
-
-
-
-
-
-
-

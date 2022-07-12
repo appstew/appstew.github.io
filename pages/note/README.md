@@ -1,7 +1,7 @@
 ---
 title: Note
 description: >
-  
+
 hide_description: true
 sidebar: true
 order: 4
@@ -9,7 +9,6 @@ permalink: /pages/note/
 ---
 
 [links]{:.heading.flip-title} --- 임시 링크 메모
-
 
 [links]: links.md
 

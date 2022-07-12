@@ -9,9 +9,10 @@ hide_description: true
 This chapter covers advanced topics, such as offline support and custom JS builds. Codings skills are recommended.
 
 0. this unordered seed list will be replaced by toc as unordered list
-{:toc}
+   {:toc}
 
 ## Enabling offline support
+
 Hydejack v8 introduces experimental "cache as you go" offline support. This is implemented via the [Service Worker API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API), a new browser standard that is now supported in the latest versions of all major browsers. However, it is a very powerful feature and should be used with a lot of care.
 
 Enabling this feature requires that your content meets the following criteria:
@@ -55,9 +56,7 @@ If you want to serve a file from the `assets` folder but NOT cache it for offlin
 
     /assets/lfs/download.bin?no-cache
 
-
 ![57 Chevy](https://upload.wikimedia.org/wikipedia/commons/b/b1/57_Chevy_210.jpg?sw-cache)
-
 
 ### How offline storage works
 
@@ -75,14 +74,15 @@ Content
 
 Other things to note are that the implementation will always cache the pages listed under `legal`, as well as the `404.html` page, which will be shown when the user is offline.
 
-
 ## Adding a custom social media icon
+
 Hydejack includes a number of social media icons by default (in fact, everything that is provided by [IcoMoon](https://icomoon.io/)), but since the landscape is always changing, it is likely that a platform that is important to you will be missing at some point.
 
 You can add any platform by simply providing a complete URL. However, a fallback icon <span class="icon-link"></span> will be used.
 {:.note}
 
 ### Creating the icon font
+
 In order to add a custom social media icon you have to use the [IcoMoon App](https://icomoon.io/app/) (free) to create a custom icon webfont. However, it is important that the generated font include all icons already in use by Hydejack. For this purpose, find the `selection.json` in [`assets/icomoon/selection.json`](https://github.com/hydecorp/hydejack/blob/v6/assets/icomoon/selection.json) and upload it to the app via "Import Icons".
 Then, use the app to add your icon(s).
 Consult the [IcoMoon docs](https://icomoon.io/#docs) for additional help.
@@ -90,16 +90,17 @@ Consult the [IcoMoon docs](https://icomoon.io/#docs) for additional help.
 Once you've created and downloaded the icon font form IconMoon, replace the `icomoon` folder in `assets` in its entirety. Keep in mind that future updates of Hydejack will override this folder.
 
 ### Adding the platform's metadata
+
 For the second step it is necessary to add the network's metadata to `_data/social.yml`.
 An entry looks like:
 
-~~~yml
+```yml
 deviantart:
   name: DeviantArt
   icon: icon-deviantart
   prepend: "https://"
   append: ".deviantart.com"
-~~~
+```
 
 `name`
 : The name of the network. Used for the title attribute and screen readers.
@@ -113,15 +114,15 @@ deviantart:
 `append`
 : Optional. A string that is appended to the username to form the link to the profile. If the final URL should be `https://<username>.deviantart.com`, this would be `.deviantart.com`.
 
-
 ## How CSS is organized in Hydejack
+
 Hydejack takes a quite unique approach to CSS, which is motivated by the ability to
 inline essential CSS rules in a `style` tag in the `<head/>` of a page (to increase the loading speed),
 while serving the rest in a separate file.
 
 The styles are written in SCSS and are located in the `_sass` folder, which looks like
 
-~~~
+```
 ├── hydejack
 │   ├── __inline__
 │   ├── __link__
@@ -139,7 +140,7 @@ The styles are written in SCSS and are located in the `_sass` folder, which look
 ├── my-style.scss
 ├── syntax.scss
 └── variables.scss
-~~~
+```
 
 The style rules are organized alongside components (or rather, topics) like "sidebar" and "footer".
 Further, there are two separate frameworks, "pooleparty" and "hydejack",
@@ -153,6 +154,7 @@ The source files are located in the same folder and end with `.pre.scss`.
 They are fully valid SCSS files, but contain comments that mark which lines should be inlined and which should be fetched asynchronously.
 
 The rules are as follows:
+
 * Every line between `// <<< inline ` and `// >>>` will be inlined
 * Every line between `// <<< link ` and `// >>>` will be linked
 * Every line that isn't contained in a block and ends with `// inline` will be inlined
@@ -162,15 +164,15 @@ The rules are as follows:
 The actual splitting happen with the `.scripts/build-css.sh` script (requires node.js 8+).
 You can run the script once by using
 
-~~~bash
+```bash
 $ npm run build:css
-~~~
+```
 
 or rebuild the CSS on every file change
 
-~~~bash
+```bash
 $ npm run watch:css
-~~~
+```
 
 Note that `my-inline.scss` and `my-style.scss` are not affected by this.
 Also, since all files are valid SCSS, the splitting part is entirely optional.
@@ -182,6 +184,5 @@ hydejack:
 ```
 
 to your config file.
-
 
 *[FLIP]: First Last Invert Play

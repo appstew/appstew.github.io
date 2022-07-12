@@ -10,7 +10,7 @@ hide_description: true
 How you install Hydejack depends on whether you [start a new site](#new-sites), 
 or change the theme of [an existing site](#existing-sites).
 
-1. this unordered seed list will be replaced by toc as unordered list
+0. this unordered seed list will be replaced by toc as unordered list
    {:toc}
 
 #### 
@@ -18,8 +18,6 @@ or change the theme of [an existing site](#existing-sites).
 <img title="img" src="../../img/01.png" alt="img" width="406">
 
 ![](../../img/01.png)
-
-
 
 ```java
 efef

@@ -71,12 +71,52 @@ void printHello() { // 반환타입이 void인 메서드
 =================
 
 ## 생성자
+
 ```java
-// d
+// 생성자: 인스턴스 초기화 에 사용되는 특수한 메서드
+// 1.생성자의 이름은 반드시 클래스의 이름과 같아야 한다.
+// 2.생성자는 리턴 타입이 없다. 그러면서도 void 를 쓰지 않는다. 
+// 생성자 오버로딩 예제: ConstructorExample.java CarTest.java
+// 매개변수가 있는 생성자 예제: ConstructorExample.java
 //
+// this vs this()
+// this() 메서드 는
+// 1.생성자의 내부에서만 사용할 수 있고,
+// 2.반드시 생성자의 첫 줄에 위치해야 한다.
+// 예제: ConstructorExample.java
+// 
 ```
 
 ## 내부 클래스
+
+| 종 류                               | 선언 위치                              | 사용 가능한 변수            |
+| --------------------------------- | ---------------------------------- | -------------------- |
+| 인스턴스 내부 클래스(instance inner class) | 외부 클래스의 멤버변수 선언위치에 선언(멤버 내부 클래스)   | 외부 인스턴스 변수, 외부 전역 변수 |
+| 정적 내부 클래스(static inner class)     | 외부 클래스의 멤버변수 선언위치에 선언(멤버 내부 클래스)   | 외부 전역 변수             |
+| 지역 내부 클래스(local inner class)      | 외부 클래스의 메서드나 초기화블럭 안에 선언           | 외부 인스턴스 변수, 외부 전역 변수 |
+| 익명 내부 클래스(anonymous inner class)  | 클래스의 선언과 객체의 생성을 동시에 하는 일회용 익명 클래스 | 외부 인스턴스 변수, 외부 전역 변수 |
+
+```java
+class Outer { // 외부 클래스
+
+    class Inner {
+        // 인스턴스 내부 클래스    
+    }
+
+    static class StaticInner {
+        // 정적 내부 클래스
+    }
+
+    void run() {
+        class LocalInner {
+        // 지역 내부 클래스
+        }
+    }
+}
+// 내부 클래스 예제: innerClass.java
+// 정적 내부 클래스: staticInnerClass.java
+// 지역 내부 클래스: localInnerClass.java
+```
 
 ## 심화 실습 - 텍스트 스타크래프트 프로그램
 

@@ -10,7 +10,15 @@ permalink: /pages/note/
 
 [links]{:.heading.flip-title} --- 임시 링크 메모
 
+[def] --- ga502IV>nvme0n1,nvme1n1 커널, 부트로더, kvm세팅, kvm image 등 설치 환경 및 파일을 어떻게 관리하고 보관할 것인지 등등 정리
+
+
+
+----------
+
 [links]: links.md
+
+[def]: defendencies.md
 
 <!-- 
 Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.

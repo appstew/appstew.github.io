@@ -3,18 +3,78 @@ layout: page
 title: [Java]객체지향 프로그래밍 기초
 description: >
 hide_description: false
+
 ---
 
 {TOC}
-{:toc}
+0. this unordered seed list will be replaced by toc as unordered list
+   {:toc}
 
 ## 클래스와 객체
 
+- 예제 파일:  SimpleCalculatorTest
 
+```java
+// 클래스는 객체를 생성하는 데 사용되는 하나의 틀
+// 인스턴스: 클래스를 통해 생성된 객체
+public class ExampleClass {
+    int x = 10; // (1)필드
+    void printX() {...} // (2)메서드
+    ExampleClass {...} // (3)생성자
+    class ExampleClass2 {...} // (4)이너 클래스
+} 
+// SimpleCalculatorTest.java
+// 변수와 메서드
+// CarTest.java
+```
 
 ## 필드와 메서드
 
+```java
+// 변수는 크게 클래스 변수, 인스턴스 변수, 지연 변수
+class Example { // => 클래스 영역
+    int instanceVariable; // 인스턴스 변수
+    static int classVariable; // 클래스 변수(static 변수, 공유변수)
+
+    void method() { // => 메서드 영역
+        int localVariable = 0; // 지역 변수. {}블록 안에서만 유효
+    }
+}
+// Example.classVariable 로 사용할 수 있다
+// 
+// static 으로 만든 정적 변수 또는 메서드는 클래스명으로 호출된다.
+// 아닌 경우 해당 변수가 포함된 클래스의 new 인스턴스로 호출된다.
+// static 으로 만든 변수는 모든 인스턴스 사이에 값이 공유된다.
+// StaticTest.java StaticFieldTest.java
+//
+// 매개 변수.
+public static int add(int x, int y) { // 메서드 시그니처
+    int result = x + y; // 메서드 바디
+    return result;
+}
+// 메서드의 반환 타입이 void 가 아닌 경우는 바디{}안에 반드시 해당 반환 타입을 반환하는 return 문이 존재해야 한다. 
+int getNumSeven() { // 매개변수가 없는 메서드
+    return 7;
+}
+//
+void printHello() { // 반환타입이 void인 메서드
+    System.out.println("hello!");
+}
+// 즉 void 는, 반환 값이 없는 메서드를 의미
+// 
+// 메서드 오버로딩
+// Overloading.java
+```
+
+![](../../img/windows_capture/2022-07-12-13-59-20-ozz3Hgv47FZY0Xsmh6j3--1651922487400.png)
+
+=================
+
 ## 생성자
+```java
+// d
+//
+```
 
 ## 내부 클래스
 

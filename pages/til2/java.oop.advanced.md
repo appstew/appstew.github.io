@@ -7,7 +7,7 @@ toc: true
 toc_sticky
 ---
 
-{TOC}
+0. {TOC}
 0. {:toc}
 0. this unordered seed list will be replaced by toc as unordered list
    {:toc}

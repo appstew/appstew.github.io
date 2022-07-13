@@ -3,8 +3,8 @@ layout: list
 type: category
 title: TIL
 slug: til
-sidebar: true
-order: 2
+sidebar: false
+order: 
 description: >
   Anything about development
 ---

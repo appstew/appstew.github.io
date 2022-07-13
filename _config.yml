@@ -29,7 +29,7 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               SEB_BE_40, github.com/appstew
-                       22/7/9 사이트 생성, 현재 공사중
+                       22/7/9 사이트 생성, 현재 jekyll 구조 파악 및 공사중
 
 # A list of keywords for your blog
 keywords:              [jekyll, theme, hyde, sidebar, resume, markdown, code, math, portfolio, personal]

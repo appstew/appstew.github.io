@@ -3,6 +3,8 @@ layout: page
 title: [Java]객체지향 프로그래밍 심화
 description: >
 hide_description: false
+toc: true
+toc_sticky
 ---
 
 {TOC}

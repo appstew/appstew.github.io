@@ -3,6 +3,7 @@ layout: page
 title: [Java]객체지향 프로그래밍 기초
 description: >
 hide_description: false
+pupblished: false
 
 ---
 

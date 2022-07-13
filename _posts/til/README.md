@@ -1,5 +1,5 @@
 ---
-title: TIL2(정리중)
+title: TIL
 description: >
 
 hide_description: true

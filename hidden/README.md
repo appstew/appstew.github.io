@@ -1,5 +1,5 @@
 ---
-title: Note
+title: HiddenNotes
 description: >
   
 hide_description: true
@@ -7,10 +7,13 @@ sitemap: false
 permalink: /hidden/
 ---
 
-[links]{:.heading.flip-title} --- 임시 링크 메모
-
+- [links]{:.heading.flip-title} --- 임시 링크 메모
+- [test]{:.heading.flip-title} --- marktext, 블로그 테스트 용
+- [ttt1]
 
 [links]: links.md
+[test]: test.md
+[ttt1]: ttt1.md
 
 <!-- 
 Here you should be able to find everything you need to know to accomplish the most common tasks when blogging with Hydejack.

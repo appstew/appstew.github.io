@@ -94,7 +94,7 @@ destination: build
 # ----------------------------------------------------------------------------------------
 
 # Sidebar image and theme color of the site.
-accent_image:          img/sidebar.png # /img/sidebar1.png
+accent_image:          img/sidebar1.png # /img/sidebar1.png
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,

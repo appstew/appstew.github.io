@@ -1,7 +1,7 @@
 ---
 title: HiddenNotes
 description: >
-  
+layout: page
 hide_description: true
 sitemap: false
 permalink: /hidden/

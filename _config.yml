@@ -434,3 +434,38 @@ jekyll_compose:
       links:
         - title: Project Link
           url: https://example.com
+    pages:
+      layout: page
+      description: > 
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /img/sidebar1.png
+    hidden:
+      layout: page
+      description: > 
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /img/sidebar1.png
+    showcase:
+      layout: gallery
+      description: > 
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /img/sidebar1.png
+    showcase:
+      layout: page
+      description: > 
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /img/sidebar1.png
+    showcase:
+      layout: projects
+      description: > 
+        A short ~160 character description of your post for search engines,
+        social media previews, etc.
+      image:
+        path: /img/sidebar1.png

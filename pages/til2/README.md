@@ -3,10 +3,10 @@ title: Web Engineering
 description: >
 코드스테이츠 백엔드 과정을 공부하면서 공부한 내용과 자료를
 페이지 형식으로 정리중입니다.
-hide_description: false
+hide_description: true
 sidebar: true
 order: 3
-permalink: /pages/TIL2/
+permalink: /pages/til2/
 ---
 0. {:toc}
 jekyll과 현재 hydejack theme 구조를 이해하고 사이트 저장소 최적화 하는중.

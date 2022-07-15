@@ -3,7 +3,7 @@ title: Web Engineering
 description: >
 #코드스테이츠 백엔드 과정을 공부하면서 공부한 내용과 자료를
 #페이지 형식으로 정리중입니다.
-hide_description: true
+hide_description: false
 sidebar: true
 order: 3
 permalink: /pages/til2/

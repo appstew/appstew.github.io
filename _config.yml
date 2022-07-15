@@ -346,6 +346,8 @@ plugins:
   - jekyll-include-cache
   - jekyll-last-modified-at
   - jemoji
+  - jekyll-mermaid
+  - jekyll-mermaid-diagrams
 
 
 # SEO Tag

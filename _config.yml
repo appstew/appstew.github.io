@@ -471,3 +471,8 @@ jekyll_compose:
         social media previews, etc.
       image:
         path: /img/sidebar1.png
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM

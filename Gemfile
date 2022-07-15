@@ -9,6 +9,15 @@ source 'https://rubygems.org'
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 # gem "jekyll", "~> 3.9"
+gem 'github-pages'
+gem "jekyll"
+gem "jekyll-gist"
+gem "jekyll-coffeescript"
+gem "jekyll-seo-tag", "~> 1.5"
+gem 'jekyll-mermaid', '~> 1.0'
+gem 'jekyll-mermaid-diagrams'
+gem 'jemoji'
+
 
 group :jekyll_plugins do
   gem 'github-pages'
@@ -20,4 +29,3 @@ gem 'wdm' if Gem.win_platform?
 gem 'tzinfo-data' if Gem.win_platform?
 
 gem "webrick", "~> 1.7"
-gem 'jekyll-mermaid', '~> 1.0'

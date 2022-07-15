@@ -348,6 +348,8 @@ plugins:
   - jemoji
   - jekyll-mermaid
   - jekyll-mermaid-diagrams
+  - jekyll-paginate
+  - jekyll-mentions
 
 
 # SEO Tag

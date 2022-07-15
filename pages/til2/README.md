@@ -51,7 +51,7 @@ B-->e([joa])
 ```
 
 <div class="mermaid">
-gantt
+gantt;
         dateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to mermaid
 

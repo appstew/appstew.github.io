@@ -7,6 +7,8 @@ hide_description: false
 sidebar: true
 order: 3
 permalink: /pages/til2/
+tags: [Mermaid]
+mermaid: true
 ---
 0. {:toc}
 jekyll과 현재 hydejack theme 구조를 이해하고 사이트 저장소 최적화 하는중.
@@ -48,8 +50,7 @@ B-->D(2)
 B-->e([joa])
 ```
 
-
-```mermaid
+<div class="mermaid">
 gantt
         dateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to mermaid
@@ -77,7 +78,8 @@ gantt
         Describe gantt syntax               :after doc1, 3d
         Add gantt diagram to demo page      : 20h
         Add another diagram to demo page    : 48h
-```
+</div>
+
 |내용1 |내용2 |링크 | |
 | -- | -- | -- | -- |
 | | |https://www.geeksforgeeks.org/ | |

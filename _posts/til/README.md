@@ -5,7 +5,7 @@ description: >
 hide_description: true
 sidebar: true
 order: 2
-permalink: /posts/til/
+permalink: /_posts/til/
 ---
 
 페이지 형식으로 TIL 정리중.

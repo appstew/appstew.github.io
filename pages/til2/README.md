@@ -49,11 +49,29 @@ B-->D(2)
 B-->e([joa])
 </div>
 
+
 -----------------
+- $ a * b = c ^ b $  
+- $ 2^{\frac{n-1}{3}} $  
+- $ \int\_a^b f(x)\,dx. $
+
+```plantuml!
+Bob -> Alice : hello world
+```
+
+@startuml
+Bob -> Alice : hello
+@enduml
+
+@startmermaid
+pie title Pets adopted by volunteers
+  "Dogs" : 386
+  "Cats" : 85
+  "Rats" : 35
+@endmermaid
 
 <div class="mermaid">
-gantt;
-
+gannt;
         dateFormat  YYYY-MM-DD
         title Adding GANTT diagram functionality to mermaid
 
@@ -80,8 +98,10 @@ gantt;
         Describe gantt syntax               :after doc1, 3d
         Add gantt diagram to demo page      : 20h
         Add another diagram to demo page    : 48h
-
 </div>
+
+
+
 
 ---------------------
 
@@ -96,10 +116,28 @@ gantt;
 
 
 
+| :                   MathJax \|\| Image                 : |||
+| :------------ | :-------- | :----------------------------- |
+| Apple         | : Apple : | Apple                          \
+| Banana        | Banana    | Banana                         \
+| Orange        | Orange    | Orange                         |
+| :     Rowspan is 4     : || :        How's it?           : |
+| ^^     A. Peach          ||    1. ![example][cell-image]   |
+| ^^     B. Orange         || ^^ 2. $I = \int \rho R^{2} dV$ |
+| ^^     C. Banana         || **It's OK!**                   |
+
+[cell-image]: https://jekyllrb.com/img/octojekyll.png "An exemplary image"
 
 
-
-
+| :        Fruits \|\| Food       : |||
+| :--------- | :-------- | :--------  |
+| Apple      | : Apple : | Apple      \
+| Banana     |   Banana  | Banana     \
+| Orange     |   Orange  | Orange     |
+| :   Rowspan is 4    : || How's it?  |
+|^^    A. Peach         ||   1. Fine :|
+|^^    B. Orange        ||^^ 2. Bad   |
+|^^    C. Banana        ||  It's OK!  |
 ===============
 ```
 | | | | |
@@ -107,13 +145,45 @@ gantt;
 | | | | |
 | | | | |
 ```
+{:color-style: style="background: black;"}
+{:color-style: style="color: white;"}
+{:text-style: style="font-weight: 800; text-decoration: underline;"}
+
+<div class="mermaid">
+|:             Here's an Inline Attribute Lists example                :||||
+| ------- | ------------------ | -------------------- | ------------------ |
+|:       :|:  <div style="color: red;"> &lt; Normal HTML Block > </div> :|||
+| ^^      |   Red    {: .cls style="background: orange" }                |||
+| ^^ IALs |   Green  {: #id style="background: green; color: white" }    |||
+| ^^      |   Blue   {: style="background: blue; color: white" }         |||
+| ^^      |   Black  {: color-style text-style }                         |||
+</div>
+
+{% mermaid %}
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+{% endmermaid %}
+
+@startmermaid
+pie title Pets adopted by volunteers
+  "Dogs" : 386
+  "Cats" : 85
+  "Rats" : 35
+@endmermaid
 
 
-
-
-
-
-
+|--|--|--|--|--|--|--|--|
+|♜| |♝|♛|♚|♝|♞|♜|
+| |♟|♟|♟| |♟|♟|♟|
+|♟| |♞| | | | | |
+| |♗| | |♟| | | |
+| | | | |♙| | | |
+| | | | | |♘| | |
+|♙|♙|♙|♙| |♙|♙|♙|
+|♖|♘|♗|♕|♔| | |♖|
 
 
 ### 링크 구성
@@ -124,3 +194,11 @@ gantt;
 [11]: 11.md
 [rails-pacman]:rails-pacman.md
 [Jekyll]:aboutJekyll.md
+
+<div class="mermaid">
+graph TD 
+A[Client] --> B[Load Balancer] 
+B --> C[Server01] 
+B --> D[Server02]
+</div>
+

@@ -10,16 +10,6 @@ source 'https://rubygems.org'
 # Happy Jekylling!
 # gem "jekyll", "~> 3.9"
 
-gem "jekyll"
-gem "jekyll-gist"
-gem "jekyll-coffeescript"
-gem "jekyll-seo-tag", "~> 1.5"
-gem 'jekyll-mermaid', '~> 1.0'
-gem 'jekyll-mermaid-diagrams'
-gem 'jemoji'
-gem 'github-pages'
-gem 'jekyll-paginate'
-
 group :jekyll_plugins do
   gem 'github-pages'
   gem 'jekyll-include-cache'
@@ -31,8 +21,8 @@ group :jekyll_plugins do
   gem 'jekyll-mermaid', '~> 1.0'
   gem 'jekyll-mermaid-diagrams'
   gem 'jemoji'
-  gem 'github-pages'
   gem 'jekyll-paginate'
+  gem 'jekyll-spaceship'
 end
 
 gem 'wdm' if Gem.win_platform?

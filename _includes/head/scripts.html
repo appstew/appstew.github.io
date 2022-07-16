@@ -25,6 +25,9 @@
   w._clapButton = {% if site.clap_button %}true{% else %}false{% endif %};
 }(window);</script>
 
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+<script>mermaid.initialize({startOnLoad:true});</script>
+
 {% if site.kramdown.math_engine == 'mathjax' %}
 <script async src="{{ 'assets/bower_components/MathJax/es5/tex-mml-chtml.js' | relative_url }}" id="_MathJax"></script>
 {% endif %}

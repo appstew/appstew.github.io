@@ -542,3 +542,7 @@ jekyll-spaceship:
     css:
       class: emoji
     src: https://github.githubassets.com/images/icons/emoji/
+
+mermaid:
+  src: '/assets/js/mermaid.min.js'
+  src_config: '/js/mermaid_config.js'

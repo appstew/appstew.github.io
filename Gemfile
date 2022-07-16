@@ -17,8 +17,8 @@ group :jekyll_plugins do
   gem "jekyll"
   gem "jekyll-gist"
   gem "jekyll-coffeescript"
-  gem "jekyll-seo-tag", "~> 2.8.0"
-  gem 'jekyll-mermaid', '~> 1.0'
+  gem "jekyll-seo-tag"
+  gem 'jekyll-mermaid'
   gem 'jekyll-mermaid-diagrams'
   gem 'jekyll-diagrams'
   gem 'jemoji'

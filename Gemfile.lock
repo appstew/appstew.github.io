@@ -278,10 +278,10 @@ DEPENDENCIES
   jekyll-diagrams
   jekyll-gist
   jekyll-include-cache
-  jekyll-mermaid (~> 1.0)
+  jekyll-mermaid
   jekyll-mermaid-diagrams
   jekyll-paginate
-  jekyll-seo-tag (~> 2.8.0)
+  jekyll-seo-tag
   jekyll-spaceship
   jemoji
   kramdown-math-katex

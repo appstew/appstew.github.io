@@ -103,6 +103,14 @@ pie title Pets adopted by volunteers
     Add another diagram to demo page    :48h
 ```
 
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+</div>
+
 ```mermaid!
     gantt
     dateFormat  YYYY-MM-DD

@@ -48,11 +48,18 @@ B-->C(3)
 B-->D(2)
 B-->e([joa])
 ```
+----------
+Lorem ipsum $$ f(x) = x^2 $$.
 
 -----------------
-- $ a * b = c ^ b $  
-- $ 2^{\frac{n-1}{3}} $  
-- $ \int\_a^b f(x)\,dx. $
+$$
+a * b = c ^ b   \\
+2^{\frac{n-1}{3}}  \\  
+\int\_a^b f(x)\,dx.  \\
+
+$$
+
+-------------------
 $$
 \begin{aligned} %!!15
   \phi(x,y) &= \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right) \\[2em]
@@ -70,6 +77,8 @@ $$
                \end{array}\right)
 \end{aligned}
 $$
+
+-------------------------
 
 An optional caption for a math block
 {:.figcaption}

@@ -1,45 +1,64 @@
----
-# Copyright (c) 2018 Florian Klampfer <https://qwtel.com/>
-#
-# This program is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# This program is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-layout: base
----
-
-{% assign version = jekyll.version | split:'.' %}
-{% assign major = version[0] | plus:0 %}
-{% assign minor = version[1] | plus:0 %}
-{% assign patch = version[2] | plus:0 %}
-
-{% include_cached components/post.html post=page no_link_title=true no_excerpt=true hide_image=page.hide_image hide_description=page.hide_description %}
-
-{% include components/dingbat.html %}
-
-{% assign addons = page.addons | default:site.hydejack.post_addons %}
-{% unless addons %}{% assign addons = "about,newsletter,related,random" | split:"," %}{% endunless %}
-{% for addon in addons %}
-  {% case addon %}
-  {% when 'about' %}
-     {% include_cached components/about.html author=page.author %}
-  {% when 'newsletter' %}
-    {% include if-non-null try="pro/newsletter.html" %}
-  {% when 'related' %}
-    {% include if-non-null try="pro/related-posts.html" fallback="components/related-posts.html" %}
-  {% when 'random' %}
-    {% include if-non-null try="pro/random-posts.html" %}
-  {% when 'comments' %}
-    {% include body/comments.html %}
-  {% else %}
-  {% endcase %}
-{% endfor %}
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      {% include head.html %} 
+      {% if page.mathjax %}			
+      {% include markdown-enhancements/mathjax.html %}
+      {% endif %}
+      {% include theme-vue.html%}
+      <!-- change font -->
+      <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,400i,700|Source+Sans+Pro|Ubuntu+Mono" rel="stylesheet">
+      {% if page.numbering %}
+      <!-- link to counter.css -->
+      <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/counter.css">
+      {% endif %}
+      {% if page.commentable %}
+      <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/commentit.css">
+      {% endif %}
+      <!-- link to responsive post.css -->
+      <link rel="stylesheet" href="{{site.url}}{{site.baseurl}}/assets/css/post.css">
+   </head>
+   <body>
+      <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+      <!-- this is side bar -->
+      <div class="sidebar" id="sidebar">
+         <nav class="sidebar-nav">
+            {% include navitem.html %}
+         </nav>
+         {% if page.toc %}
+         <div class="toc">
+            <div class='toc-container'>
+               {% include toc.html html=content %}
+            </div>
+         </div>
+         {% endif %}
+      </div>
+      <!-- Add all page content inside this div if you want the side nav to push page content to the right
+         (not used if you only want the sidenav to sit on top of the page -->
+      <div class="wrap">
+         <div class="content-container">
+            <div class="page">
+               {% include frontmatter.html %}
+               <div id="content-container" style="text-align:justify">
+                        {% if page.type == "mdpdf" %}			
+                  <p>Due to github updates on markdown engine, my mathjax got scrambled. So I am providing the link to both the md source file as well as here in the <a href="https://github.com/{{site.github_username}}/{{site.github_username}}.github.io/tree/master/_posts/{{ page.repopath }}" > repo</a> </p>
+                        {% else %}
+                         {{ content }}	
+                        {% endif %}                  
+               </div>
+               <!-- <div id="comment-session"> -->
+                  <!-- {% include commentit.html %} -->
+               <!-- </div> -->
+            </div>
+         </div>
+      </div>
+      <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+      {% include footer.html %} 
+   </body>
+   {% if page.mermaid %}
+   {% include markdown-enhancements/mermaid.html %}
+   {% endif %}
+   {% if page.highlight %}
+   {% include markdown-enhancements/highlight.html %}
+   {% endif %}
+</html>

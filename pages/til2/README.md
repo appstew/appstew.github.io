@@ -7,8 +7,6 @@ hide_description: false
 sidebar: true
 order: 3
 permalink: /pages/til2/
-mermaid: true
-<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 ---
 0. {:toc}
 jekyll과 현재 hydejack theme 구조를 이해하고 사이트 저장소 최적화 하는중.
@@ -50,6 +48,19 @@ B-->e([joa])
 ```
 ----------
 Lorem ipsum $$ f(x) = x^2 $$.
+
+
+--------
+
+% mermaid %
+
+graph LR;
+A(입력)-->B[연산];
+B-->C(3);
+B-->D(2);
+B-->e([joa]);
+
+% endmermaid %
 
 -----------------
 $$
@@ -150,7 +161,7 @@ graph TD;
   <a href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a>
 </blockquote>
 
-{% mermaid %}
+```mermaid
     gantt;
     dateFormat  YYYY-MM-DD
     title       Adding GANTT diagram functionality to mermaid
@@ -181,8 +192,7 @@ graph TD;
     Describe gantt syntax               :after doc1, 3d
     Add gantt diagram to demo page      :20h
     Add another diagram to demo page    :48h
-{% endmermaid %}
-
+```
 
 ---------------------
 
@@ -230,7 +240,7 @@ graph TD;
 {:color-style: style="color: white;"}
 {:text-style: style="font-weight: 800; text-decoration: underline;"}
 
-<div class="mermaid">
+```
 |:             Here's an Inline Attribute Lists example                :||||
 | ------- | ------------------ | -------------------- | ------------------ |
 |:       :|:  <div style="color: red;"> &lt; Normal HTML Block > </div> :|||
@@ -238,15 +248,16 @@ graph TD;
 | ^^ IALs |   Green  {: #id style="background: green; color: white" }    |||
 | ^^      |   Blue   {: style="background: blue; color: white" }         |||
 | ^^      |   Black  {: color-style text-style }                         |||
-</div>
+```
 
-{% mermaid %}
-graph TD;
+    ```mermaid
+    graph TD;
     A-->B;
     A-->C;
     B-->D;
     C-->D;
-{% endmermaid %}
+    ```
+
 
 @startmermaid
 pie title Pets adopted by volunteers
@@ -293,4 +304,32 @@ graph TD;
     B-->D;
     C-->D;
 </div>
+
+<div class='mermaid'>
+|--|--|--|--|--|--|--|--|
+|♜| |♝|♛|♚|♝|♞|♜|
+| |♟|♟|♟| |♟|♟|♟|
+|♟| |♞| | | | | |
+| |♗| | |♟| | | |
+| | | | |♙| | | |
+| | | | | |♘| | |
+|♙|♙|♙|♙| |♙|♙|♙|
+|♖|♘|♗|♕|♔| | |♖|
+</div>  
+
+
+<div class='mermaid'>
+@startgantt;
+[Prototype design] lasts 15 days
+[Test prototype] lasts 10 days
+-- All example --
+[Task 1 (1 day)] lasts 1 day
+[T2 (5 days)] lasts 5 days
+[T3 (1 week)] lasts 1 week
+[T4 (1 week and 4 days)] lasts 1 week and 4 days
+[T5 (2 weeks)] lasts 2 weeks
+@endgantt
+</div>
+-------------
+
 

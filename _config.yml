@@ -352,6 +352,7 @@ plugins:
   - jekyll-mentions
   - jekyll-spaceship
   - github-pages
+  - jekyll-diagrams
 
 # SEO Tag
 # ---------------------------------------------------------------------------------------

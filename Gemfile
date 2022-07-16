@@ -17,12 +17,14 @@ group :jekyll_plugins do
   gem "jekyll"
   gem "jekyll-gist"
   gem "jekyll-coffeescript"
-  gem "jekyll-seo-tag", "~> 1.5"
+  gem "jekyll-seo-tag", "~> 2.8.0"
   gem 'jekyll-mermaid', '~> 1.0'
   gem 'jekyll-mermaid-diagrams'
+  gem 'jekyll-diagrams'
   gem 'jemoji'
   gem 'jekyll-paginate'
   gem 'jekyll-spaceship'
+  gem "kramdown-math-katex"
 end
 
 gem 'wdm' if Gem.win_platform?

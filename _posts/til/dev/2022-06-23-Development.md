@@ -1,13 +1,10 @@
 ---
 
-title:  "Development기초"
+title:  "Development"
 search: false
-categories: 
+#categories: 
 
-- dev
-  tags:
-- 코드스테이츠
-
+tags:  codestates
 ---
 
 # 학습목표

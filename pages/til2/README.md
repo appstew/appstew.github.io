@@ -7,8 +7,8 @@ hide_description: false
 sidebar: true
 order: 3
 permalink: /pages/til2/
-tags: [Mermaid]
 mermaid: true
+<script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 ---
 0. {:toc}
 jekyll과 현재 hydejack theme 구조를 이해하고 사이트 저장소 최적화 하는중.
@@ -140,9 +140,18 @@ graph TD;
     C-->D;
 </div>
 
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-lang="en">
+  <p lang="en" dir="ltr">
+    The next version of Hydejack (v6.3.0) will allow embedding 3rd party scripts,
+    like the one that comes with this tweet for example.
+  </p>
+  &mdash; Florian Klampfer (@qwtel)
+  <a href="https://twitter.com/qwtel/status/871098943505039362">June 3, 2017</a>
+</blockquote>
 
-```mermaid!
-    gantt
+{% mermaid %}
+    gantt;
     dateFormat  YYYY-MM-DD
     title       Adding GANTT diagram functionality to mermaid
     excludes    weekends
@@ -172,7 +181,7 @@ graph TD;
     Describe gantt syntax               :after doc1, 3d
     Add gantt diagram to demo page      :20h
     Add another diagram to demo page    :48h
-```
+{% endmermaid %}
 
 
 ---------------------
@@ -272,5 +281,14 @@ graph TD
 A[Client] --> B[Load Balancer] 
 B --> C[Server01] 
 B --> D[Server02]
+</div>
+
+==================
+<div class="mermaid">
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 </div>
 

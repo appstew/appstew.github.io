@@ -5,6 +5,7 @@ description: >
 hide_description: false
 toc: true
 toc_sticky
+/permalink: /pages/til2/test
 <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 <script>mermaid.initialize({startOnLoad:true});</script>
 ---
@@ -44,8 +45,8 @@ $$
 $$
 
 
-```mermaid-example
-    gantt
+<div class="mermaid">
+    gantt;
     dateFormat  YYYY-MM-DD
     title       Adding GANTT diagram functionality to mermaid
     excludes    weekends
@@ -75,7 +76,7 @@ $$
     Describe gantt syntax               :after doc1, 3d
     Add gantt diagram to demo page      :20h
     Add another diagram to demo page    :48h
-```
+</div>
 
 <div class="mermaid">
 graph TD;
@@ -135,7 +136,10 @@ graph TD;
 
 
 
-
+<div class="mermaid"> 
+    graph TD; A-->B; A-->C; B-->D; C-->D; 
+  </div>
+  
 
 
 

@@ -11,6 +11,15 @@ pupblished: false
 0. this unordered seed list will be replaced by toc as unordered list
    {:toc}
 
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
+
 ## 클래스와 객체
 
 - 예제 파일:  SimpleCalculatorTest

@@ -18,12 +18,10 @@ group :jekyll_plugins do
   gem "jekyll-gist"
   gem "jekyll-coffeescript"
   gem "jekyll-seo-tag"
-  gem 'jekyll-mermaid'
-  gem 'jekyll-mermaid-diagrams'
-  gem 'jekyll-diagrams'
+ 
   gem 'jemoji'
   gem 'jekyll-paginate'
-  gem 'jekyll-spaceship'
+
   gem "kramdown-math-katex"
 end
 

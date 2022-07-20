@@ -17,8 +17,8 @@ hide_description: false
 
 | TIL 링크 | 학습한 내용 | 처음 학습한 날짜 |
 | --       | --         | --              |
-|      |            |       |
-|      |            |       |
+|[dailycoding]      |            |  22.7.20     |
+|  [recursion]    |  [자료구조/알고리즘]재귀          |   22.7.20    |
 |      |            |       |
 |      |            |       |
 |      |            |       |
@@ -32,5 +32,6 @@ hide_description: false
 ### 링크 구성
 
 
-
+[dailycoding]:dailycoding.md
+[recursion]:recursion.md
 

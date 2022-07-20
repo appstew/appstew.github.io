@@ -52,8 +52,8 @@ order: 3
 ### 링크 구성
 
 
-[rails-pacman]:rails-pacman.md
-[Jekyll]:aboutJekyll.md
+[rails-pacman]: rails-pacman.md
+[Jekyll]: aboutJekyll.md
 
 [test.html]: test.html
 [workings]: workings.md

@@ -32,6 +32,6 @@ hide_description: false
 ### 링크 구성
 
 
-[dailycoding]:dailycoding.md
-[recursion]:recursion.md
+[dailycoding]: dailycoding.md
+[recursion]: recursion.md
 

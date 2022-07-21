@@ -1,3 +1,11 @@
+---
+layout: page
+title: rails-pacman test
+description: >
+hide_description: false
+toc: true
+
+---
 
 
 ||||

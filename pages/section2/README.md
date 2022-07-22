@@ -20,7 +20,7 @@ hide_description: false
 |[dailycoding]      |            |  22.7.20     |
 |  [recursion]    |  [자료구조/알고리즘]재귀          |   22.7.20    |
 |      |            |       |
-|      |            |       |
+|    [StringifyJSON]  |  페어 과제 [깃헙링크](https://github.com/appstew/be-sprint-stringify-json)           |       |   
 |      |            |       |
 |      |            |       |
 
@@ -35,3 +35,4 @@ hide_description: false
 [dailycoding]: dailycoding.md
 [recursion]: recursion.md
 
+[StringifyJSON]: StringifyJSON.md

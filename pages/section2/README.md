@@ -9,7 +9,7 @@ hide_description: false
 # permalink:
 ---
 0. {:toc}
-코드스테이츠 백엔드 부트캠프 40기의 section2.
+코드스테이츠 백엔드 부트캠프 40기의 section2. 코플릿 부분은 unpublish할지 생각해보자.
 {:.note}
 
 > 현재 미작성했거나 학습이 미흡한 부분:

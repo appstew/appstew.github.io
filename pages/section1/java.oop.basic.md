@@ -3,14 +3,14 @@ layout: page
 title: [Java]객체지향 프로그래밍 기초
 description: >
 hide_description: false
-
+toc: true
 
 ---
 
 {TOC}
 0. this unordered seed list will be replaced by toc as unordered list
    {:toc}
-
+> 레퍼런스 파일: hrd/section1/java.oop.basic/
 
 ```mermaid
 graph TD;

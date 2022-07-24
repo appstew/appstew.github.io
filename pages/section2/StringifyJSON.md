@@ -10,12 +10,41 @@ toc_sticky
 
 
 이번 과제에서는 서로 다른 프로그램 사이에서 데이터를 주고받기 위해 사용되는 데이터 타입인 JSON에 대해 학습하고, 실습을 통해 앞서 배운 자바에서 사용하는 데이터 타입을 재귀를 사용하여 직접 JSON타입으로 변경하는 코드를 작성하게 됩니다.
-Before You Learn
 
     과제를 시작하기 전에 이전에 학습했던 재귀함수의 동작원리를 복습하세요.
     Java에서 사용하는 다양한 데이터 타입에 대한 이해가 필요합니다.
 
 > 그래서 JSON 이 뭔데?
+
+```java
+    String - ""로 묶여야 함
+    Number
+    Object - {로 시작하고 }로 끝내어 표현함, name뒤에 :를 붙이고 ,로 구분
+    Array - [로 시작하고 ]로 끝냄, ,로 값을 구분
+    Boolean
+    Null
+```
+```java
+///JSON 의 구조
+{
+    "characters" : [
+      {
+        "name": "archer",
+        "level": 1,
+        "inventory": null,
+        "hardcore": false
+      },
+      {
+        "name": "knight",
+        "level": 8,
+        "inventory": ["sword", "shield"],
+        "hardcore": true
+      }
+    ]
+}
+```
+
+
 
 
 <details>

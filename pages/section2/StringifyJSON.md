@@ -116,27 +116,167 @@ System.out.println(deserializedData);
 
 
 ## 시작하기
-<details>
+이 프로젝트를 이해하고 구현하기 위해 공부했던 자료들을 출처와 함께 정리
 
-이번 과제는 재귀를 이용해 메서드 stringify를 직접 구현합니다.
+| 내용 | 링크 및 출처|
+| --   | -- |
+|1. JUnit, AssertJ, 단위테스트 개념 및 다양한 활용법 | https://jminie.tistory.com/68 |
+|2. 단위테스트 필요성 등등(1/3) | https://mangkyu.tistory.com/143|
+| [Spring] JUnit과 Mockito 기반의 Spring 단위 테스트 코드 작성법 (3/3) |출처: https://mangkyu.tistory.com/145 [MangKyu's Diary:티스토리] |
+|Java - JSON을 파싱하는 가장 쉬운 방법 |https://codechacha.com/ko/java-parse-json/ |
+| | |
+| | |
+| | |
+| | |
+```java
+그니까 테스트 하기 위해 JUnit 과 AssertJ 가 있는데,  
+// AssertJ는 이렇게 임포트
+import static org.assertj.core.api.Assertions.*;
+import org.junit.jupiter.api.Test;
+//그리고 
+assertThat(테스트타겟).메소드1().메소드2().메소드3();
+이런 식으로 쓰는데, 
+//이 프로젝트에선 이런 식으로 사용하였고,
+assertThat(test.stringify(null)).isEqualTo(ObjectMapper(null));
 
-이전 콘텐츠에서 writeValue는 데이터를 JSON으로 변환하는 메서드인 것을 확인했습니다. 이 메서드를 함수의 형태로 직접 구현하기 위해서, 재귀를 사용하세요. JSON은 대표적인 트리 구조를 가지고 있으므로, 전형적인 재귀 탐색이 가능한 구조(객체의 값으로 객체를 포함하는 구조)이기 때문에 재귀 사용을 적극 권장합니다. 어떻게 풀어야 할지 방향이 잘 정해지지 않는다면, 코플릿의 재귀 문제를 풀었던 방법을 다시 상기하세요. 부모와 자식의 구조가 같은 트리 구조를 어떤 조건에서 재귀 호출하면 좋을지 고민해보세요.
-Getting Started
-
-이번 과제는 IntelliJ를 사용하여 직접 코드를 작성하고, 테스트를 통해 정확한 코드를 입력했는지 확인할 수 있습니다.
-아래 순서에 맞게 진행해주세요.
-
-    repository 주소 에서 fork 및 clone 후 메소드를 작성합니다.
-    IntelliJ를 실행합니다.
-    열기를 클릭한 이후, 다운받은 폴더를 클릭하고 Open버튼을 클릭합니다.
-    신뢰할 수 있는 프로젝트를 클릭합니다.
-    src/main/java/stringifyJSON.java 파일을 열면, stringify메서드가 작성되어 있습니다. 해당 메서드에서 // TODO:부분을 직접 채워주세요.
-    모두 작성하였다면, src/test/java/stringifyJSON_test.java파일을 실행하여 작성한 코드가 정상적으로 작동하는지 테스트를 진행할 수 있습니다.
-    테스트는 아래 그림을 참고하시고, 1번 또는 2번 버튼을 통해 진행할 수 있습니다.
-
- image
+```
+```java
 Bare minimum Requirements
 
     src/main/java/stringifyJSON.java 에서 stringify 함수를 직접 구현해보고, src/test/java/stringifyJSON_test.java 파일을 실행하여 모든 테스트를 통과해야 합니다.
+```
+> 파일: section2/be-sprint-stringify-json/
 
-</details>
+> 하면서 몰랐던, 새로 알게 된 것들 정리:
+
+```java
+instanceof // if (data instanceof String) 이런 식으로 쓴다.
+.isEqualTo() // 두 객체가 서로 같은 값을 가지고 있는지
+.isSameAs() // 같은 메모리 주소를 참조하는지
+```
+
+
+
+```java
+// assertThat 예제 .출처 https://bibi6666667.tistory.com/231
+assertThat("Hello, world! Nice to meet you.") // 주어진 "Hello, world! Nice to meet you."라는 문자열은
+                .isNotEmpty() // 비어있지 않고
+                .contains("Nice") // "Nice"를 포함하고
+                .contains("world") // "world"도 포함하고
+                .doesNotContain("ZZZ") // "ZZZ"는 포함하지 않으며
+                .startsWith("Hell") // "Hell"로 시작하고
+                .endsWith("u.") // "u."로 끝나며
+                .isEqualTo("Hello, world! Nice to meet you."); // "Hello, world! Nice to meet you."과 일치합니다.
+```
+
+```java
+//assertThat 예제 2 .출처 https://bibi6666667.tistory.com/231
+assertThat(3.14d) // 주어진 3.14라는 숫자는
+                .isPositive() // 양수이고
+                .isGreaterThan(3) // 3보다 크며
+                .isLessThan(4) // 4보다 작습니다
+                .isEqualTo(3, offset(1d)) // 오프셋 1 기준으로 3과 같고
+                .isEqualTo(3.1, offset(0.1d)) // 오프셋 0.1 기준으로 3.1과 같으며
+                .isEqualTo(3.14); // 오프셋 없이는 3.14와 같습니다
+```                
+
+```java
+// 프로젝트 폴더에서, stringifyJSON 이라는 클래스 안에, 
+    public String stringify(Object data) {
+            public String stringify(Object data) {
+    // 입력된 값이 문자열일 경우
+      if(data instanceof String){
+          return "\""+(String)data+"\"";
+      }
+      ....
+      ....
+// 함수(메서드인가?.. section1 돌아가서 복습하자..) 를 구현한다.
+```
+```java
+// 그리고 stringifyJSON_test 라는 퍼블릭 클래스 를 만들고, 그 안에
+public class stringifyJSON_test {
+
+    private static stringifyJSON test = new stringifyJSON();
+// 
+    public String ObjectMapper(Object data) throws JsonProcessingException {
+        ObjectMapper mapper = new ObjectMapper();
+        return mapper.writeValueAsString(data);
+    }
+
+    @Test
+    @DisplayName("null을 입력받을 경우, 알맞은 형태의 JSON으로 변환합니다")
+    public void null을_JSON으로_변경합니다() throws JsonProcessingException {
+        assertThat(test.stringify(null)).isEqualTo(ObjectMapper(null));
+    }
+    ...
+    ...
+
+```
+```java
+- 다 보기는 시간이 없을 것 같아 다음 일부만 살펴보자.
+- 다음은 원래의 마지막 부분이다.
+```java
+    @Test
+    @DisplayName("HashMap을 입력받을 경우, 알맞은 형태의 JSON으로 변환합니다")
+    public void Map_을_입력받았을_경우_JSON으로_변경합니다_3() throws JsonProcessingException {
+        HashMap<Object, Object> map = new HashMap<>(){{
+            put("foo", true);
+            put("bar", false);
+            put("baz", null);
+        }};
+        assertThat(test.stringify(map)).isEqualTo(ObjectMapper(map));
+```
+- 그럼 이 부분에 의해 @Test
+    @DisplayName("HashMap을 입력받을 경우, 알맞은 형태의 JSON으로 변환합니다")
+
+- HashMap을 입력받을 경우, 알맞은 형태의 JSON으로 변환합니다 
+- 라고 뜬다. 
+- 약간 수정해서
+```
+   @Test
+    @DisplayName("HashMap을 입력받을 경우, 알맞은 형태의 JSON으로 변환합니다")
+    public void Map_을_입력받았을_경우_JSON으로_변경합니다_3() throws JsonProcessingException {
+        HashMap<Object, Object> map = new HashMap<>(){{
+            put("foo", true);
+            put("bar", false);
+            put("baz", null);
+        }};
+        System.out.println("테스트");
+        // assertThat(test.stringify(map)).isEqualTo(ObjectMapper(map));
+        System.out.println(ObjectMapper(map));
+    }
+```
+- 라고 하면
+```java
+테스트
+{"bar":false,"foo":true,"baz":null}
+```
+- 위와 같이 JSON 형태로 출력되는 것을 볼 수 있다.
+- 반대로 일부러 틀린 데이터를 입력해보자.
+```java
+ @Test
+    @DisplayName("HashMap을 입력받을 경우, 알맞은 형태의 JSON으로 변환합니다")
+    public void Map_을_입력받았을_경우_JSON으로_변경합니다_3() throws JsonProcessingException {
+        HashMap<Object, Object> map = new HashMap<>(){{
+            put("foo", true);
+            put("bar", false);
+            put("baz", null);
+        }};
+        HashMap<Object, Object> map2 = new HashMap<>(){{
+            put("foo", false);
+            put("bar", false);
+            put("baz", null);
+        }};
+        
+        assertThat(test.stringify(map)).isEqualTo(ObjectMapper(map2));
+        
+    }
+```
+그러면
+> 테스트 실패: 1, 통과됨:12 /13개 테스트 
+
+와 같이 결과가 나와서 잘 실행된 것을 알 수 있다.
+
+
+
+   

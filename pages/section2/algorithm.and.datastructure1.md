@@ -72,3 +72,124 @@ stack.pop();
 - Stack 의 실사용 예제
 ![](https://s3.ap-northeast-2.amazonaws.com/urclass-images/odlYBM0wMK3y1JCsKsbPv-1650936354312.gif)
 
+- 이제 코플릿을 푸는데..1번 문제에서 배열과 리스트 등장..그때 일이 생겨서.. 지금 이걸 모른 다는 건 말도 안되지만 아무튼 급하게 학습
+- 그리고 그때 공부 못하고 못만든 TIL 문서를 만들면서 여기 내용과 통합하자.
+
+```java
+// array 정의
+int[] numbers1 = new int[4];
+// array에 값 저장
+numbers1[2] = 20;
+//
+//자바에 리스트는 두가지가 있다. 
+//LinkedList 와 ArrayList
+//
+1.Array - 추가, 삭제가 어렵고, 직접 구현해야함
+int[] numbers = {10, 20, 30, 40, 50};
+//
+2.ArrayList
+ArrayList numbers = new ArrayList();
+//
+numbers.add(10);
+numbers.remove(0);
+//
+3.LinkedList
+LinkedList numbers = new LinkedList();
+//
+numbers.add(10);
+numbers.remove(0);
+```
+- ArrayList 예제
+```java
+List<String> list = new ArrayList<>();
+list.add("hello");
+list.add("cat");
+list.add("hi");
+list.add("dog");
+list.add("good");
+list.add("friends");
+
+System.out.println(list.size());   //  6
+System.out.println(list.get(3));   //  dog
+list.remove(3);
+list.remove("cat");
+System.out.println(list);   //  [hello, hi, good, friends]
+```
+```java
+List<String> companies = Arrays.asList("google", "apple", "samsung");
+System.out.println(companies);  //  [google, apple, samsung]
+
+List<Integer> numbers = Arrays.asList(1, 10, 100);
+System.out.println(numbers);  //  [1, 10, 100]
+```
+- ArrayList vs LinkedList
+- 출처: https://velog.io/@roro/Java-List-ArrayList-LinkedList
+
+```java
+public static void main(String[] args) {
+    List<String> al = new ArrayList<>(2000000);
+    List<String> ll = new LinkedList<>();
+
+    System.out.println("=====순차적 추가=====");
+    System.out.println("ArrayList : " + add1(al));
+    System.out.println("LinkedList : " + add1(ll));
+    System.out.println("=====중간 추가=====");
+    System.out.println("ArrayList : " + add2(al));
+    System.out.println("LinkedList : " + add2(ll));
+    System.out.println("=====중간 삭제=====");
+    System.out.println("ArrayList : " + remove2(al));
+    System.out.println("LinkedList : " + remove2(ll));
+    System.out.println("=====순차적 삭제=====");
+    System.out.println("ArrayList : " + remove1(al));
+    System.out.println("LinkedList : " + remove1(ll));
+}
+
+private static long add1(List<String> list) {
+    long start = System.currentTimeMillis();
+    for (int i = 0; i < 1000000; i++) {
+        list.add(i + "");
+    }
+    long end = System.currentTimeMillis();
+    return end - start;
+}
+
+private static long add2(List<String> list) {
+    long start = System.currentTimeMillis();
+    for (int i = 0; i < 10000; i++) {
+        list.add(5000,i + "");
+    }
+    long end = System.currentTimeMillis();
+    return end - start;
+}
+
+private static long remove1(List<String> list) {
+    long start = System.currentTimeMillis();
+    for (int i = list.size() - 1; i >= 0; i--) {
+        list.remove(i);
+    }
+    long end = System.currentTimeMillis();
+    return end - start;
+}
+
+private static long remove2(List<String> list) {
+    long start = System.currentTimeMillis();
+    for (int i = 0; i < 10000; i++) {
+        list.remove(i);
+    }
+    long end = System.currentTimeMillis();
+    return end - start;
+}
+// 결과
+=====순차적 추가=====
+ArrayList : 99
+LinkedList : 233
+=====중간 추가=====
+ArrayList : 2233
+LinkedList : 106
+=====중간 삭제=====
+ArrayList : 1403
+LinkedList : 219
+=====순차적 삭제=====
+ArrayList : 8
+LinkedList : 25
+```

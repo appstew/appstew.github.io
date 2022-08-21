@@ -226,6 +226,8 @@ Spring 애플리케이션을 부트스트랩하고, 실행하는 역할을 합�
     @RequestMapping을 Controller 클래스 레벨에 추가하여 클래스 전체에 사용되는 공통 URL(Base URL)을 설정할 수 있다.
 ```
 
+#### 리눅스 실행중인 로컬 포트 확인 및 중지 방법
+
 ```
 인텔리제이에서 서버를 닫지 않고 종료 후 재시작 했을 때 서버가 닫히지 않아서 다시 서버 실행을 할 경우 이미 사용중인 포트번호라고 뜨는 문제가 있었다.
 // 리눅스 특정 포트에서 실행 중인 프로세스 제거하기
@@ -245,6 +247,7 @@ java    5539 dami   47u  IPv6  68025      0t0  TCP *:webcache (LISTEN)
 
 ```
 
+#### 리눅스 서드파티 tar.gz 앱 설치 및 심링크 생성
 
 ```
 // 220821 16:55.
@@ -354,3 +357,11 @@ public class MemberController {
 
 ![](https://s3.ap-northeast-2.amazonaws.com/urclass-images/hjL4xDrLRcm34cXfka3qO-1655087288749.png)
 
+==============
+
+- 20220821 일요일 21:51. 겨우 따라잡았다..
+  - be-homework-controller 요구 사항 4개 중 일단 1개는 성공
+  - section3-week1 필수 전체 및 핵심 일부 구현
+
+![](../../img/fedora/Screenshot%20from%202022-08-21%2021-49-02.png)
+![](../../img/fedora/Screenshot%20from%202022-08-21%2021-49-11.png)

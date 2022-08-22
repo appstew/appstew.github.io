@@ -13,17 +13,6 @@ image:
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-# this md file is a post template.
-
-## Mermaid SVG
-
-```mermaid
-gantt
-  title  Adding GANTT diagram functionality to mermaid
-  apple :a, 2017-07-20, 1w
-  banana :crit, b, 2017-07-23, 1d
-  cherry :active, c, after b a, 1d
-```
 
 ## Prompts
 
@@ -40,30 +29,6 @@ gantt
 {: .prompt-danger }
 
 
-
-## gantt 1
-
-```mermaid
-gantt
-  title  Adding GANTT diagram functionality to mermaid
-  apple :a, 2017-07-20, 1w
-  banana :crit, b, 2017-07-23, 1d
-  cherry :active, c, after b a, 1d
-```
-
-
-## gantt 2
-
-```mermaid
-gantt title gantt test
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-```
 
 ## title [Spring MVC] API 계층
 
@@ -83,8 +48,10 @@ classDiagram
       -DTO과제(~8.29)
     }
     class service{
-      1.
+      equals.business
+      1.서비스(비즈니스)계층
       2.
+      -서비스(비즈니스) 과제(~8.30)
     }
     class Data{
       1.

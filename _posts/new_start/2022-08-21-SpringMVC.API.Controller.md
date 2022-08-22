@@ -1,9 +1,9 @@
 ---
-title: SpringMVC.API
+title: SpringMVC.API.Controller
 author: appstew
-date: 2019-08-08 11:33:00 +0800
+date: 2022-08-19 11:33:00 +0800
 categories: [codestates, section3]
-tags: [codestate]
+tags: [codestates]
 math: true
 mermaid: true
 image:
@@ -68,11 +68,29 @@ Parallel 4   :         des6, after des4, 1d
 ## title [Spring MVC] API 계층
 
 ```mermaid
-graph TD; title [Spring MVC] API 계층
-A[0] --> B[[Spring MVC] API 계층] 
-B --> C[Spring MVC 아키텍처] 
-B --> D[Controller]
-B --> E[DTO(Data Transfer Object)]
+classDiagram
+    Spring MVC <|-- API
+    Spring MVC <|-- service
+    Spring MVC <|-- Data
+    %% Spring MVC : +int age
+    %% Spring MVC : +String gender
+    %% Spring MVC: +isMammal()
+    %% Spring MVC: +mate()
+    class API{
+      1. Controller
+      2. DTO
+      -controller과제(~8.26)
+      -DTO과제(~8.29)
+    }
+    class service{
+      1.
+      2.
+    }
+    class Data{
+      1.
+      2.
+    }
+click API href "https://google.com"
 click c href ".#spring-아키텍처"
 click D href "./#controller"
 click e href "./"
@@ -365,3 +383,4 @@ public class MemberController {
 
 ![](../../img/fedora/Screenshot%20from%202022-08-21%2021-49-02.png)
 ![](../../img/fedora/Screenshot%20from%202022-08-21%2021-49-11.png)
+

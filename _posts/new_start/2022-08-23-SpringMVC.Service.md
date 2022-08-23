@@ -196,21 +196,6 @@ dependencies {
 - MapStruct 가 매핑을  
   -     
 
-- 아기소리
-
-### 수업 종료 후 추가공부
-
-- .java .class 차이점
-  - .java 는 프로그램 작성시, .class 는 빌드된 파일로서, JVM 에서 프로그램 구동 시 사용된다.
-  - .class 파일은 .java 코드를 보안 이유로 바이트 코드 바꾼 것이고 또한 이걸 실행하는 것이 속도가 더 빠르다.
-![](../../img/fedora_hrd/java_class_difference.png)
-
-
-```
-//질문: 궁금한 게 있습니다. Mapper 라이브러리가 설명만 봤을 때는 엄청나게 편해보였는데, 막상 사용해보니 Entity와 DTO의 멤버가 다른 경우(예를 들어 유저에게 아이디 패스워드 네임 이메일이 있는데 UserDto에서는 네임과 이메일만 가져올 경우) 일일히 옵션으로 매핑 처리를 해줘야하고 그에 맞는 DTO도 별도로 만들어줘야해서 수작업으로 Entity To Dto 클래스를 만들어서 매핑해주는 것에 비해 큰 이점이 있는지 잘 모르겠다는 생각이 들었는데, 실무에서는 거의 매퍼를 사용하나요? 
-//답변: 야옹
-```
-
 - CofferService.java 안에 있는 데이터. stub, 또는 목업데이터
 
 - Stream API 리뷰
@@ -219,6 +204,34 @@ dependencies {
 //질문: @Email 유효성 검증에서 ‘@‘는 빠지면 안 되는데 ‘.’는 빠져도 되더라구요. 어디를 뜯어보면 확인할 수 있나요? 
 //답변: 
 ```
+
+```
+//질문: 궁금한 게 있습니다. Mapper 라이브러리가 설명만 봤을 때는 엄청나게 편해보였는데, 막상 사용해보니 Entity와 DTO의 멤버가 다른 경우(예를 들어 유저에게 아이디 패스워드 네임 이메일이 있는데 UserDto에서는 네임과 이메일만 가져올 경우) 일일히 옵션으로 매핑 처리를 해줘야하고 그에 맞는 DTO도 별도로 만들어줘야해서 수작업으로 Entity To Dto 클래스를 만들어서 매핑해주는 것에 비해 큰 이점이 있는지 잘 모르겠다는 생각이 들었는데, 실무에서는 거의 매퍼를 사용하나요? 
+//답변: 야옹
+```
+
+### 수업 종료 후 추가공부
+
+- .java .class 차이점
+  - .java 는 프로그램 작성시, .class 는 빌드된 파일로서, JVM 에서 프로그램 구동 시 사용된다.
+  - .class 파일은 .java 코드를 보안 이유로 바이트 코드 바꾼 것이고 또한 이걸 실행하는 것이 속도가 더 빠르다.
+![](../../img/fedora_hrd/java_class_difference.png)
+
+- github pages 는 SSR 이고 mermaid.min.js 까지 제공하는데 왜 크롬과 파폭 등 브라우저 단에서는 렌더링 애드온이 필요한 걸까?
+  - [kiroki.io](https://kroki.io/)
+    - [cheat sheet](../../img/fedora_hrd/kroki.io_printPDF.pdf)
+      - Excalidraw[]
+      - Graphviz
+      - [PlantUML](https://plantuml.com/starting)
+  - https://gojs.net/latest/intro/ 여기서 나중에좀 천천히 읽고 실습해보자.
+  - about:debugging#/runtime/this-firefox 에서 Markdown Diagrams 소스코드, 디버깅툴 보기
+  - 그리고 schema, 자료구조 시각화 자료 등, 시간 날때 알아보자.
+  - markdownMonster
+  - Obsidian
+  - [intelliJ Diagram exmaple](../../img/fedora_hrd/beandiagram.svg)
+    - <details>![](../../img/fedora_hrd/beandiagram.svg)
+    </details>
+
 
 ```mermaid
 flowchart LR
@@ -690,8 +703,8 @@ websocketServletWebServerCustomizer(websocketServletWebServerCustomizer)
 welcomePageHandlerMapping(welcomePageHandlerMapping)
 welcomePageHandlerMapping(welcomePageHandlerMapping)
 
-node217  -. @Bean .->  forceAutoProxyCreatorToUseClassProxying 
-applicationAvailabilityAutoConfiguration  -. @Bean .->  applicationAvailability 
+node217  -. "@Bean" .->  forceAutoProxyCreatorToUseClassProxying 
+applicationAvailabilityAutoConfiguration  -. "@Bean" .->  applicationAvailability 
 be39Section3Week1HomeworkMapperApplication  -..->  be39Section3Week1HomeworkMapperApplication 
 be39Section3Week1HomeworkMapperApplication  -..->  coffeeController 
 be39Section3Week1HomeworkMapperApplication  -..->  coffeeMapperImpl 
@@ -702,97 +715,97 @@ be39Section3Week1HomeworkMapperApplication  -..->  memberService
 be39Section3Week1HomeworkMapperApplication  -..->  orderController 
 be39Section3Week1HomeworkMapperApplication  -..->  orderMapperImpl 
 be39Section3Week1HomeworkMapperApplication  -..->  orderService 
-cacheAutoConfiguration  -. @Bean .->  cacheAutoConfigurationValidator 
-cacheAutoConfiguration  -- @Import -->  cacheConfigurationImportSelector 
-cacheAutoConfiguration  -. @Bean .->  cacheManagerCustomizers 
-node255  -. @Bean .->  dispatcherServlet 
-node255  -. @Bean .->  multipartResolver 
-node38  -- @Import -->  node255 
-node38  -. @Bean .->  dispatcherServletRegistration 
-node66  -. @Bean .->  tomcatWebServerFactoryCustomizer 
-errorMvcAutoConfiguration  -. @Bean .->  basicErrorController 
-errorMvcAutoConfiguration  -. @Bean .->  errorAttributes 
-errorMvcAutoConfiguration  -. @Bean .->  errorPageCustomizer 
-errorMvcAutoConfiguration  -. @Bean .->  preserveErrorControllerTargetClassPostProcessor 
-node364  -. @Bean .->  conventionErrorViewResolver 
-node1  -. @Bean .->  beanNameViewResolver 
-node1  -. @Bean .->  error 
-httpEncodingAutoConfiguration  -. @Bean .->  characterEncodingFilter 
-httpEncodingAutoConfiguration  -. @Bean .->  localeCharsetMappingsCustomizer 
-httpMessageConvertersAutoConfiguration  -- @Import -->  jacksonHttpMessageConvertersConfiguration 
-httpMessageConvertersAutoConfiguration  -. @Bean .->  messageConverters 
-node182  -. @Bean .->  stringHttpMessageConverter 
-jacksonAutoConfiguration  -. @Bean .->  jsonComponentModule 
-node104  -. @Bean .->  standardJacksonObjectMapperBuilderCustomizer 
-node361  -. @Bean .->  jacksonObjectMapperBuilder 
-node65  -. @Bean .->  jacksonObjectMapper 
-node195  -. @Bean .->  parameterNamesModule 
-node212  -. @Bean .->  mappingJackson2HttpMessageConverter 
-lifecycleAutoConfiguration  -. @Bean .->  lifecycleProcessor 
-messageSourceAutoConfiguration  -. @Bean .->  messageSource 
-messageSourceAutoConfiguration  -. @Bean .->  messageSourceProperties 
-multipartAutoConfiguration  -. @Bean .->  multipartConfigElement 
-multipartAutoConfiguration  -. @Bean .->  multipartResolver 
-projectInfoAutoConfiguration  -. @Bean .->  buildProperties 
-projectInfoAutoConfiguration  -. @Bean .->  gitProperties 
-propertyPlaceholderAutoConfiguration  -. @Bean .->  propertySourcesPlaceholderConfigurer 
-restTemplateAutoConfiguration  -. @Bean .->  restTemplateBuilder 
-restTemplateAutoConfiguration  -. @Bean .->  restTemplateBuilderConfigurer 
-servletWebServerFactoryAutoConfiguration  -- @Import -->  beanPostProcessorsRegistrar 
-servletWebServerFactoryAutoConfiguration  -- @Import -->  node336 
-servletWebServerFactoryAutoConfiguration  -. @Bean .->  servletWebServerFactoryCustomizer 
-servletWebServerFactoryAutoConfiguration  -. @Bean .->  tomcatServletWebServerFactoryCustomizer 
-node336  -. @Bean .->  tomcatServletWebServerFactory 
-simpleCacheConfiguration  -. @Bean .->  cacheManager 
-sqlInitializationAutoConfiguration  -- @Import -->  databaseInitializationDependencyConfigurer 
-taskExecutionAutoConfiguration  -. @Bean .->  applicationTaskExecutor 
-taskExecutionAutoConfiguration  -. @Bean .->  taskExecutorBuilder 
-taskSchedulingAutoConfiguration  -. @Bean .->  scheduledBeanLazyInitializationExcludeFilter 
-taskSchedulingAutoConfiguration  -. @Bean .->  taskScheduler 
-taskSchedulingAutoConfiguration  -. @Bean .->  taskSchedulerBuilder 
-validationAutoConfiguration  -. @Bean .->  defaultValidator 
-validationAutoConfiguration  -. @Bean .->  methodValidationPostProcessor 
-validationAutoConfiguration  -- @Import -->  primaryDefaultValidatorPostProcessor 
-webMvcAutoConfiguration  -. @Bean .->  formContentFilter 
-webMvcAutoConfiguration  -. @Bean .->  hiddenHttpMethodFilter 
-node376  -. @Bean .->  beanNameHandlerMapping 
-node376  -. @Bean .->  defaultServletHandlerMapping 
-node376  -. @Bean .->  flashMapManager 
-node376  -. @Bean .->  flashMapManager 
-node376  -. @Bean .->  handlerExceptionResolver 
-node376  -. @Bean .->  handlerFunctionAdapter 
-node376  -. @Bean .->  httpRequestHandlerAdapter 
-node376  -. @Bean .->  localeResolver 
-node376  -. @Bean .->  localeResolver 
-node376  -. @Bean .->  mvcContentNegotiationManager 
-node376  -. @Bean .->  mvcContentNegotiationManager 
-node376  -. @Bean .->  mvcConversionService 
-node376  -. @Bean .->  mvcConversionService 
-node376  -. @Bean .->  mvcHandlerMappingIntrospector 
-node376  -. @Bean .->  mvcPathMatcher 
-node376  -. @Bean .->  mvcPatternParser 
-node376  -. @Bean .->  mvcResourceUrlProvider 
-node376  -. @Bean .->  mvcUriComponentsContributor 
-node376  -. @Bean .->  mvcUrlPathHelper 
-node376  -. @Bean .->  mvcValidator 
-node376  -. @Bean .->  mvcValidator 
-node376  -. @Bean .->  mvcViewResolver 
-node376  -. @Bean .->  requestMappingHandlerAdapter 
-node376  -. @Bean .->  requestMappingHandlerAdapter 
-node376  -. @Bean .->  requestMappingHandlerMapping 
-node376  -. @Bean .->  requestMappingHandlerMapping 
-node376  -. @Bean .->  resourceHandlerMapping 
-node376  -. @Bean .->  routerFunctionMapping 
-node376  -. @Bean .->  simpleControllerHandlerAdapter 
-node376  -. @Bean .->  themeResolver 
-node376  -. @Bean .->  themeResolver 
-node376  -. @Bean .->  viewControllerHandlerMapping 
-node376  -. @Bean .->  viewNameTranslator 
-node376  -. @Bean .->  welcomePageHandlerMapping 
-node334  -. @Bean .->  beanNameViewResolver 
-node334  -. @Bean .->  defaultViewResolver 
-node334  -. @Bean .->  requestContextFilter 
-node334  -. @Bean .->  viewResolver 
-node334  -- @Import -->  node376 
-node329  -. @Bean .->  websocketServletWebServerCustomizer 
+cacheAutoConfiguration  -. "@Bean" .->  cacheAutoConfigurationValidator 
+cacheAutoConfiguration  -- "@Import" -->  cacheConfigurationImportSelector 
+cacheAutoConfiguration  -. "@Bean" .->  cacheManagerCustomizers 
+node255  -. "@Bean" .->  dispatcherServlet 
+node255  -. "@Bean" .->  multipartResolver 
+node38  -- "@Import" -->  node255 
+node38  -. "@Bean" .->  dispatcherServletRegistration 
+node66  -. "@Bean" .->  tomcatWebServerFactoryCustomizer 
+errorMvcAutoConfiguration  -. "@Bean" .->  basicErrorController 
+errorMvcAutoConfiguration  -. "@Bean" .->  errorAttributes 
+errorMvcAutoConfiguration  -. "@Bean" .->  errorPageCustomizer 
+errorMvcAutoConfiguration  -. "@Bean" .->  preserveErrorControllerTargetClassPostProcessor 
+node364  -. "@Bean" .->  conventionErrorViewResolver 
+node1  -. "@Bean" .->  beanNameViewResolver 
+node1  -. "@Bean" .->  error 
+httpEncodingAutoConfiguration  -. "@Bean" .->  characterEncodingFilter 
+httpEncodingAutoConfiguration  -. "@Bean" .->  localeCharsetMappingsCustomizer 
+httpMessageConvertersAutoConfiguration  -- "@Import" -->  jacksonHttpMessageConvertersConfiguration 
+httpMessageConvertersAutoConfiguration  -. "@Bean" .->  messageConverters 
+node182  -. "@Bean" .->  stringHttpMessageConverter 
+jacksonAutoConfiguration  -. "@Bean" .->  jsonComponentModule 
+node104  -. "@Bean" .->  standardJacksonObjectMapperBuilderCustomizer 
+node361  -. "@Bean" .->  jacksonObjectMapperBuilder 
+node65  -. "@Bean" .->  jacksonObjectMapper 
+node195  -. "@Bean" .->  parameterNamesModule 
+node212  -. "@Bean" .->  mappingJackson2HttpMessageConverter 
+lifecycleAutoConfiguration  -. "@Bean" .->  lifecycleProcessor 
+messageSourceAutoConfiguration  -. "@Bean" .->  messageSource 
+messageSourceAutoConfiguration  -. "@Bean" .->  messageSourceProperties 
+multipartAutoConfiguration  -. "@Bean" .->  multipartConfigElement 
+multipartAutoConfiguration  -. "@Bean" .->  multipartResolver 
+projectInfoAutoConfiguration  -. "@Bean" .->  buildProperties 
+projectInfoAutoConfiguration  -. "@Bean" .->  gitProperties 
+propertyPlaceholderAutoConfiguration  -. "@Bean" .->  propertySourcesPlaceholderConfigurer 
+restTemplateAutoConfiguration  -. "@Bean" .->  restTemplateBuilder 
+restTemplateAutoConfiguration  -. "@Bean" .->  restTemplateBuilderConfigurer 
+servletWebServerFactoryAutoConfiguration  -- "@Import" -->  beanPostProcessorsRegistrar 
+servletWebServerFactoryAutoConfiguration  -- "@Import" -->  node336 
+servletWebServerFactoryAutoConfiguration  -. "@Bean" .->  servletWebServerFactoryCustomizer 
+servletWebServerFactoryAutoConfiguration  -. "@Bean" .->  tomcatServletWebServerFactoryCustomizer 
+node336  -. "@Bean" .->  tomcatServletWebServerFactory 
+simpleCacheConfiguration  -. "@Bean" .->  cacheManager 
+sqlInitializationAutoConfiguration  -- "@Import" -->  databaseInitializationDependencyConfigurer 
+taskExecutionAutoConfiguration  -. "@Bean" .->  applicationTaskExecutor 
+taskExecutionAutoConfiguration  -. "@Bean" .->  taskExecutorBuilder 
+taskSchedulingAutoConfiguration  -. "@Bean" .->  scheduledBeanLazyInitializationExcludeFilter 
+taskSchedulingAutoConfiguration  -. "@Bean" .->  taskScheduler 
+taskSchedulingAutoConfiguration  -. "@Bean" .->  taskSchedulerBuilder 
+validationAutoConfiguration  -. "@Bean" .->  defaultValidator 
+validationAutoConfiguration  -. "@Bean" .->  methodValidationPostProcessor 
+validationAutoConfiguration  -- "@Import" -->  primaryDefaultValidatorPostProcessor 
+webMvcAutoConfiguration  -. "@Bean" .->  formContentFilter 
+webMvcAutoConfiguration  -. "@Bean" .->  hiddenHttpMethodFilter 
+node376  -. "@Bean" .->  beanNameHandlerMapping 
+node376  -. "@Bean" .->  defaultServletHandlerMapping 
+node376  -. "@Bean" .->  flashMapManager 
+node376  -. "@Bean" .->  flashMapManager 
+node376  -. "@Bean" .->  handlerExceptionResolver 
+node376  -. "@Bean" .->  handlerFunctionAdapter 
+node376  -. "@Bean" .->  httpRequestHandlerAdapter 
+node376  -. "@Bean" .->  localeResolver 
+node376  -. "@Bean" .->  localeResolver 
+node376  -. "@Bean" .->  mvcContentNegotiationManager 
+node376  -. "@Bean" .->  mvcContentNegotiationManager 
+node376  -. "@Bean" .->  mvcConversionService 
+node376  -. "@Bean" .->  mvcConversionService 
+node376  -. "@Bean" .->  mvcHandlerMappingIntrospector 
+node376  -. "@Bean" .->  mvcPathMatcher 
+node376  -. "@Bean" .->  mvcPatternParser 
+node376  -. "@Bean" .->  mvcResourceUrlProvider 
+node376  -. "@Bean" .->  mvcUriComponentsContributor 
+node376  -. "@Bean" .->  mvcUrlPathHelper 
+node376  -. "@Bean" .->  mvcValidator 
+node376  -. "@Bean" .->  mvcValidator 
+node376  -. "@Bean" .->  mvcViewResolver 
+node376  -. "@Bean" .->  requestMappingHandlerAdapter 
+node376  -. "@Bean" .->  requestMappingHandlerAdapter 
+node376  -. "@Bean" .->  requestMappingHandlerMapping 
+node376  -. "@Bean" .->  requestMappingHandlerMapping 
+node376  -. "@Bean" .->  resourceHandlerMapping 
+node376  -. "@Bean" .->  routerFunctionMapping 
+node376  -. "@Bean" .->  simpleControllerHandlerAdapter 
+node376  -. "@Bean" .->  themeResolver 
+node376  -. "@Bean" .->  themeResolver 
+node376  -. "@Bean" .->  viewControllerHandlerMapping 
+node376  -. "@Bean" .->  viewNameTranslator 
+node376  -. "@Bean" .->  welcomePageHandlerMapping 
+node334  -. "@Bean" .->  beanNameViewResolver 
+node334  -. "@Bean" .->  defaultViewResolver 
+node334  -. "@Bean" .->  requestContextFilter 
+node334  -. "@Bean" .->  viewResolver 
+node334  -- "@Import" -->  node376 
+node329  -. "@Bean" .->  websocketServletWebServerCustomizer 
 ```

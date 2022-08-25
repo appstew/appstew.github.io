@@ -52,7 +52,7 @@
 
 
 ## 220824 
-- 인텔리제이로 Downloads 안에 mermaid.site GoJS.site 를 열어보았고, 인텔리제이로도 자바 뿐만 아니라 다른 것들도 할 수 있다는 것을 알게되었다.
+- 인텔리제이로 Downloads 안에 [mermaid.site](https://github.com/appstew/mermaid) [GoJS.site](https://github.com/appstew/GoJS) 를 열어보았고, 인텔리제이로도 자바 뿐만 아니라 다른 것들도 할 수 있다는 것을 알게되었다.
   - mermaid.site 와 GoJS.site 각각 포크하였다.
 mermaid.site 의 경우
   - 파이어폭스의 렌더 엔진을 꺼도 보기좋지는 않지만, 어쨋든 md 문서의 mermaid-example 들이 렌더링 되긴 하는 것을 알게 되었다. 

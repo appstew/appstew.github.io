@@ -226,6 +226,8 @@ tcp6       0      0 127.0.0.1:8080          127.0.0.1:50700         ESTABLISHED 
 [dami@fedora ~]$ lsof -i:8080
 COMMAND  PID USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 java    5539 dami   47u  IPv6  68025      0t0  TCP *:webcache (LISTEN)
+sudo kill $7329
+
 [dami@fedora ~]$ kill $(lsof -t -i:8080)
 [dami@fedora ~]$ lsof -i:8080
 [dami@fedora ~]$ 

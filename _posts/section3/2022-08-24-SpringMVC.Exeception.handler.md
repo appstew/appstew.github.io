@@ -29,6 +29,65 @@ stream API 리뷰는 나중에라도 꼭 해드리고 싶어요.
     제출 기한
         2022.09.01 24:00 까지
 
+## 페어 프로그래밍
+- section3/Execption.handler/be-homework-exception-handle/ 에 주어진 기능 3개를 페어와 같이 구현하였다.
+```java
+//GlobalExceptionAdvice.java
+// 페어와 함께 작성한 코드
+        // TODO GlobalExceptionAdvice 기능 추가 1
+//        return new ResponseEntity<>(response, HttpStatus.valueOf(e.getExceptionCode().getStatus()));
+        return new ResponseEntity<>(response, HttpStatus.valueOf(response.getStatus()));
+
+//        return new ResponseEntity<>(HttpStatus.valueOf(e.getExceptionCode()
+//                .getStatus()));
+    }
+    
+    // TODO GlobalExceptionAdvice 기능 추가 2
+
+    @ExceptionHandler
+    public ResponseEntity handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e) {
+        ErrorResponse response = new ErrorResponse(405, "Method Not Allowed");
+
+//        final ErrorResponse response =ErrorResponse.of(HttpStatus.METHOD_NOT_ALLOWED);식
+// 황정식님 방
+
+        return new ResponseEntity<>(response, HttpStatus.METHOD_NOT_ALLOWED);
+    }
+    // TODO GlobalExceptionAdvice 기능 추가 3
+    @ExceptionHandler
+    public ResponseEntity handleException(Exception e) {
+        ErrorResponse response = new ErrorResponse(500, "Internal Server Error");
+
+        return new ResponseEntity<>(response, HttpStatus.INTERNAL_SERVER_ERROR);
+        
+    }
+```
+
+```java
+//줌 세션 황정식 님이 가르쳐주신 코드
+//ErrorResponse.java 안에
+    private int status;
+    private String message;
+까지는 같았으나,
+    public ErrorResponse(int status, String message) {
+        this.status = status;
+        this.message = message;
+    }
+    // 이걸 public 이 아닌 아래처럼 private 으로 하고
+    //    public static ErrorResponse of() {
+//        return new ErrorResponse()
+//    }
+    public static ErrorResponse of(ExceptionCode exceptionCode) {
+    return new ErrorResponse(exceptionCode.getStatus(), exceptionCode.getMessage());
+    }
+    public static ErrorResponse of(HttpStatus httpStatus) {
+        return new ErrorResponse(httpStatus.value(), httpStatus.getReasonPhrase());
+    }
+    // 황정식 님이 줌세션에 가르쳐준 방식
+```
+- 이걸 가지고 GlobalEceptionAdvice.java 에 구현해보기
+
+
 ## 8/25 16:00 줌 세션
 
 오늘 과제는 바로 제출했는데, 페어분이 너무 잘하셔서 Exception.java 등 알려주고 쉽게 3가지 기능구현을 해서 곧바로 제출했는데,
@@ -54,13 +113,18 @@ stream API 리뷰는 나중에라도 꼭 해드리고 싶어요.
   - advanced : 영어로 검색하고 보기
   - nightmare : 매일 알고리즘 풀기
     - 제 때는 매일 알고리즘 하루에 하나 푸는 사람들이 손에 꼽을 정도였는데, 여러분은 대단하시네요.(데일리 코딩 덕분)
-
+- 영어로 프로필 이력서 만들고, 
+한국쪽은 리멤버코리아, 외국쪽은 링크드인 통해서 연락 받을 수 있도록 함
+- 신입이 경력 없이 외국취업은 힘들지 않을까..미국이랑 유럽 싱가폴 정도 도전해봤는데, 신입(주니어)은 진짜 개미지옥..
+한국에서 경력을 쌓고, 그걸로 하는 것도 나쁘지 않음
+- 설문 링크
+- FE : [https://urclass.codestates.com/e3dd3357-1e01-40c1-8daf-57e7acae0307?playlist=1813](https://urclass.codestates.com/e3dd3357-1e01-40c1-8daf-57e7acae0307?playlist=1813)
+- BE : [https://urclass.codestates.com/b064a3ac-ede7-43de-b6f0-b97aa186bfc0?playlist=1783](https://urclass.codestates.com/b064a3ac-ede7-43de-b6f0-b97aa186bfc0?playlist=1783) 
 
 - 스프링안쓰고 nodejs 랑 java 만드로 브라우저에 뛰우는 코드
 
 - 수강생 시절 피하면 좋은 것들
   - 무리하지 않기
-  
 
 
 

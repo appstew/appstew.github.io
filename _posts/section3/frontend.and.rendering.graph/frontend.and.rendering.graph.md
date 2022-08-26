@@ -1,5 +1,14 @@
 [mermaid.js 사이트 포크](https://github.com/appstew/mermaid/tree/develop/docs)
 
+- 220826 11:34 공부한 내용 정리
+- 비전자 및 백엔드 부트캠프 수강생으로서 브라우저의 자체 렌더링 엔진, 렌더링 프로세스, 등이 궁금하여 다음과 같이 공부하였다. html, css, js 등에 대해서는 거의 아는 게 없지만 나름대로 최대한 해보려고 노력함
+- 브라우저 엔진, 렌더링 프로세스, html코드 분석, 
+  - /javatest/hrd/intelliJ_projects/repository/gojs/
+    - mermaid.working/index.html
+    - samples/flowchart.html
+    - 인텔리j 에서 실행
+
+
 - 아이패드 사파리에 켜놓은 것 보고 실습
 
 <details>

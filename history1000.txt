@@ -1,0 +1,1000 @@
+    2  python3 efiboots
+    3  sudo grubby --info=ALL
+    4  efibootmgr
+    5  sudo grubby --info=ALL
+    6  git status
+    7  git add .
+    8  git commit -m 'md'
+    9  git push
+   10  git add .
+   11  git commit -m 'md'
+   12  git push
+   13  sudo nautilus
+   14  df -alh
+   15  efibootmgr -v
+   16  sudo grubby --info=ALL
+   17  clear
+   18  efibootmgr -v
+   19  sudo grubby --info=ALL
+   20  sudo nautilus
+   21  grub-install --target=x86_64-efi
+   22  grubw-install --target=x86_64-efi
+   23  grub2-install --target=x86_64-efi
+   24  grub2-install --target=i386-pc
+   25  grub2-install
+   26  grub-install
+   27  grub2-install
+   28  df -alh
+   29  tree
+   30  cd /
+   31  grub2-install
+   32  clear
+   33  grub2-mkconfig -o /boot/grub/grub.cfg
+   34  sudo grub2-mkconfig -o /boot/grub/grub.cfg
+   35  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+   36  clear
+   37  grub2-install /dev/nvme0n1
+   38  grub2-install /dev/nvme0n1p1
+   39  grub2-install
+   40  gtub2-install --efi-directory=/boot/efi
+   41  grub2-install --efi-directory=/boot/efi
+   42  sudo dnf install grub2-efi-x64-modules
+   43  grub2-install --efi-directory=/boot/efi
+   44  grub2-install
+   45  clear
+   46  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+   47  efibootmgr -v
+   48  sudo grubby --info=ALL
+   49  clear
+   50  efibootmgr -v
+   51  sudo vi fstab
+   52  sudo nautilus
+   53  sudo gedit fstab
+   54  sudo gnome-text fstab
+   55  sudo gnome-text-editor fstab
+   56  ls
+   57  cd ..
+   58  ls
+   59  systemctl daemon-reload
+   60  sudo nautilus
+   61  sudo grub2-mkconfig
+   62  cd run/media/dami/
+   63  cd /run/media/dami/
+   64  ls
+   65  cd fedora)fedora
+   66  cd fedora_fedora
+   67  ls
+   68  rcync -avz --hard-links --numeric-ids ./home/ ./root/
+   69  rsync -avz --hard-links --numeric-ids ./home/ ./root/
+   70  sudo rsync -avz --hard-links --numeric-ids ./home/ ./root/
+   71  ls
+   72  sudo gnome-text-editor fstab
+   73  clear
+   74  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+   75  sudo gnome-nautilus
+   76  sudo nautilus
+   77  sudo nautlius
+   78  sudo nautilus
+   79  systemctl
+   80  systemctl --help
+   81  sudo grub2-mkconfig
+   82  sudo nautilus
+   83  neofetch
+   84  sudo grubby --info=ALL
+   85  clear
+   86  sudo grubby --info=ALL
+   87  sudo nautilus
+   88  sudo grub2-mkconfig -o /boot/grub2/grub.cfg
+   89  sudo nautilus
+   90  sudo grub2-mkconfig
+   91  sudo nautilus
+   92  blkid
+   93  systemctl status sys-kernel-config.mount
+   94  sudo gnome-disks
+   95  sudo systemctl daemon-reload
+   96  sudo nautilus
+   97  neofetch
+   98  sudo grub2-mkconfig -o /boot/efi/grub2/grub.cfg
+   99  sudo chroot ./*
+  100  sudo chroot ./
+  101  sudo chroot /run/media/dami/neme0n1p3/
+  102  sudo chroot /run/media/dami/nvme0n1p3/
+  103  sudo chroot /run/media/dami/nvme0n1p3
+  104  chroot /run/media/dami/nvme0n1p3
+  105  sudo nautilus
+  106  mount -av
+  107  sudo vi /etc/default/grub
+  108  sudo update-grub
+  109  update-grub
+  110  grub
+  111  grub2
+  112  mkconfig
+  113  grub2-mkconfig
+  114  sudo grub2-mkconfig
+  115  clear
+  116  sudo grub2-mkconfig > ~/1111.txt
+  117  sudo gedit /etc/default/grub
+  118  sudo dnf install gedit
+  119  sudo gedit /etc/default/grub
+  120  sudo grub2-mkconfig > ~/1111.txt
+  121  sudo nautilus
+  122  sudo grub2-mkconfig -o /boot/grub2/test
+  123  sudo btrfs subvolume list /run/media/dami/fedora_fedora
+  124  sudo systemctl daemon-reload
+  125  sudo mkdir /mnt/1
+  126  sudo mount /dev/nvme0n1p3 /mnt/2
+  127  sudo mkdir /mnt/2
+  128  sudo mount /dev/nvme0n1p3 /mnt/2
+  129  cd /mnt
+  130  ls
+  131  sudo cp -a --reflink=always /mnt/2/home/* /mnt/2/home/
+  132  sudo cp -a --reflink=always /mnt/2/root/* /mnt/2/
+  133  sudo umount /mnt/2
+  134  sudo mount -a
+  135  sudo systemctl daemon-reload
+  136  sudo mount /dev/nvme0n1p3 /mnt/2
+  137  ldd /mnt/2/sbin/init
+  138  sudo mkinitcpio -g /mnt/2/boot/initramfs-5.18.16-200.fc36.x86_64.img
+  139  sudo mkinitcpio -P /mnt/2/boot/initramfs-5.18.16-200.fc36.x86_64.img
+  140  sudo mkinitcpio
+  141  mkinitcpio
+  142  clear
+  143  sudo grub2-mkconfig -o /boot/grub2/test
+  144  sudo btrfs list /run/media/dami/fedora_fedora
+  145  sudo btrfs subvolume list /run/media/dami/fedora_fedora
+  146  clear
+  147  sudo btrfs scrub /run/media/dami/fedora_fedora/
+  148  sudo btrfs scrub /run/media/dami/fedora_fedora
+  149  sudo btrfs scrub /dev/nvme0n1p3
+  150  sudo btrfs check /dev/nvme0n1p3
+  151  sudo btrfs scrub /dev/nvme0n1p3
+  152  sudo btrfs scrub status /dev/nvme0n1p3
+  153  sudo btrfs subvolume list /run/media/dami/fedora_fedora
+  154  sudo nautilus
+  155  sestatus | grep -i <selinux>
+  156  dmesg | grep -i <selinux>
+  157  sestatus | grep -i selinux
+  158  sudo nautilus
+  159  auditd s
+  160  sudo systemctl status auditd
+  161  sudo nautilus
+  162  cd /boot
+  163  ls
+  164  sudo mkinitrd initramfs-5.18.16-200.fc36.x86_64.img 5.18.16-200.fc36.x86_64
+  165  mkinitrd initramfs-5.18.16-200.fc36.x86_64.img 5.18.16-200.fc36.x86_64
+  166  uname -r
+  167  cat /etc/fedora-release
+  168  cat /mnt/2/etc/fedora-release
+  169  cat /mnt/2/etc/fedora-release12321312
+  170  sudo nautilus
+  171  ls 
+  172  cd ..
+  173  ls
+  174  cd ~
+  175  sudo cp -rf /boot ~/Pictures/boot.and.efi/
+  176  sudo systemctl daemon-reload
+  177  sudo systemctl status nvidia-powerd
+  178  sudo systemctl enable nvidia-hibernate.service nvidia-suspend.service nvidia-resume.service
+  179  sudo systemctl status nvidia-powerd
+  180  sudo systemctl status nvidia-suspend
+  181  sudo systemctl status nvidia-resume.service
+  182  sudo systemctl status nvidia-powerd
+  183  sudo gedit etc/default/grub
+  184  sudo gedit /etc/default/grub
+  185  clear
+  186  sudo dnf install asusctl supergfxctl
+  187  sudo dnf update --refresh
+  188  sudo systemctl enable supergfxd.service
+  189  sudo systemctl status supergfxd
+  190  sudo systemctl status supergfxd.service
+  191  neofetch
+  192  lspci -nnv
+  193  clear
+  194  df -alh
+  195  clear
+  196  neofetch
+  197  sudo nautilus
+  198  neofetch
+  199  asusctl led-mode static
+  200  cat /sys/class/dmi/id/product_family # provides the prod_family var,
+  201  cat /sys/class/dmi/id/board_name # provides name to be added to board_names.
+  202  sudo gedit /etc/asusd/asusd-ledmodes.toml
+  203  sudo gedit /lib/udev/rules.d/61-gdm.rules
+  204  sudo systemctl mask nvidia-fallback.service
+  205  bash --version
+  206  sudo dnf install chrome-gnome-shell
+  207  git status
+  208  git add .
+  209  git config --global --add safe.directory /javatest/blog/site
+  210  git status
+  211  git add .
+  212  git commit -m 'installed_3_fedora'
+  213  git push
+  214  git add .
+  215  git status
+  216  clear
+  217  git status
+  218  git add .
+  219  git commit -m 'md'
+  220  git push
+  221  ls
+  222  ls -alh
+  223  gem install bundler jekyll
+  224  y
+  225  gem install bundler jekyll
+  226  clear
+  227  ls -alh
+  228  ruby -v
+  229  ruby-dev -v
+  230  ruby-devel -v
+  231  sudo dnf install ruby-dev
+  232  sudo dnf install ruby-devel
+  233  clear
+  234  gem install bundler jekyll
+  235  make
+  236  g++
+  237  sudo dnf install gcc-c++
+  238  gem install bundler jekyll
+  239  clear
+  240  sudo dnf install uim
+  241  language support
+  242  imsettings-gsettings
+  243  uim
+  244  imsettings
+  245  input-methods
+  246  input-method
+  247  im
+  248  im-chooser
+  249  nimf
+  250  fcitx
+  251  ibus
+  252  ibus-setting
+  253  im-chooser
+  254  ibus-setup
+  255  language-support
+  256  sudo dmesg | grep IM_MODULE
+  257  sudo dmesg | grep -i IM_MODULE
+  258  im-chooser
+  259  sudo dnf install fcitx
+  260  fcitx
+  261  ibut-setup
+  262  ibus-setup
+  263  fcitx
+  264  im-chooser
+  265  sudo alternatives --config xinputrc
+  266  im-chooser
+  267  sudo alternatives --config xinputrc
+  268  fcitx
+  269  sudo alternatives --config xinputrc
+  270  5
+  271  sudo alternatives --config xinputrc
+  272  sudo dnf install nimf
+  273  im-config -n uim
+  274  sudo dnf install https://github.com/hamonikr/nimf/releases/download/1.3.0/nimf-1.3.0-1.fc33.x86_64.rpm
+  275  nimf
+  276  sudo alternatives --config xinputrc
+  277  nimf-settings
+  278  ibus-setup
+  279  df -alh
+  280  nimf-settings
+  281  ㅇㄴㅁㅇㄴㅇㄴㅁㄴㅁㅇㅁㄴㅇsdsdさdさdさdさっdさdささdさdさっさcさせえヴぇscascascsscascs ㄴㅍㅁㄴㅍㅁㄴㅍㅁㄴㅍㅁㄴㅍㅁㄴㅍ
+  282  sudo alternatives --config xinputrcs
+  283  sudo alternatives --config xinputrc
+  284  im-chooser
+  285  nimf-setting
+  286  nimf-settings
+  287  sudo alternatives --config xinputrc
+  288  sudo systemctl status init.d
+  289  sudo systemctl status nvidia-power.d
+  290  sudo nautilus
+  291  nimf-settings
+  292  sudo alternatives --config xinputrc
+  293  ibus-settings
+  294  ibus-setup
+  295  sudo dnf list
+  296  sudo remove nimf
+  297  sudo dnf remove nimf
+  298  sudo dnf remove https://github.com/hamonikr/nimf/releases/download/1.3.0/nimf-1.3.0-1.fc33.x86_64.rpm
+  299  sudo remove fcitx
+  300  sudo dnf remove fcitx
+  301  sudo alternatives --config xinputrc
+  302  sudo dnf remove uim
+  303  sudo alternatives --config xinputrc
+  304  sudo dnf autoremove
+  305  sudo dnf info code
+  306  clear
+  307  sudo dnf info code
+  308  clear
+  309  sudo dnf info korean
+  310  sudo nautilus
+  311  clear
+  312  sudo dnf remove code
+  313  sudo dnf info code
+  314  clear
+  315  sudo dnf install code
+  316  df -alh
+  317  jekyll --version
+  318  bundle exec
+  319  bundle exec jekyll --version
+  320  clear
+  321  bundle update jekyll-theme-hydejack
+  322  bundle install
+  323  ruby -v
+  324  bundle info --path minima
+  325  gem env
+  326  git add .
+  327  bundle install
+  328  git add .
+  329  git commit -m 'md'
+  330  git push
+  331  git add .
+  332  git commit -m 'md'
+  333  git push
+  334  git add .
+  335  git commit -m 'md'
+  336  git push
+  337  bundle exec jekyll serve
+  338  git status
+  339  git add .
+  340  git commit -m 'compress.html->custom.html'
+  341  git push
+  342  git add .
+  343  git commit -m 'compress.html->custom.html'
+  344  git push
+  345  git add .
+  346  git commit -m 'md'
+  347  git push
+  348  bundle exec jekyll serve
+  349  git remote -v
+  350  git remote add netlify git@github.com:appstew/hydejack-starter-kit.git
+  351  git remote -v
+  352  git add .
+  353  git commit -m 'md'
+  354  git push nelify master
+  355  git push netlify master
+  356  git fetch git@github.com:appstew/hydejack-starter-kit.git
+  357  git branch
+  358  git push netlify master
+  359  git push --help
+  360  git push netlify master -f
+  361  git status
+  362  git push
+  363  clear
+  364  jekyll build
+  365  bundle exec jekyll build
+  366  hexo new page about
+  367  hexo new post "hello world"
+  368  clear
+  369  git remote -v
+  370  git status
+  371  git init
+  372  ls
+  373  git status
+  374  clear
+  375  echo "# hexo" >> README.md
+  376  git add .
+  377  cd themes
+  378  git status
+  379  git remote -v
+  380  git branch
+  381  cd cactus
+  382  git remote -v
+  383  git remote remove origin
+  384  git remote -v
+  385  git branch
+  386  git -help
+  387  cd ../..
+  388  ls
+  389  clear
+  390  git add .
+  391  git commit -m 'first commit'
+  392  git branch
+  393  git branch -M main
+  394  git branch
+  395  git remote add origin git@github.com:appstew/hexo.git
+  396  git remote -v
+  397  git push -u origin main
+  398  hexo generate
+  399  hexo server
+  400  hexo generate
+  401  hexo server
+  402  git add .
+  403  git commit -m 'md'
+  404  git push
+  405  git add .
+  406  git commit -m 'md
+  407  git commit -m 'md'
+  408  git push
+  409  cd themes/hexo
+  410  cd themes/cactus
+  411  git status
+  412  git branch
+  413  cd ../..
+  414  ls
+  415  git status
+  416  git add .
+  417  git commit -m 'md'
+  418  git push
+  419  git submodule update --init
+  420  git submodule sync | grep "mapping found"
+  421  git rm
+  422  git submodule sync
+  423  git submodule update --init
+  424  git ls-files --stage | grep 160000
+  425  git ls-files --stage
+  426  git submodule add git@github.com:appstew/hexo.git ./themes/cactus
+  427  git ls-files --stage
+  428  git ls-files --stage | grep 160000
+  429  git submodule
+  430  cat .gitmodule
+  431  cat .gitmodules
+  432  clear
+  433  git submodule add https://github.com/probberechts/hexo-theme-cactus.git
+  434  git submodule
+  435  git ls-files --stage | grep 160000
+  436  git submodule remove --cached
+  437  git ls-files --stage | grep 160000
+  438  git rm --cached ./hexo-theme-cactus
+  439  git ls-files --stage | grep 160000
+  440  git rm --cached ./themes/cactus
+  441  git ls-files --stage | grep 160000
+  442  git add .
+  443  git commit -m 'md'
+  444  git push
+  445  git ls-files --stage | grep 160000
+  446  git checkout --orphan gh-pages
+  447  git branch
+  448  git branch gh-pages
+  449  git add .
+  450  git commit -m 'gh-pages'
+  451  git branch
+  452  git push
+  453  GIT PUSH -u origin gh-pages
+  454  git push -u origin gh-pages
+  455  hexo serve
+  456  git push
+  457  git add .
+  458  git commit -m 'md'
+  459  git push
+  460  git remote -v
+  461  git branch
+  462  git branch -d gh-pages
+  463  git checkout main
+  464  git branch -d gh-pages
+  465  git branch
+  466  git add .
+  467  git commit -m 'md'
+  468  git push
+  469  git branch
+  470  cd public
+  471  git remote -v
+  472  git init
+  473  git branch
+  474  git status
+  475  cd ..
+  476  git status
+  477  git branch
+  478  cd public
+  479  git branch
+  480  git checkout --orphan gh-pages
+  481  git branch
+  482  ls
+  483  git remote -v
+  484  git remote add git@github.com:appstew/hexo.git origin gh-pages
+  485  git remote add origin gh-pages git@github.com:appstew/hexo.git
+  486  git remote add gh-pages git@github.com:appstew/hexo.git
+  487  git remote -v
+  488  cd ..
+  489  git remote -v
+  490  cd public
+  491  git status
+  492  git add .
+  493  git commit -m 'first commit'
+  494  git push -u gh-pages gh-pages
+  495  git status
+  496  cd ..
+  497  hexo build
+  498  hexo generate
+  499  hexo clean
+  500  hexo generate
+  501  hexo deploy
+  502  cd public
+  503  git branch
+  504  git remote -v
+  505  git status
+  506  git init
+  507  git branch -M gh-pages
+  508  git branch
+  509  git status
+  510  git add .
+  511  git commit -m 'md'
+  512  git push -u origin gh-pages
+  513  git remote -v
+  514  git remote add origin git@github.com:appstew/hexo.git
+  515  git remote -v
+  516  git push -u origin gh-pages
+  517  git push -uf origin gh-pages
+  518  cd ..
+  519  git generate
+  520  hexo generate
+  521  cd public
+  522  git branch
+  523  git add .
+  524  git commit -m 'md'
+  525  git push
+  526  git status
+  527  bundle exec jekyll serve
+  528  cd _site
+  529  git status
+  530  git branch
+  531  git init
+  532  git branch
+  533  git branch -M main
+  534  git config --global --add safe.directory /javatest/blog/site_site
+  535  git branch -M main
+  536  git branch
+  537  git config --global --add safe.directory /javatest/blog/site_site
+  538  git branch
+  539  git remote -v
+  540  git init
+  541  git branch
+  542  git add .
+  543  ls
+  544  ls -alh
+  545  cd ..
+  546  ls -alh
+  547  cd _site
+  548  ls -alh
+  549  sudo chwon -R dami ./*
+  550  sudo chown -R dami ./*
+  551  ls -alh
+  552  git branch
+  553  git init
+  554  git branch
+  555  git config --global --add safe.directory '*'
+  556  git branch
+  557  git init
+  558  git branch
+  559  git branch -M main
+  560  git branch
+  561  git remote -v
+  562  git remote add origin git@github.com:appstew/appstew.github.io.git
+  563  git remote -v
+  564  git status
+  565  git add .
+  566  git commit -m 'first built commit'
+  567  git push -uf origin main
+  568  cd ..
+  569  bundle install
+  570  git status
+  571  bundle exec jekyll serve
+  572  bundle install
+  573  bundle exec jekyll serve
+  574  bundle install
+  575  bundle exec jekyll serve
+  576  gem install jekyll-mermaid
+  577  bundle install
+  578  bundle exec jekyll serve
+  579  gem install jekyll-diagrams
+  580  gem install jekyll-mermaid-diagrams
+  581  gem install jekyll-plantuml
+  582  gem install jekyll-toc
+  583  bundle install
+  584  bundle exec jekyll serve
+  585  bundle install
+  586  bundle exec jekyll serve
+  587  git status
+  588  bundle install
+  589  sudo bundle install
+  590  bundle install
+  591  bundle exec jekyll serve
+  592  bundle exec jekyll --trace serve
+  593  bundle
+  594  bundle exec jekyll s
+  595  bundle exec jekyll --trace serve
+  596  jekyll new
+  597  jekyll new ./
+  598  ls -alh
+  599  ls
+  600  bundle
+  601  bundle exec jekyll s
+  602  jekyll build --trace
+  603  bundle exec jekyll s --trace
+  604  bundle exec jekyll --trace s
+  605  bundle exec jekyll --trace serve
+  606  bundle exec jekyll serve
+  607  bundle exec jekyll --trace serve
+  608  bundle exec jekyll serve
+  609  bundle install
+  610  bundle exec jekyll serve
+  611  bundle
+  612  bundle exec jekyll serve
+  613  cd _site
+  614  git init
+  615  git status
+  616  git remote add origin git@github.com:appstew/appstew.github.io.git
+  617  git remote -v
+  618  git add .
+  619  git commit -m 'chirpy first'
+  620  git push -uf origin main
+  621  git commit -m 'chirpy first'
+  622  git status
+  623  git branch -M main
+  624  git status
+  625  git add .
+  626  git commit -m 'chirpy first'
+  627  git push -uf origin main
+  628  cd /javatest/blog/site
+  629  ls
+  630  git status
+  631  git add .
+  632  git status
+  633  git commit -m 'md'
+  634  git status
+  635  git push
+  636  clear
+  637  bundle install
+  638  bundle
+  639  clear
+  640  bundle exec jekyll serve
+  641  clear
+  642  git status
+  643  git commit -am 'md'
+  644  git push
+  645  ssh
+  646  sudo cat ~/id-rsa.pub
+  647  sudo cat ~/.ssh/id-rsa.pub
+  648  sudo cat ~/.ssh/id_rsa.pub
+  649  git status
+  650  git add .
+  651  git status
+  652  git config
+  653  git branch -r
+  654  git remote -r
+  655  git remote -v
+  656  ssh -T git@github.com  
+  657  git status
+  658  git add .
+  659  git commit -m 'md'
+  660  git push
+  661  gem install jekyll-theme-hydejack
+  662  git status
+  663  git add .
+  664  git commit -m 'md;
+  665  git commit -m 'md'
+  666  gem install katex execjs
+  667  gem install ductape
+  668  gem install duktape
+  669  sudo nautilsu
+  670  sudo nautilus
+  671  ruby --version
+  672  clear
+  673  sudo dnf info ruby
+  674  cd ~/Downloads
+  675  ls
+  676  mkdir mermaid
+  677  git clone git@github.com:appstew/mermaid.git
+  678  cd mermaid
+  679  git status
+  680  np
+  681  npm run deploy
+  682  npm install gh-pages --save-dev --legacy-peer-deps
+  683  npm audit fix
+  684  npm run deploy
+  685  npm build
+  686  npm run build
+  687  npm run deploy
+  688  cd ..
+  689  ls
+  690  clear
+  691  sudo dnf info hexo
+  692  hexo init hexo
+  693  node.js -v
+  694  Node.js -v
+  695  Node.js --version
+  696  node.js --version
+  697  sudo dnf info node.js
+  698  sudo dnf info nodejs
+  699  clear
+  700  nodejs -v
+  701  nodejs --version
+  702  sudo dnf info nodejs
+  703  clear
+  704  ls
+  705  cd install
+  706  ls
+  707  npm install -g hexo-cli
+  708  sudo npm install -g hexo-cli
+  709  ls
+  710  cd ..
+  711  hexo init hexo
+  712  cd hexo
+  713  $ git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
+  714  git clone https://github.com/probberechts/hexo-theme-cactus.git themes/cactus
+  715  cd ..
+  716  cd install
+  717  ls
+  718  yarn add hexo-filter-mermaid-diagrams
+  719  ls
+  720  cd ..
+  721  cd hexo
+  722  yarn add hexo-filter-mermaid-diagrams
+  723  clear
+  724  cd ..
+  725  git clone git@github.com:appstew/be-homework-controller.git
+  726  cd ..
+  727  bundle
+  728  bundle exec jekyll serve
+  729  df -alh
+  730  ⛺
+  731  cd Downloads
+  732  ls
+  733  cd ideaIU-2022.2
+  734  ls
+  735  cat ./idea.sh
+  736  ls
+  737  ln ./idea.sh /usr/bin/intellij
+  738  sudo ln ./idea.sh /usr/bin/intellij
+  739  intellij
+  740  which intellij
+  741  sudo dnf info jdk
+  742  sudo dnf info jvm
+  743  clear
+  744  cat ~/.cache/JetBrains/IntelliJIdea2020.3/log
+  745  cd ~/.cache/JetBrains/
+  746  ls
+  747  cd IntelliJIdea2022.2
+  748  ls
+  749  cat log
+  750  cd log
+  751  ls
+  752  clear
+  753  cat idea.log
+  754  clear
+  755  ls
+  756  cat indexing-diagnostic
+  757  cd indexing-diagnostic
+  758  ls
+  759  intellij
+  760  cd /usr/bin
+  761  ls
+  762  rm intellij
+  763  sudo rm intellij
+  764  ls
+  765  intellij
+  766  sudo rm intellij
+  767  intellij
+  768  cd /usr/bin/idea_ultimate
+  769  ls
+  770  cd bin
+  771  ls
+  772  ./idea.sh
+  773  ln -s ./idea.sh /usr/bin/intellij
+  774  sudo ln -s ./idea.sh /usr/bin/intellij
+  775  intellij
+  776  sudo ln -s /usr/bin/idea_ultimate/bin/idea.sh /usr/bin/intellij
+  777  ./configure
+  778  make
+  779  make install
+  780  ls
+  781  cd bin
+  782  ls
+  783  idea.sh
+  784  ./idea.sh
+  785  clear
+  786  sudo dnf info intelliJ
+  787  intelliJ
+  788  ./idea.sh
+  789  ls
+  790  cd ..
+  791  ls
+  792  cd ..
+  793  ls
+  794  cd -rf ./idea-IU-222.3345.118 /usr/bin
+  795  cd -f ./idea-IU-222.3345.118 /usr/bin
+  796  cd  ./idea-IU-222.3345.118/ /usr/bin/idea_ultimate
+  797  cd  ./idea-IU-222.3345.118/ /usr/bin/idea_ultimate/
+  798  cd ./idea-IU-222.3345.118/ /usr/bin/idea_ultimate/
+  799  mv -rf ./idea-IU-222.3345.118/ /usr/bin/idea_ultimate/
+  800  mv -rf ./idea-IU-222.3345.118 /usr/bin/idea_ultimate
+  801  cp -rf ./idea-IU-222.3345.118 /usr/bin/idea_ultimate
+  802  sudo cp -rf ./idea-IU-222.3345.118 /usr/bin/idea_ultimate
+  803  cd ~
+  804  cd ~/Downlaods
+  805  ls
+  806  cd ~/Downloads
+  807  ls
+  808  intellij
+  809  ls -l /usr/share/applications/ | wc -l
+  810  ls -l /usr/share/applications/
+  811  clear
+  812  cat ~/desktop-entries/gpass.desktop
+  813  ls ~/desktop-entries/
+  814  which intellij
+  815  bundle exec jekyll serve
+  816  postman
+  817  bundle exec jekyll build
+  818  git push
+  819  git add .
+  820  git branch
+  821  git status
+  822  git commit -m '220821_19:07'
+  823  git push
+  824  cd _site
+  825  git status
+  826  git add .
+  827  git commit -m '220821_19:07'
+  828  git push
+  829  cd ..
+  830  bundle exec jekyll build
+  831  git add .
+  832  git commit -m 'md'
+  833  git push
+  834  cd _site
+  835  git status
+  836  git add .
+  837  git commit -m 'md'
+  838  git push
+  839  zoom
+  840  jdk
+  841  javac -version
+  842  java -version
+  843  which java
+  844  sudo rpm -qa | grep jdk
+  845  java -version
+  846  javac -version
+  847  clear
+  848  postman
+  849  cd ..
+  850  bundle exec jekyll build
+  851  git add .
+  852  git commit -m '220822'
+  853  git push
+  854  cd _site
+  855  git status
+  856  git add .
+  857  git commit -m '220822'
+  858  git push
+  859  dnf list installed \*nvidia\*
+  860  neofetch
+  861  clear
+  862  sudo systemctl status nvidia-powerd.service
+  863  clear
+  864  dnf list installed \*nvidia\*
+  865  sudo systemctl status nvidia-powerd.service
+  866  sudo systemctl disable nvidia-powerd.service
+  867  sudo systemctl status nvidia-powerd.service
+  868  sudo journalctl
+  869  git clone git@github.com:codestates-seb/be-homework-mapper.git
+  870  git clone git@github.com:appstew/be-homework-mapper.git
+  871  니
+  872  ls
+  873  cd be-homework-mapper
+  874  ls
+  875  git status
+  876  git remote -v
+  877  cd ..
+  878  cd be-template-service-layer
+  879  ls
+  880  git status
+  881  git remote -v
+  882  cd ..
+  883  git add .
+  884  bundle exec jekyll build
+  885  git add .
+  886  git commit -m '220823'
+  887  bundle exec jekyll build
+  888  git add .
+  889  git commit -m '220823'
+  890  git push
+  891  cd _site
+  892  git add .
+  893  git commit -m '220823'
+  894  git push
+  895  git status
+  896  ls
+  897  git remote -v
+  898  git branch
+  899  postman
+  900  cd ..
+  901  bundle exec jekyll build
+  902  cd _site
+  903  git add .
+  904  git commit -m 'md'
+  905  git push
+  906  cd ..
+  907  bundle exec jekyll build
+  908  git add .
+  909  git commit -m 'md'
+  910  git push
+  911  cd _site
+  912  git add .
+  913  git commit -m 'md'
+  914  git push
+  915  clear
+  916  log
+  917  sudo journalctl
+  918  git status
+  919  cd ..
+  920  bundle exec jekyll build
+  921  cd _site
+  922  git status
+  923  git add .
+  924  git commit -m 'md'
+  925  git push
+  926  git clone git@github.com:codestates-seb/be-template-exception-handle.git
+  927  git clone git@github.com:codestates-seb/be-reference-exception-handle.git
+  928  bundle exec jekyll build
+  929  git add .
+  930  git commit -m '20220824'
+  931  git push
+  932  cd _site
+  933  git add .
+  934  git commit -m '20220824'
+  935  git push
+  936  git clone git@github.com:appstew/be-homework-exception.git
+  937  git remote -v
+  938  cd ..
+  939  git status
+  940  git add .
+  941  git commit -m '백엔드 40기 과제'
+  942  git remote -v
+  943  git push
+  944  git remote -v
+  945  git remote -v
+  946  cd ..
+  947  ls
+  948  git clone git@github.com:appstew/be-homework-dto.git
+  949  git remote -v
+  950  git add .
+  951  git commit -m '백엔드40기 controller과제'
+  952  git push
+  953  git status
+  954  git remote -v
+  955  git add .
+  956  git commit -m '백엔드 40기 DTO과제'
+  957  git push
+  958  git status
+  959  git add .
+  960  git commit -m '줌 세션 후 조금 수정'
+  961  git history
+  962  bundle exec jekyll build
+  963  git add .
+  964  git commit -m '220825'
+  965  git push
+  966  bundle exec jekyll build
+  967  git add .
+  968  git commit -m '220825'
+  969  git push
+  970  cd _site
+  971  git status
+  972  git add .
+  973  git commit -m '220825'
+  974  git push
+  975  git status
+  976  git push
+  977  git status
+  978  postman
+  979  lsof -i:8080
+  980  fuser
+  981  fuser tcp
+  982  fuser /tcp
+  983  netstat -ano | grep "8080"
+  984  netstat -ano | grep tcp
+  985  fuser 8080/tcp
+  986  lsof -i:8080
+  987  kill $(lsof -i:8080)
+  988  kill $(lsof -t -i:8080)
+  989  kill 7329
+  990  pid 7329
+  991  kill $7329
+  992  sudo kill $7329
+  993  lsof -i:8080
+  994  git clone git@github.com:codestates-seb/be-template-jdbc.git
+  995  git clone git@github.com:codestates-seb/be-reference-spring-data-jdbc.git
+  996  git romote -v
+  997  history1000start 220826.settingkvm
+  998  dnf install asusctl --refresh
+  999  sudo dnf install asusctl --refresh
+ 1000  supergfxctl -m integrated
+ 1001  history 1000 > history1000.txt

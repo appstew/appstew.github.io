@@ -41,6 +41,8 @@ lspci -nnv 와 neofetch 에서 둘다 외장그래픽카드가 안잡히는 걸�
 - 어쩔 수 없이 vfio 모드로 설정하고 /etc/default/grub 과 grub2fedora 의 boot/grub2/grub.cfg 안의 설정을 nvidia-drm.modeset=0 으로 설정해주었고
 supergfxctl -m vfio 로 해주고 실행. 이주 될줄 알았으나 놓친 부분:<qemu:arg value="file=2TB/qemukvm.files/root/var/lib/libvirt/images/acpitable.bin"/>
 
+- 결국 기존 가상머신 이미지 부팅 성공!
+
 - 이건 좀 다른 얘기지만 sudo umount target is busy 인 경우:
   - 사용자 확인: fuser -cu (target)
   - 프로세스 강제 킬: fuser -ck (target)

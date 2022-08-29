@@ -38,9 +38,22 @@ layout: compress
 
     </div> <!-- #main-wrapper -->
 
-    {% if page.mermaid %}
+    <!-- {% if page.mermaid %}
       {% include mermaid.html %}
+    {% endif %} -->
+
+
+    {% include mermaid.html %}
+ 
+    {% if page.flowchart %}
+      {% include flowchart.html %}
     {% endif %}
+
+    {% if page.kanban %}
+    {% include kanban.html %}
+  {% endif %}
+
+
 
     <div id="mask"></div>
 

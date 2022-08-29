@@ -1,12 +1,11 @@
 ---
-title: asus-linux.org
+title: flowchart
 author: appstew
 categories: [gojs]
 tags: [typography]
 math: true
 mermaid: true
 flowchart: true
-kanban: true
 image:
   path: /commons/devices-mockup.png
   width: 800

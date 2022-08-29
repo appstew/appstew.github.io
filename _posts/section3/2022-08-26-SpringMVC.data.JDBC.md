@@ -13,7 +13,7 @@ image:
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-.data.JDBC
+.data.JDBC(8/26~30 금 월 화 3일)
 
 # 8/26 아침 줌 세션.
 
@@ -151,4 +151,103 @@ image:
     - 대용량 데이터를 처리할때 가령 몇십만줄 txt js 라든가
 
 - .Lines(Path.of)
+
+## 8/26 아침 줌 세션
+
+- 
+- 줌에 한글 채팅안되는거 고쳐야 하는데 바빠서 아직도 못고쳐서 복봍하는중..ㅠ
+
+하다보니 자꾸 html js 욕심이 생기고 몰라서 막히는게 많더라구요..ㅠ
+
+백엔드에서 뭔가 했는데 화면에는 안나오는.
+
+## 8/26 오후 줌 세션
+
+- 오늘 프론트 두명 백엔드 두명 하차했다고 한다..다른 팀원들이 무슨 말하는지 모르겠다고. 첫 입문, 첫 취직은 힘들 것이다.
+- build.gradle 
+  - implementation 코멘트는 //
+  - JPA 는 resources/db.h2/schema.sql 경로를 application.yml 경로 
+  지정해줘야한다.
+  - data.sql 에 INSERT NEW.. 로 목 데이터 입력 가능
+  - 현업에서는 Spring Data JDBC 말고 JPA 쓸 것이다.
+  - spring initializer 사이트
+  - JPA 는 테이블 생성이 자동
+  - at Message.java
+  @Id 애너테이션
+  private long messageId; ...
+  - Bean 은 스프링 컴포넌트 안에 것들
+  - at CrudeRepository.java
+  Spring Data Jdbc가 기본적으로 Repository 인터페이스를 이미 상속받아서 NoRepositoryBeans으로 중복 빈을 못 만들게 한다네요
+  - at MessageService.java
+  에서 private messageRepository; 에 final 들어가면 
+  - at MessageController.java
+  public ResponseEntity postMessages(@Valid @RequestBody MessagePostDto messagePostDto) {
+  Message message = 
+  messageService.crateMessage(mapper.messageDtoToMessage(messagePostDtio));
+
+  return ResponseEntity.ok(mapper.messageToMessage ..)
+  }
+
+- spring jdbc 가 어려운 이유. DDD(Domain Driven Design, 도메인 주도 설계)
+  - 한마디로 모든 기능을 도메인 모델 위주로 돌아가는 설계 기법
+  - 도메인이란?
+    - 비즈니스적인 어떤 업무 영역
+    - 우리가 실제로 현실 세계에서 접하는 각각의 업무 영역
+  - 코드로 이해
+
+- 빈약한 도메인 모델
+  - MemberService(서비스 클래스) 서비스 클래스에 기능 집중@Service
+
+  - Member(도메인 엔티티 클래스) - 기능이 없는 빈약한 도메인 모델
+
+- 풍부한 도메인 모델
+
+- 에그리거트(Aggregate)란?
+  - 배달 주문 앱의 도메인 모델 예
+    - 회원, 주문, 음식, 배달, 결제 기능 <- 도메인들
+  - 애그리거트는 가령,
+    - 회원 - 회원 정보, 회원포인트
+    - 주문 - 배달 주문자 정보, 배달 음식 정보, 주문 정보, 배달 추적 정보, 배달 주소 정보
+    - 음식 - 음식 정보
+    - 결제 - 결제 정보
+  - aggregate root 은 회원 정보, 주문 정보, 음식 정보, 결제 정보
+
+- 기존의 avg, sum count() 를 aggregate function 이라고 하는데 이거랑은 다른 의미의 쓰임이다.
+
+- 테이블과 테이블이 join 하기 위해서는 foreign key 필요, ORM 에서 핵심은 foreign key
+
+- 가령 member_id(기본키)
+email: varchar(100) not null
+name: varchar(100) not null
+phone: varchar(20) not nul
+
+ORDER_COFFEE
+order_id(외래키:주문): bigint not null
+coffee_id(외래키:커피):bigint not null
+quantity: int not null
+
+COFFEE
+coffee_id(기본키):bigint
+kor_name: varchar(100) not null
+eng_name: varchar(100) not null
+price: int not nuall
+
+- 도메인 엔티티 설계(DDD 적용전)
+  - Member.java 에서 Order.java 로 불러오기
+  - at private 
+  
+  AggregateReference<Member, Long> memberId;
+
+- Set<CoffeeRef> orderCoffees = new LinkedHashSet<>();
+  - 그냥 Set 은 키 중복을 방지하지만 순서는 저장하지 않는다,
+  대신 위와 같이 하면 순서도 저장해준다. 다만 약간의 로직이 추가되므로 약간의 연산 지연이.
+
+
+
+
+
+
+
+
+
 

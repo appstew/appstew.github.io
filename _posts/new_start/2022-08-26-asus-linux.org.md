@@ -25,7 +25,7 @@ A --> B
   <div style="width: 100%; display: flex; justify-content: space-between">
     <div id="myPaletteDiv" style="width: 100px; margin-right: 2px; background-color: #282c34;"></div>
     <div id="myDiagramDiv" style="flex-grow: 1; height: 750px; background-color: #282c34;"></div>
-  </div>
+</div>
 <button id="SaveButton" onclick="save()">Save</button>
 <button onclick="load()">Load</button>
 Diagram Model saved in JSON format:

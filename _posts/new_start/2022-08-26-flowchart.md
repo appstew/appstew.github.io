@@ -12,7 +12,7 @@ image:
   height: 500
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
-안녕하세요~
+
 
 
 ```mermaid
@@ -98,3 +98,15 @@ supergfxctl -m vfio 로 해주고 실행. 이주 될줄 알았으나 놓친 부�
 - 이건 좀 다른 얘기지만 sudo umount target is busy 인 경우:
   - 사용자 확인: fuser -cu (target)
   - 프로세스 강제 킬: fuser -ck (target)
+
+
+
+
+![df](../../img/fedora/resourceStructure.png) ![df](../../img/fedora/resourceStructure.svg)
+
+
+![df](../img/fedora/resourceStructure.png) ![df](../img/fedora/resourceStructure.svg)
+
+
+![df](img/fedora/resourceStructure.png) ![df](img/fedora/resourceStructure.svg)
+

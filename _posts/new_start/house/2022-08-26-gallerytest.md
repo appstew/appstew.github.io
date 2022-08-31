@@ -13,10 +13,3 @@ image:
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-
-![](../../../Excalidraw/test.png) ![](../../../Excalidraw/test.svg)
-
-![](../../../Excalidraw/test.drawio.svg)
-
-![](https://mmistakes.github.io/minimal-mistakes/assets/images/unsplash-gallery-image-3.jpg)
-

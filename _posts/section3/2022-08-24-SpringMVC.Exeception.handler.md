@@ -106,7 +106,7 @@ stream API 리뷰는 나중에라도 꼭 해드리고 싶어요.
 - miro flowchart, boards, figzam
 - request latency over time
 
- 
+ ㅇ
 - 뭐든지 하면 다 좋고, 그렇지만, 시간과 한계가 있으니, 단계별로 나눠서 하나씩.
   - bare minimum, advanced, nightmare
   - bare minimum: 블로깅

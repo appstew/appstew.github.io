@@ -244,10 +244,43 @@ price: int not nuall
 
 
 
+# 8/30 화요일 아침 줌 세션
+- spring JDBC 뿐만 아니라 https://spring.io/projects/spring-data 에 들어가면 스프링이 제공하는 데이터 기술이 나열되어있다.
+손가락
+- 
+- 오늘 실습과제 중, h2 중 db 기술과 페이지네이션 기능이 포함되어 있다!
+
+- 서울에 IT 단지
+  - 구로디지털,가산디지털,판교,강남,성숫동(쏘카)
+  - 실리콘밸리는 물가가 너무 비싼 대신 연봉 10만달러 이상
+  - 한국은 3500~2억,3억
+  - 
+
+# 8/30 화요일 오후 줌 세션(16:30~18:00)
+- SpringMVC.data.JDBC 과제 페어와 함께 완성하고 제출함
+- 지금 실시간 세션에는 아바타 실습(공지사항 구현하기) 는 be-reference-JDBC 에 필기겸 수정 작성했다. 현재 Notice 패키지 안에만 수정
+- 아래 Order 에서 Member의 memberId 변수를 가져오는 방식을 자세히 보고 기억하자.
+```java
+package com.codestates.order.entity;
+
+import ...
+@Getter
+@Setter
+@Table("ORDERS")
+public class Order {
+    @Id
+    private long orderId;
+
+    // 테이블 외래키처럼 memberId를 추가해서 참조하도록 한다..
+    private AggregateReference<Member, Long> memberId;
+    // 
+```
+```java
+public class Member {
+    @Id
+    private Long memberId;
+```
 
 
 
-
-
-
-
+## 

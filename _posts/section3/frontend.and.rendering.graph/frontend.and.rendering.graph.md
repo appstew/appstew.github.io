@@ -72,3 +72,5 @@ mermaid.site 의 경우
 - 더 알아볼거 
   - webpack
   - nodeJS, 웹프레임워크, ruby, 
+
+네 어제는 엄청 덥더니

@@ -13,11 +13,8 @@ image:
   alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
-![](/_posts/new_start/house/36.png)
 
-![](../../../Excalidraw/test.png)
-
-![](../../../Excalidraw/test.svg)
+![](../../../Excalidraw/test.png) ![](../../../Excalidraw/test.svg)
 
 ![](../../../Excalidraw/test.drawio.svg)
 

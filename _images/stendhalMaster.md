@@ -1,5 +1,4 @@
 ---
 ---
 
-![](../img/springHttps.excalidraw.svg)
-
+![](../img/stendhalMaster.excalidraw.svg)

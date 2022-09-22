@@ -1,0 +1,32 @@
+<!-- ---
+---
+[
+{%- include background.html -%},
+ {% for image in site.images %}
+     "title"    : "{{ image.title | escape }}",
+     alt="{% if img.alt %}{{ img.alt }}{% endif %}">
+     "image" : "{{ image.title | escape }}.excalidraw.svg",
+     "content"  : "{{ image.content | strip_html | replace: "\", ‘’ |  replace: ‘"’, ‘\"’ | replace: '    ‘,’ ' | replace: '
+‘, ’ ' }}"
+   } {% unless forloop.last %},{% endunless %}
+ {% endfor %},
+
+] -->
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  <body>
+
+      <div id="main">
+        {% for image in site.images %}
+          <a href="{{site.baseurl}}/images/{{ image.path | split: '/' | last | split: '.' | first }}.html">
+            <img src="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.excalidraw.svg" alt="{{ image.title }}" />
+
+          </a>
+          <h2>{{ image.title }}</h2>
+          <p>{{ image.caption }}</p>
+        {% endfor %}
+        </div>
+        </body>
+        </html>

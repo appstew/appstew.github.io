@@ -14,10 +14,10 @@
         
         {% for image in site.images %}
         <article class="thumb">
-        <a href="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.drawio.svg">  
-        <a href="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.excalidraw.svg">
-        <img src="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.drawio.svg" alt="{{ image.title }}" />
-        <img src="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.excalidraw.svg" alt="{{ image.title }}" />
+        <!-- <a href="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.drawio.svg">   -->
+        <a href="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.svg">
+        <!-- <img src="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.drawio.svg" alt="{{ image.title }}" /> -->
+        <img src="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.svg" alt="{{ image.title }}" />
           </a>  
 
           <h2>{{ image.title }}</h2>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
   {%- include head.html -%}
@@ -14,9 +14,8 @@
         
         {% for image in site.images %}
         <article class="thumb">
-        <a href="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.drawio.svg">  
-        <a href="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.excalidraw.svg">
-        <img src="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.drawio.svg" alt="{{ image.title }}" />
+        <a href="{{site.baseurl}}/images/{{ image.path | split: '/' | last | split: '.' | first }}.html">
+            
         <img src="{{site.baseurl}}/img/{{ image.path | split: '/' | last | split: '.' | first }}.excalidraw.svg" alt="{{ image.title }}" />
           </a>  
 
@@ -38,4 +37,4 @@
     <script src="{{ 'assets/js/util.js' | relative_url }}"></script>
     <script src="{{ 'assets/js/main.js' | relative_url }}"></script>
   </body>
-</html>
+</html> -->
